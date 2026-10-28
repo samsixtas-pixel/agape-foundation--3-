@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Agape Family Foundation — Providing education, healthcare, and daily support to orphaned children across Tanzania." />
+  <title>Agape Family Foundation | 520+ Children Given a Second Chance</title>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Agape Family Foundation" />
+  <meta property="og:title" content="Agape Family Foundation | 520+ Children Given a Second Chance" />
+  <meta property="og:description" content="Agape Family Foundation — Providing education, healthcare, and daily support to orphaned children across Tanzania." />
+  <meta property="og:image" content="assets/uploads/hero-group.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Agape Family Foundation | 520+ Children Given a Second Chance" />
+  <meta name="twitter:description" content="Agape Family Foundation — Providing education, healthcare, and daily support to orphaned children across Tanzania." />
+  <meta name="twitter:image" content="assets/uploads/hero-group.jpg" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"NGO","name":"Agape Family Foundation","description":"Agape Family Foundation provides education, healthcare, and daily support to orphaned and vulnerable children across Tanzania.","areaServed":"Tanzania","foundingDate":"2022"}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{--navy:#0d1f3c;--navy-dark:#081629;--navy-mid:#162d52;--orange:#e8611a;--orange-lt:#f07a3a;--cream:#f7f4ef;--warm-white:#fdfaf6;--text-dark:#1a1a2e;--text-body:#3d4456;--text-muted:#6b7280;--border:#e4ddd4;--shadow-sm:0 2px 12px rgba(13,31,60,.07);--shadow-md:0 8px 32px rgba(13,31,60,.12);--radius:12px;--radius-lg:20px;--transition:.3s cubic-bezier(.4,0,.2,1)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--text-dark);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+    img{display:block;max-width:100%}
+    a{text-decoration:none;color:inherit}
+    button{cursor:pointer;border:none;background:none;font-family:inherit}
+    ::selection{background:rgba(232,97,26,.24);color:var(--navy-dark)}
+    :focus-visible{outline:3px solid rgba(240,122,58,.72);outline-offset:3px}
+
+    /* Accessibility skip link */
+    .skip-link{position:absolute;left:-9999px;top:8px;z-index:2000;background:var(--orange);color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;font-size:14px}
+    .skip-link:focus{left:8px}
+
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .reveal-delay-1{transition-delay:.1s}.reveal-delay-2{transition-delay:.2s}.reveal-delay-3{transition-delay:.3s}.reveal-delay-4{transition-delay:.4s}
+
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:900;padding:0 20px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:12px;transition:background var(--transition),box-shadow var(--transition)}
+    .nav.scrolled{background:rgba(8,22,41,.97);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(255,255,255,.06)}
+    .nav-hamburger{width:44px;height:44px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:5px;flex-shrink:0;border-radius:10px;transition:background var(--transition);-webkit-tap-highlight-color:transparent;z-index:902}
+    .nav-hamburger:hover{background:rgba(255,255,255,.1)}
+    .nav-hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform var(--transition),opacity var(--transition),width var(--transition);transform-origin:center}
+    .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-hamburger.open span:nth-child(2){opacity:0;width:0}
+    .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .nav-logo{display:flex;align-items:center;gap:10px;flex:1;justify-content:center}
+    .nav-logo-img{width:40px;height:40px;border-radius:50%;object-fit:contain;background:#fff;padding:2px;box-shadow:0 0 0 1.5px rgba(255,255,255,.2);flex-shrink:0}
+    .nav-logo-text{font-size:13px;font-weight:700;color:#fff;line-height:1.2}
+    .nav-logo-text span{display:block;font-weight:300;opacity:.65;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+    .nav-right{display:flex;align-items:center;gap:0}
+
+    /* DRAWER */
+    .drawer-overlay{position:fixed;inset:0;background:rgba(5,14,28,.65);z-index:950;opacity:0;pointer-events:none;transition:opacity .35s ease;backdrop-filter:blur(3px)}
+    .drawer-overlay.open{opacity:1;pointer-events:all}
+    .drawer{position:fixed;top:0;left:0;bottom:0;width:min(320px,88vw);background:var(--navy-dark);z-index:960;transform:translateX(-100%);transition:transform .38s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;overflow-y:auto;box-shadow:4px 0 40px rgba(0,0,0,.5)}
+    .drawer.open{transform:translateX(0)}
+    .drawer-head{padding:24px 28px 20px;display:flex;align-items:center;gap:14px;border-bottom:1px solid rgba(255,255,255,.07)}
+    .drawer-logo-img{width:54px;height:54px;border-radius:50%;object-fit:contain;background:#fff;padding:3px;flex-shrink:0}
+    .drawer-logo-text strong{display:block;font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:#fff;line-height:1.2}
+    .drawer-logo-text small{font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+    .drawer-nav{flex:1;padding:12px 0}
+    .drawer-nav-item{display:flex;align-items:center;gap:14px;padding:14px 28px;font-size:16px;font-weight:500;color:rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.04);transition:background var(--transition),color var(--transition),padding-left var(--transition);position:relative}
+    .drawer-nav-item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--orange);border-radius:0 3px 3px 0;transform:scaleY(0);transition:transform var(--transition)}
+    .drawer-nav-item:hover,.drawer-nav-item.active{background:rgba(255,255,255,.04);color:#fff;padding-left:32px}
+    .drawer-nav-item:hover::before,.drawer-nav-item.active::before{transform:scaleY(1)}
+    .drawer-nav-item svg{width:18px;height:18px;flex-shrink:0;opacity:.5}
+    .drawer-nav-item:hover svg,.drawer-nav-item.active svg{opacity:1}
+    .drawer-cta{padding:20px 28px 28px;border-top:1px solid rgba(255,255,255,.07)}
+    .drawer-cta-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:var(--orange);color:#fff;padding:14px 20px;border-radius:10px;font-size:15px;font-weight:700;transition:background var(--transition);box-shadow:0 4px 20px rgba(232,97,26,.35)}
+    .drawer-cta-btn:hover{background:var(--orange-lt)}
+    .drawer-cta-btn svg{width:16px;height:16px}
+    .drawer-lang{display:flex;gap:8px;margin-top:14px;justify-content:center}
+    .drawer-lang button{padding:6px 14px;border-radius:7px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.6);font-size:12px;font-weight:700;letter-spacing:.06em;border:1px solid rgba(255,255,255,.12);transition:background var(--transition),color var(--transition)}
+    .drawer-lang button.active{background:var(--orange);color:#fff;border-color:var(--orange)}
+    .drawer-verse{margin-top:14px;font-size:11px;color:rgba(255,255,255,.25);text-align:center;line-height:1.5;font-style:italic}
+
+    .lang-switcher{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:3px;margin-right:10px}
+    .lang-btn{padding:5px 10px;border-radius:6px;font-size:11px;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.5);transition:background var(--transition),color var(--transition)}
+    .lang-btn.active{background:var(--orange);color:#fff}
+
+    .nav-donate{background:var(--orange);color:#fff;padding:9px 18px;border-radius:8px;font-size:13px;font-weight:600;transition:background var(--transition);white-space:nowrap;flex-shrink:0}
+    .nav-donate:hover{background:var(--orange-lt)}
+
+    /* HERO */
+    .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;background-color:var(--navy-dark);background-image:url('assets/uploads/ChatGPT Image Aug 15, 2026, 03_34_08 AM.png');background-size:cover;background-position:center 30%;transition:transform 8s ease}
+    .hero-bg.loaded{transform:scale(1.04)}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,22,41,.15) 0%,rgba(8,22,41,.25) 40%,rgba(8,22,41,.75) 75%,rgba(8,22,41,.92) 100%)}
+    .hero-content{position:relative;z-index:2;padding:0 24px 48px;max-width:640px}
+    .hero-eyebrow{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-lt);margin-bottom:16px;padding:10px 15px;border-radius:999px;background:linear-gradient(145deg,rgba(255,255,255,.24),rgba(255,255,255,.07));border:1px solid rgba(255,255,255,.36);box-shadow:8px 9px 20px rgba(3,12,29,.24),-4px -4px 15px rgba(255,255,255,.12),inset 1px 1px 0 rgba(255,255,255,.35);backdrop-filter:blur(13px) saturate(1.15);-webkit-backdrop-filter:blur(13px) saturate(1.15)}
+    .hero-headline{font-family:'Playfair Display',serif;font-size:clamp(36px,9vw,64px);font-weight:900;line-height:1.08;color:#fff;margin-bottom:18px;letter-spacing:-.02em}
+    .hero-headline em{font-style:italic;color:var(--orange-lt)}
+    .hero-sub{font-size:clamp(15px,3.5vw,18px);color:rgba(255,255,255,.82);font-weight:300;max-width:480px;margin-bottom:28px;line-height:1.7}
+    .hero-trust{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
+    .hero-trust-badge{display:flex;align-items:center;gap:6px;border-radius:14px;padding:11px 14px;font-size:12px;font-weight:500;color:rgba(255,255,255,.9);background:linear-gradient(145deg,rgba(255,255,255,.24),rgba(255,255,255,.07));border:1px solid rgba(255,255,255,.36);box-shadow:8px 9px 20px rgba(3,12,29,.24),-4px -4px 15px rgba(255,255,255,.12),inset 1px 1px 0 rgba(255,255,255,.35);backdrop-filter:blur(13px) saturate(1.15)}
+    .hero-trust-badge svg{width:13px;height:13px;flex-shrink:0}
+    .hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;padding:15px 28px;border-radius:10px;font-size:15px;font-weight:600;transition:background var(--transition),transform var(--transition),box-shadow var(--transition);box-shadow:0 4px 20px rgba(232,97,26,.4)}
+    .btn-primary:hover{background:var(--orange-lt);box-shadow:0 6px 28px rgba(232,97,26,.5)}
+    .btn-primary:active{transform:scale(.97)}
+    .btn-secondary{display:inline-flex;align-items:center;gap:8px;color:#fff;padding:15px 24px;border-radius:14px;font-size:15px;font-weight:500;background:linear-gradient(145deg,rgba(255,255,255,.24),rgba(255,255,255,.07));border:1px solid rgba(255,255,255,.36);box-shadow:8px 9px 20px rgba(3,12,29,.24),-4px -4px 15px rgba(255,255,255,.12),inset 1px 1px 0 rgba(255,255,255,.35);backdrop-filter:blur(13px) saturate(1.15)}
+    .btn-secondary:hover{background:linear-gradient(145deg,rgba(255,255,255,.34),rgba(255,255,255,.12))}
+
+    /* TRUST STRIP */
+    .trust-strip{background:var(--navy);padding:32px 0;overflow:hidden}
+    .trust-strip-inner{display:flex;gap:0;overflow-x:auto;scrollbar-width:none;padding:0 24px}
+    .trust-strip-inner::-webkit-scrollbar{display:none}
+    .trust-metric{flex:0 0 auto;min-width:140px;padding:0 32px;border-right:1px solid rgba(255,255,255,.08);text-align:center}
+    .trust-metric:first-child{padding-left:0}
+    .trust-metric:last-child{border-right:none}
+    .trust-metric-num{font-family:'Playfair Display',serif;font-size:32px;font-weight:900;color:#fff;line-height:1;margin-bottom:4px}
+    .trust-metric-num span{color:var(--orange-lt)}
+    .trust-metric-label{font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+
+    /* SECTION */
+    .section{padding:72px 24px}
+    .section-label{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:12px}
+    .section-title{font-family:'Playfair Display',serif;font-size:clamp(28px,6vw,44px);font-weight:900;line-height:1.12;color:var(--navy);letter-spacing:-.02em}
+    .section-title em{font-style:italic;color:var(--orange)}
+    .section-body{font-size:15px;color:var(--text-body);line-height:1.75;max-width:540px}
+    .max-w{max-width:960px;margin-left:auto;margin-right:auto}
+
+    /* FUNDRAISER */
+    .fundraiser{background:var(--cream)}
+    .fundraiser-card{background:#fff;border-radius:var(--radius-lg);padding:32px 28px;box-shadow:var(--shadow-md);border:1px solid var(--border)}
+    .fundraiser-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:24px}
+    .fundraiser-month{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px}
+    .fundraiser-goal{font-family:'Playfair Display',serif;font-size:24px;font-weight:900;color:var(--navy);line-height:1.1}
+    .fundraiser-badge{background:rgba(232,97,26,.1);color:var(--orange);border-radius:8px;padding:8px 14px;font-size:12px;font-weight:600;text-align:center;flex-shrink:0}
+    .fundraiser-badge b{display:block;font-size:20px;font-family:'Playfair Display',serif}
+    .progress-wrap{background:#f0ebe4;border-radius:99px;height:10px;margin-bottom:10px;overflow:hidden}
+    .progress-bar{height:100%;background:linear-gradient(90deg,var(--orange),var(--orange-lt));border-radius:99px;width:0;transition:width 1.6s cubic-bezier(.4,0,.2,1)}
+    .progress-labels{display:flex;justify-content:space-between;font-size:12px;color:var(--text-muted);margin-bottom:24px}
+    .progress-labels strong{color:var(--navy)}
+    .fundraiser-note{font-size:13px;color:var(--text-muted);margin-bottom:24px;line-height:1.6}
+    .free-amount-callout{display:flex;align-items:flex-start;gap:12px;background:linear-gradient(135deg,rgba(232,97,26,.08),rgba(240,122,58,.04));border:1px solid rgba(232,97,26,.22);border-radius:12px;padding:14px 16px;margin-bottom:20px}
+    .free-amount-callout svg{width:22px;height:22px;flex-shrink:0;color:var(--orange);margin-top:2px}
+    .free-amount-callout strong{display:block;color:var(--navy);font-size:14px;font-weight:700;line-height:1.4;margin-bottom:2px}
+    .free-amount-callout span{display:block;color:var(--text-muted);font-size:12.5px;line-height:1.55}
+    .fundraiser-cta{width:100%;padding:16px;font-size:15px;border-radius:10px;justify-content:center}
+    .fundraiser-trust{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:14px;font-size:12px;color:var(--text-muted)}
+    .fundraiser-trust svg{width:14px;height:14px;color:#22c55e}
+
+    /* PROGRAMS */
+    .programs{background:var(--warm-white)}
+    .programs-header{margin-bottom:32px}
+    .programs-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:8px;margin:0 -24px;padding-left:24px;padding-right:24px}
+    .programs-track::-webkit-scrollbar{display:none}
+    .program-card{flex:0 0 280px;scroll-snap-align:start;background:#fff;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 12px 28px rgba(13,31,60,.08);border:1px solid var(--border);transition:transform var(--transition),box-shadow var(--transition)}
+    .program-card:hover{transform:translateY(-7px);box-shadow:0 22px 48px rgba(13,31,60,.16)}
+    .program-img{height:180px;overflow:hidden;position:relative}
+    .program-img-inner{width:100%;height:100%;background-size:cover;background-position:center;transition:transform .6s ease}
+    .program-card:hover .program-img-inner{transform:scale(1.05)}
+    .program-icon-wrap{position:absolute;bottom:14px;left:14px;background:var(--orange);width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center}
+    .program-icon-wrap svg{width:20px;height:20px;color:#fff}
+    .program-body{padding:20px}
+    .program-title{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:8px}
+    .program-text{font-size:13px;color:var(--text-body);line-height:1.65}
+    .program-stat{margin-top:14px;padding-top:14px;border-top:1px solid var(--border);font-size:12px;color:var(--text-muted)}
+    .program-stat strong{color:var(--orange);font-size:15px;font-weight:700}
+
+    /* TRANSPARENCY */
+    .transparency{background:var(--navy);padding:72px 24px}
+    .transparency .section-title{color:#fff}
+    .transparency .section-label{color:rgba(255,255,255,.5)}
+    .transparency .section-body{color:rgba(255,255,255,.6)}
+    .trans-bars{margin-top:36px;display:flex;flex-direction:column;gap:20px}
+    .trans-header{display:flex;justify-content:space-between;margin-bottom:8px}
+    .trans-name{font-size:13px;font-weight:500;color:rgba(255,255,255,.85)}
+    .trans-pct{font-size:13px;font-weight:700;color:var(--orange-lt)}
+    .trans-track{background:rgba(255,255,255,.08);border-radius:99px;height:8px;overflow:hidden}
+    .trans-bar{height:100%;border-radius:99px;width:0;transition:width 1.4s cubic-bezier(.4,0,.2,1)}
+    .trans-bar-blue{background:linear-gradient(90deg,#3b82f6,#60a5fa)}
+    .trans-bar-green{background:linear-gradient(90deg,#22c55e,#4ade80)}
+    .trans-bar-orange{background:linear-gradient(90deg,var(--orange),var(--orange-lt))}
+    .trans-bar-gray{background:rgba(255,255,255,.25)}
+    .trans-note{margin-top:28px;font-size:12px;color:rgba(255,255,255,.35);display:flex;align-items:center;gap:8px}
+    .trans-note svg{width:14px;height:14px;flex-shrink:0}
+
+    /* IMPACT */
+    .impact{background:var(--cream)}
+    .impact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:40px}
+    @media(min-width:600px){.impact-grid{grid-template-columns:repeat(4,1fr)}}
+    .impact-card{background:#fff;border-radius:var(--radius);padding:24px 20px;border:1px solid var(--border);box-shadow:var(--shadow-sm);text-align:center}
+    .impact-num{font-family:'Playfair Display',serif;font-size:36px;font-weight:900;color:var(--navy);line-height:1;margin-bottom:6px}
+    .impact-num .suffix{color:var(--orange)}
+    .impact-label{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted);line-height:1.4}
+
+    /* STORIES */
+    .stories{background:var(--warm-white)}
+    .stories-grid{display:grid;gap:20px;margin-top:36px}
+    @media(min-width:640px){.stories-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:900px){.stories-grid{grid-template-columns:repeat(3,1fr)}}
+    .story-card{background:#fff;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:transform var(--transition),box-shadow var(--transition)}
+    .story-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+    .story-card:hover .story-img-inner{transform:scale(1.06)}
+    .story-img{height:220px;overflow:hidden}
+    .story-img-inner{width:100%;height:100%;background-size:cover;background-position:center top;transition:transform .6s ease}
+    .story-body{padding:22px 22px 24px}
+    .story-name{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--navy);margin-bottom:3px}
+    .story-age{font-size:11px;color:var(--orange);font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+    .story-text{font-size:13px;color:var(--text-body);line-height:1.7}
+    .story-quote-mark{font-family:'Playfair Display',serif;font-size:48px;color:var(--orange);line-height:.6;margin-bottom:12px;opacity:.6}
+
+    /* GALLERY */
+    .gallery{background:var(--navy-dark);padding:64px 0 56px;overflow:hidden}
+    .gallery-header{padding:0 24px;margin-bottom:40px}
+    .gallery-header .section-title{color:#fff}
+    .gallery-header .section-label{color:rgba(255,255,255,.4)}
+    .gallery-stage{position:relative;height:500px;display:flex;align-items:center;justify-content:center;perspective:1200px;cursor:grab}
+    .gallery-stage:active{cursor:grabbing}
+    .gal-card{position:absolute;border-radius:16px;overflow:hidden;background:var(--navy-mid);transition:all .52s cubic-bezier(.4,0,.2,1);cursor:pointer;will-change:transform,opacity,width,height;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+    .gal-card[data-pos="0"]{width:460px;height:470px;transform:translateX(0) translateZ(0) rotateY(0deg);opacity:1;z-index:10;cursor:default;box-shadow:0 32px 80px rgba(0,0,0,.7)}
+    .gal-card[data-pos="1"]{width:270px;height:340px;transform:translateX(345px) translateZ(-120px) rotateY(-12deg);opacity:.85;z-index:8}
+    .gal-card[data-pos="-1"]{width:270px;height:340px;transform:translateX(-345px) translateZ(-120px) rotateY(12deg);opacity:.85;z-index:8}
+    .gal-card[data-pos="2"]{width:170px;height:240px;transform:translateX(500px) translateZ(-220px) rotateY(-20deg);opacity:.55;z-index:6}
+    .gal-card[data-pos="-2"]{width:170px;height:240px;transform:translateX(-500px) translateZ(-220px) rotateY(20deg);opacity:.55;z-index:6}
+    .gal-card[data-pos="3"]{width:90px;height:150px;transform:translateX(460px) translateZ(-300px) rotateY(-28deg);opacity:.28;z-index:4}
+    .gal-card[data-pos="-3"]{width:90px;height:150px;transform:translateX(-460px) translateZ(-300px) rotateY(28deg);opacity:.28;z-index:4}
+    .gal-card[data-pos="far"]{width:60px;height:100px;transform:translateX(550px) translateZ(-360px);opacity:0;z-index:1;pointer-events:none}
+    .gal-card[data-pos="-far"]{width:60px;height:100px;transform:translateX(-550px) translateZ(-360px);opacity:0;z-index:1;pointer-events:none}
+    .gal-card-img{width:100%;height:100%;background-size:cover;background-position:center;transition:transform .6s ease}
+    .gal-card[data-pos="0"]:hover .gal-card-img{transform:scale(1.04)}
+    .gal-card:not([data-pos="0"]):hover{filter:brightness(1.1)}
+    .gal-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(8,22,41,.92) 0%,rgba(8,22,41,.4) 70%,transparent 100%);padding:48px 20px 20px;pointer-events:none}
+    .gal-caption-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:#fff;margin-bottom:4px}
+    .gal-caption-detail{font-size:12px;color:rgba(255,255,255,.65)}
+    .gallery-dots{display:flex;justify-content:center;gap:8px;margin-top:28px}
+    .gallery-dot{width:6px;height:6px;border-radius:99px;background:rgba(255,255,255,.25);transition:all .3s ease;cursor:pointer;border:none;padding:0}
+    .gallery-dot.active{width:24px;background:var(--orange)}
+    .gallery-nav{display:flex;justify-content:center;gap:12px;margin-top:20px}
+    .gallery-arrow{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center;transition:background var(--transition),transform var(--transition)}
+    .gallery-arrow:hover{background:rgba(255,255,255,.16)}
+    .gallery-arrow:active{transform:scale(.92)}
+    .gallery-arrow svg{width:18px;height:18px}
+    .gallery-footer{display:flex;justify-content:center;margin-top:32px;padding:0 24px}
+    .btn-gallery{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1.5px solid rgba(255,255,255,.2);color:rgba(255,255,255,.85);padding:13px 28px;border-radius:10px;font-size:14px;font-weight:600;transition:border-color var(--transition),background var(--transition)}
+    .btn-gallery:hover{border-color:var(--orange);background:rgba(232,97,26,.1);color:#fff}
+    .btn-gallery svg{width:16px;height:16px}
+    @media(max-width:480px){
+      .gal-card[data-pos="0"]{width:230px;height:275px}
+      .gal-card[data-pos="1"],.gal-card[data-pos="-1"]{width:160px;height:220px;transform:translateX(200px) translateZ(-100px) rotateY(-12deg);opacity:.8}
+      .gal-card[data-pos="-1"]{transform:translateX(-200px) translateZ(-100px) rotateY(12deg)}
+      .gal-card[data-pos="2"],.gal-card[data-pos="-2"]{width:100px;height:160px;transform:translateX(300px) translateZ(-180px) rotateY(-20deg);opacity:.4}
+      .gal-card[data-pos="-2"]{transform:translateX(-300px) translateZ(-180px) rotateY(20deg)}
+      .gal-card[data-pos="3"],.gal-card[data-pos="-3"],.gal-card[data-pos="far"],.gal-card[data-pos="-far"]{opacity:0;pointer-events:none}
+      .gallery-stage{height:295px}
+    }
+
+    /* FINAL CTA */
+    .final-cta{background:var(--cream);padding:80px 24px;text-align:center}
+    .final-cta-inner{max-width:560px;margin:0 auto}
+    .final-cta-icon{width:60px;height:60px;background:rgba(232,97,26,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px}
+    .final-cta-icon svg{width:28px;height:28px;color:var(--orange)}
+    .final-cta .section-title{margin-bottom:16px}
+    .final-cta .section-body{margin:0 auto 32px}
+    .final-cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-navy{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;padding:15px 28px;border-radius:10px;font-size:15px;font-weight:600;transition:background var(--transition)}
+    .btn-navy:hover{background:var(--navy-mid)}
+
+    /* FOOTER */
+    .footer{background:var(--navy-dark);padding:48px 24px 80px;color:rgba(255,255,255,.5)}
+    .footer-top{display:flex;flex-direction:column;gap:32px;margin-bottom:40px}
+    @media(min-width:640px){.footer-top{flex-direction:row;justify-content:space-between}}
+    .footer-brand{max-width:260px}
+    .footer-brand p{font-size:13px;line-height:1.7;margin-top:12px}
+    .footer-links h4{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:14px}
+    .footer-links ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+    .footer-links li{font-size:13px}
+    .footer-links a{color:rgba(255,255,255,.4);transition:color var(--transition)}
+    .footer-links a:hover{color:rgba(255,255,255,.8)}
+    .footer-reg{padding-top:24px;border-top:1px solid rgba(255,255,255,.07);font-size:11px;display:flex;flex-direction:column;gap:6px}
+    @media(min-width:640px){.footer-reg{flex-direction:row;justify-content:space-between;align-items:center}}
+
+    /* FLOATING */
+    .float-donate{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:800;background:var(--orange);color:#fff;padding:14px 32px;border-radius:99px;font-size:14px;font-weight:600;box-shadow:0 6px 28px rgba(232,97,26,.5);display:flex;align-items:center;gap:8px;transition:opacity .4s ease,transform .4s ease,background var(--transition);white-space:nowrap}
+    .float-donate.hidden{opacity:0;pointer-events:none;transform:translateX(-50%) translateY(12px)}
+    .float-donate:hover{background:var(--orange-lt)}
+    .float-donate svg{width:16px;height:16px}
+
+    .float-wa{position:fixed;bottom:80px;right:20px;z-index:800;background:#25d366;color:#fff;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,.4);transition:transform var(--transition),opacity .4s ease}
+    .float-wa.hidden{opacity:0;pointer-events:none}
+    .float-wa:hover{transform:scale(1.1)}
+    .float-wa svg{width:24px;height:24px}
+    .float-wa-pulse::before{content:'';position:absolute;inset:-4px;border-radius:50%;border:2px solid #25d366;animation:waPulse 2.5s ease infinite;opacity:0}
+    @keyframes waPulse{0%{transform:scale(.9);opacity:.6}100%{transform:scale(1.5);opacity:0}}
+
+    /* NEW: Back-to-top button */
+    .float-top{position:fixed;bottom:20px;right:20px;z-index:800;background:var(--navy);color:#fff;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(13,31,60,.35);transition:transform var(--transition),opacity .4s ease,background var(--transition);opacity:0;pointer-events:none}
+    .float-top.show{opacity:1;pointer-events:auto}
+    .float-top:hover{background:var(--navy-mid);transform:translateY(-3px)}
+    .float-top svg{width:20px;height:20px}
+    @media(min-width:768px){.float-top{bottom:24px;right:84px}}
+
+    /* PAY MODAL */
+    .pay-overlay{position:fixed;inset:0;background:rgba(8,22,41,.62);backdrop-filter:blur(3px);display:flex;align-items:flex-end;justify-content:center;z-index:1000;opacity:0;pointer-events:none;transition:opacity .25s ease}
+    .pay-overlay.open{opacity:1;pointer-events:auto}
+    @media(min-width:640px){.pay-overlay{align-items:center}}
+    .pay-sheet{background:#fff;width:100%;max-width:460px;max-height:92vh;overflow-y:auto;border-radius:22px 22px 0 0;padding:22px 20px 28px;transform:translateY(24px);transition:transform .25s ease;box-shadow:0 -10px 40px rgba(0,0,0,.2)}
+    @media(min-width:640px){.pay-sheet{border-radius:20px}}
+    .pay-overlay.open .pay-sheet{transform:translateY(0)}
+    .pay-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
+    .pay-head h3{font:800 19px 'Playfair Display',serif;color:var(--navy);margin:0}
+    .pay-close{border:none;background:var(--cream);width:32px;height:32px;border-radius:50%;color:var(--navy);font-size:18px;line-height:1;cursor:pointer;transition:background var(--transition)}
+    .pay-close:hover{background:#eee7dd}
+    .pay-amount-pill{display:inline-flex;align-items:center;gap:6px;margin:8px 0 16px;background:linear-gradient(90deg,rgba(232,97,26,.12),rgba(240,122,58,.08));color:var(--orange);font-weight:700;font-size:12.5px;padding:7px 13px;border-radius:999px}
+    .pay-amount-pill svg{width:14px;height:14px;flex-shrink:0}
+    .pay-tabs{display:grid;grid-template-columns:repeat(auto-fit,minmax(80px,1fr));gap:6px;margin-bottom:18px}
+    .pay-tab{border:1.5px solid var(--border);background:#fff;border-radius:10px;padding:9px 4px;font-size:11px;font-weight:700;color:var(--navy);cursor:pointer;text-align:center;line-height:1.3;transition:border-color var(--transition),background var(--transition),color var(--transition)}
+    .pay-tab .dot{display:block;width:8px;height:8px;border-radius:50%;margin:0 auto 4px}
+    .pay-tab.active{border-color:var(--orange);background:rgba(232,97,26,.06);color:var(--orange)}
+    .pay-panel{display:none}
+    .pay-panel.active{display:block;animation:payFade .25s ease}
+    @keyframes payFade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+    .pay-section-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text-muted);margin:0 0 8px}
+    .network-hero{position:relative;width:100%;aspect-ratio:2/1;border-radius:14px;overflow:hidden;background:var(--navy-dark);background-size:cover;background-position:center;margin-bottom:16px;box-shadow:0 8px 24px rgba(13,31,60,.15)}
+    .network-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,22,41,.05) 0%,rgba(8,22,41,.82) 100%);pointer-events:none}
+    .network-hero-content{position:absolute;bottom:16px;left:18px;right:18px;z-index:2;color:#fff}
+    .network-hero-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;line-height:1.1;letter-spacing:-.01em;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+    .network-hero-tag{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;opacity:.9;margin-top:4px;text-shadow:0 1px 10px rgba(0,0,0,.6)}
+    .lipa-box{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--cream);border:1.5px dashed var(--orange);border-radius:12px;padding:14px 16px;margin-bottom:14px}
+    .lipa-box .grow{min-width:0}
+    .lipa-box .grow small{display:block;color:var(--text-muted);font-size:11px;margin-bottom:2px}
+    .lipa-box .grow strong{display:block;font:800 22px 'Playfair Display',serif;color:var(--navy);letter-spacing:.02em}
+    .lipa-box .grow span.acct-name{display:block;font-size:12px;color:var(--text-muted);margin-top:2px}
+    .lipa-copy-btn{flex-shrink:0;border:none;background:var(--navy);color:#fff;font-weight:700;font-size:12px;padding:10px 14px;border-radius:9px;cursor:pointer;transition:background .2s}
+    .lipa-copy-btn:hover{background:var(--navy-mid)}
+    .lipa-copy-btn.copied{background:#22c55e}
+    .pay-steps{list-style:none;margin:0 0 18px;padding:0;counter-reset:step}
+    .pay-steps li{position:relative;padding:3px 0 3px 30px;font-size:13px;color:var(--navy);line-height:1.5}
+    .pay-steps li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:2px;width:20px;height:20px;border-radius:50%;background:var(--orange);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
+    .pay-divider{display:flex;align-items:center;gap:10px;margin:18px 0;color:var(--text-muted);font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+    .pay-divider::before,.pay-divider::after{content:'';flex:1;height:1px;background:var(--border)}
+    .pay-auto-note{font-size:11.5px;color:var(--text-muted);margin-top:12px;line-height:1.55;text-align:center}
+    .wa-pay-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:#25d366;color:#fff;padding:14px 20px;border-radius:10px;font-size:14.5px;font-weight:700;transition:background var(--transition),transform var(--transition),box-shadow var(--transition);box-shadow:0 4px 20px rgba(37,211,102,.35)}
+    .wa-pay-btn:hover{background:#1fbb5a;box-shadow:0 6px 28px rgba(37,211,102,.5)}
+    .wa-pay-btn:active{transform:scale(.97)}
+    .wa-pay-btn svg{width:18px;height:18px;flex-shrink:0}
+    .pay-empty{padding:26px 14px;text-align:center}
+    .pay-empty p{font-size:14px;color:var(--text-muted);line-height:1.7;margin:0 0 18px}
+    .pay-status{margin-top:12px;font-size:13px;text-align:center;border-radius:10px;padding:10px;display:none}
+    .pay-status.show{display:block}
+
+    /* WA CONTACT MODAL */
+    .wa-contact-modal{position:fixed;inset:0;z-index:1000;display:none;place-items:center;padding:20px;background:linear-gradient(135deg,rgba(5,15,32,.68),rgba(13,31,60,.48));backdrop-filter:blur(12px) saturate(1.15)}
+    .wa-contact-modal.open{display:grid}
+    .wa-contact-box{width:min(380px,100%);padding:30px;position:relative;overflow:hidden;border-radius:28px;background:linear-gradient(145deg,#fffdf9 0%,#f5eee5 100%);border:1px solid rgba(255,255,255,.88);box-shadow:18px 20px 38px rgba(7,21,42,.32);animation:waClayIn .38s cubic-bezier(.2,.8,.2,1) both}
+    .wa-contact-box::before{content:'';position:absolute;width:160px;height:160px;right:-70px;top:-70px;border-radius:50%;background:radial-gradient(circle,rgba(240,122,58,.22),transparent 68%);pointer-events:none}
+    @keyframes waClayIn{from{opacity:0;transform:translateY(18px) scale(.94)}to{opacity:1;transform:none}}
+    .wa-contact-box h2{position:relative;color:var(--navy);font-family:'Playfair Display',serif;font-size:25px;letter-spacing:-.02em;margin:0 34px 6px 0}
+    .wa-contact-box p{position:relative;color:var(--text-body);font-size:14px;margin:0 0 20px}
+    .wa-contact-option{width:100%;display:flex;align-items:center;gap:13px;text-align:left;padding:15px;margin-top:11px;border:0;border-radius:16px;background:#f4ede4;color:var(--navy);font-weight:700;font-size:14px;box-shadow:7px 7px 13px rgba(157,126,91,.2),-6px -6px 12px rgba(255,255,255,.85);transition:transform .22s ease,box-shadow .22s ease,color .22s ease,background .22s ease}
+    .wa-contact-option:hover{background:#f8f4ed;color:#16833d;transform:translateY(-2px)}
+    .wa-contact-option:active{transform:translateY(1px)}
+    .wa-contact-number{display:grid;place-items:center;flex:0 0 auto;width:30px;height:30px;border-radius:11px;background:linear-gradient(145deg,#30e677,#1db75b);color:#fff;font-size:13px;box-shadow:3px 4px 7px rgba(22,131,61,.3)}
+    .wa-contact-close{position:absolute;z-index:1;top:13px;right:15px;width:32px;height:32px;display:grid;place-items:center;border-radius:12px;color:var(--text-muted);font-size:23px;line-height:1;background:#f4ede4;box-shadow:3px 4px 8px rgba(157,126,91,.17)}
+    .wa-contact-close:hover{color:var(--navy)}
+
+    /* RESPONSIVE */
+    @media(min-width:768px){
+      .section{padding:96px 48px}
+      .trust-strip{padding:40px 0}
+      .trust-metric{min-width:180px}
+      .trust-metric-num{font-size:40px}
+      .fundraiser-card{padding:40px 36px}
+      .program-card{flex:0 0 320px}
+      .footer{padding-bottom:48px}
+      .float-donate{display:none}
+    }
+    @media(min-width:1024px){
+      .section{padding:112px 64px}
+      .programs-track{margin:0;padding-left:0;padding-right:0;overflow:visible;flex-wrap:wrap}
+      .program-card{flex:1 1 0}
+    }
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link" data-en="Skip to main content" data-sw="Ruka hadi maudhui makuu">Skip to main content</a>
+
+  <div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()" aria-hidden="true"></div>
+
+  <aside class="drawer" id="drawer" role="navigation" aria-label="Site navigation">
+    <div class="drawer-head">
+      <img src="logo.png" alt="Agape Family Foundation logo" class="drawer-logo-img" />
+      <div class="drawer-logo-text">
+        <strong>Agape Family<br>Foundation</strong>
+        <small>Est. 2022 · Tanzania</small>
+      </div>
+    </div>
+    <nav class="drawer-nav" aria-label="Main pages">
+      <a href="index.html" class="drawer-nav-item active" onclick="closeDrawer()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span data-en="Home" data-sw="Nyumbani">Home</span>
+      </a>
+      <a href="pages/about.html" class="drawer-nav-item" onclick="closeDrawer()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/></svg>
+        <span data-en="About Us" data-sw="Kuhusu Sisi">About Us</span>
+      </a>
+      <a href="pages/leadership.html" class="drawer-nav-item" onclick="closeDrawer()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"/></svg>
+        <span data-en="Leadership" data-sw="Uongozi">Leadership</span>
+      </a>
+      <a href="pages/gallery.html" class="drawer-nav-item" onclick="closeDrawer()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span data-en="Gallery" data-sw="Picha">Gallery</span>
+      </a>
+      <a href="pages/blog.html" class="drawer-nav-item" onclick="closeDrawer()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        <span data-en="Blog" data-sw="Blogu">Blog</span>
+      </a>
+      <a href="pages/updates.html" class="drawer-nav-item" onclick="closeDrawer()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18.36 6.64a9 9 0 11-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg>
+        <span data-en="Updates" data-sw="Matangazo">Updates</span>
+      </a>
+      <a href="pages/volunteer.html" class="drawer-nav-item" onclick="closeDrawer()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        <span data-en="Volunteer" data-sw="Jitolee">Volunteer</span>
+      </a>
+      <a href="pages/contact.html" class="drawer-nav-item" onclick="closeDrawer()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span data-en="Contact" data-sw="Wasiliana">Contact</span>
+      </a>
+    </nav>
+    <div class="drawer-cta">
+      <a href="index.html#donate" class="drawer-cta-btn" onclick="closeDrawer()">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        <span data-en="Donate Now" data-sw="Changia Sasa">Donate Now</span>
+      </a>
+      <div class="drawer-lang" role="group" aria-label="Language">
+        <button type="button" class="lang-btn-drawer active" data-lang="en" onclick="setLang('en')">EN</button>
+        <button type="button" class="lang-btn-drawer" data-lang="sw" onclick="setLang('sw')">SW</button>
+      </div>
+      <p class="drawer-verse">"He who helps the poor will lack nothing at all."</p>
+    </div>
+  </aside>
+
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <button class="nav-hamburger" id="navHamburger" onclick="toggleDrawer()" aria-label="Open navigation menu" aria-expanded="false" aria-controls="drawer">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="index.html" class="nav-logo" style="text-decoration:none;cursor:pointer;">
+      <img src="logo.png" alt="AFF logo" class="nav-logo-img" />
+      <div class="nav-logo-text">Agape Family Foundation<span>Est. 2022 · Tanzania</span></div>
+    </a>
+    <div class="nav-right">
+      <div class="lang-switcher" role="group" aria-label="Switch language">
+        <button type="button" class="lang-btn active" id="langEN" onclick="setLang('en')" aria-pressed="true">EN</button>
+        <button type="button" class="lang-btn" id="langSW" onclick="setLang('sw')" aria-pressed="false">SW</button>
+      </div>
+      <a href="index.html#donate" class="nav-donate" data-en="Donate Now" data-sw="Changia Sasa">Donate Now</a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg" id="heroBg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-eyebrow reveal" data-en="Tanzania · Since 2022" data-sw="Tanzania · Tangu 2022">Tanzania · Since 2022</div>
+        <h1 class="hero-headline reveal reveal-delay-1"><em id="heroChildrenCount">520+</em> <span id="heroChildrenHeadline">Children Given a Second Chance</span></h1>
+        <p class="hero-sub reveal reveal-delay-2" id="heroChildrenDescription" data-en="Providing education, healthcare, and daily support to orphaned children across Tanzania." data-sw="Kutoa elimu, huduma za afya, na msaada wa kila siku kwa watoto yatima kote Tanzania.">Providing education, healthcare, and daily support to orphaned children across Tanzania.</p>
+        <div class="hero-trust reveal reveal-delay-3" role="list">
+          <div class="hero-trust-badge" role="listitem">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7.5" stroke="currentColor" stroke-opacity=".4"/><path d="M5 8.5l2 2 4-4" stroke="#4ade80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-en="Registered NGO" data-sw="NGO Iliyosajiliwa">Registered NGO</span>
+          </div>
+          <div class="hero-trust-badge" role="listitem">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7.5" stroke="currentColor" stroke-opacity=".4"/><path d="M5 8.5l2 2 4-4" stroke="#4ade80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-en="1,500+ Donations" data-sw="Michango 1,500+">1,500+ Donations</span>
+          </div>
+          <div class="hero-trust-badge" role="listitem">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7.5" stroke="currentColor" stroke-opacity=".4"/><path d="M5 8.5l2 2 4-4" stroke="#4ade80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-en="Transparent Fund Use" data-sw="Matumizi ya Fedha Wazi">Transparent Fund Use</span>
+          </div>
+        </div>
+        <div class="hero-ctas reveal reveal-delay-4">
+          <a href="#donate" class="btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <span data-en="Donate Now" data-sw="Changia Sasa">Donate Now</span>
+          </a>
+          <a href="#impact" class="btn-secondary">
+            <span data-en="See Our Impact" data-sw="Ona Matokeo Yetu">See Our Impact</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17l10-10M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip" role="region" aria-label="Key metrics">
+      <div class="trust-strip-inner">
+        <div class="trust-metric"><div class="trust-metric-num">520<span>+</span></div><div class="trust-metric-label" data-en="Children Supported" data-sw="Watoto Wanaosaidiwa">Children Supported</div></div>
+        <div class="trust-metric"><div class="trust-metric-num">13<span>yrs</span></div><div class="trust-metric-label" data-en="Years of Service" data-sw="Miaka ya Huduma">Years of Service</div></div>
+        <div class="trust-metric"><div class="trust-metric-num">8<span></span></div><div class="trust-metric-label" data-en="Regions Reached" data-sw="Mikoa Iliyofikiwa">Regions Reached</div></div>
+        <div class="trust-metric"><div class="trust-metric-num">92<span>%</span></div><div class="trust-metric-label" data-en="Funds to Programs" data-sw="Fedha za Programu">Funds to Programs</div></div>
+        <div class="trust-metric"><div class="trust-metric-num">340<span>+</span></div><div class="trust-metric-label" data-en="School Enrollments" data-sw="Usajili wa Shule">School Enrollments</div></div>
+      </div>
+    </div>
+
+    <section class="section fundraiser" id="donate" aria-labelledby="fundraiser-title">
+      <div class="max-w">
+        <div class="fundraiser-card reveal">
+          <div class="fundraiser-header">
+            <div>
+              <div class="fundraiser-month" data-en="Monthly Campaign · 2025" data-sw="Kampeni ya Mwezi · 2025">Monthly Campaign · 2025</div>
+              <h2 class="fundraiser-goal" id="fundraiser-title">
+                <span data-en="Help" data-sw="Saidia">Help</span>
+                <em style="color:var(--orange);font-style:normal;">50 <span data-en="Children" data-sw="Watoto">Children</span></em><br>
+                <span data-en="This Month" data-sw="Mwezi Huu">This Month</span>
+              </h2>
+            </div>
+            <div class="fundraiser-badge">
+              <b>68%</b><span data-en="of goal" data-sw="ya lengo">of goal</span>
+            </div>
+          </div>
+          <div class="progress-wrap" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" id="mainProgressBar" data-target="68"></div>
+          </div>
+          <div class="progress-labels">
+            <span><strong>TSh 17,100,000</strong> <span data-en="raised" data-sw="zilizopatikana">raised</span></span>
+            <span><span data-en="Goal:" data-sw="Lengo:">Goal:</span> <strong>TSh 25,000,000</strong></span>
+          </div>
+          <p class="fundraiser-note" data-en-html="true" data-en="Every dollar you give goes directly to feeding, schooling, and providing healthcare to orphaned children in Dar es Salaam and Mwanza. <strong style='color:var(--navy);'>TSh 50,000 feeds a child for a full week.</strong>" data-sw-html="true" data-sw="Kila shilingi unayotoa inakwenda moja kwa moja kwa kulisha, kulipia shule, na kutoa huduma za afya kwa watoto yatima huko Dar es Salaam na Mwanza. <strong style='color:var(--navy);'>TSh 50,000 inalisha mtoto kwa wiki nzima.</strong>">
+            Every dollar you give goes directly to feeding, schooling, and providing healthcare to orphaned children in Dar es Salaam and Mwanza. <strong style="color:var(--navy);">TSh 50,000 feeds a child for a full week.</strong>
+          </p>
+
+          <div class="free-amount-callout">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            <div>
+              <strong data-en="Give any amount — every shilling counts." data-sw="Toa kiasi chochote — kila shilingi inahesabika.">Give any amount — every shilling counts.</strong>
+              <span data-en="No fixed price. Choose what's on your heart, then pay directly from your phone." data-sw="Hakuna kiasi maalum. Chagua kile kilicho moyoni mwako, kisha lipa moja kwa moja kutoka simu yako.">No fixed price. Choose what's on your heart, then pay directly from your phone.</span>
+            </div>
+          </div>
+
+          <button class="btn-primary fundraiser-cta" onclick="handleDonate()" aria-label="Donate now">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <span data-en="Donate Now" data-sw="Changia Sasa">Donate Now</span>
+          </button>
+
+          <div class="fundraiser-trust">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span data-en="SSL secured · No hidden fees · 100% goes to children" data-sw="Inalindwa na SSL · Hakuna ada zilizofichwa · 100% inakwenda kwa watoto">SSL secured · No hidden fees · 100% goes to children</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section programs" aria-labelledby="programs-title">
+      <div class="max-w">
+        <div class="programs-header">
+          <p class="section-label reveal" data-en="Our Programs" data-sw="Programu Zetu">Our Programs</p>
+          <h2 class="section-title reveal reveal-delay-1" id="programs-title">
+            <span data-en="What We Do" data-sw="Tunachofanya">What We Do</span><br>
+            <span data-en="Every Single Day" data-sw="Kila Siku">Every Single Day</span>
+          </h2>
+        </div>
+        <div class="programs-track" id="programsTrack" role="list">
+          <article class="program-card reveal reveal-delay-1" role="listitem">
+            <div class="program-img">
+              <div class="program-img-inner" style="background-image:url('assets/uploads/WhatsApp Image 2026-08-15 at 03.18.26.jpeg');" role="img" aria-label="Children in a classroom"></div>
+              <div class="program-icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></div>
+            </div>
+            <div class="program-body">
+              <h3 class="program-title" data-en="Education" data-sw="Elimu">Education</h3>
+              <p class="program-text" data-en="We enroll children in accredited schools, provide uniforms, books, and after-school tutoring — ensuring no child falls behind due to poverty." data-sw="Tunaandikisha watoto katika shule zilizoidhinishwa, kutoa sare, vitabu, na masomo ya ziada — kuhakikisha hakuna mtoto anayebaki nyuma kwa sababu ya umaskini.">We enroll children in accredited schools, provide uniforms, books, and after-school tutoring — ensuring no child falls behind due to poverty.</p>
+              <div class="program-stat"><strong>340+</strong> <span data-en="children currently enrolled in school" data-sw="watoto wameandikishwa shuleni sasa hivi">children currently enrolled in school</span></div>
+            </div>
+          </article>
+          <article class="program-card reveal reveal-delay-2" role="listitem">
+            <div class="program-img">
+              <div class="program-img-inner" style="background-image:url('assets/uploads/WhatsApp Image 2026-08-15 at 03.18.40.jpeg');" role="img" aria-label="Child receiving healthcare"></div>
+              <div class="program-icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+            </div>
+            <div class="program-body">
+              <h3 class="program-title" data-en="Healthcare" data-sw="Huduma za Afya">Healthcare</h3>
+              <p class="program-text" data-en="Monthly medical check-ups, vaccinations, nutritional support, and mental health care — because a healthy child can truly learn and grow." data-sw="Uchunguzi wa dawa kila mwezi, chanjo, msaada wa lishe, na huduma za afya ya akili — kwa sababu mtoto mzima anaweza kweli kujifunza na kukua.">Monthly medical check-ups, vaccinations, nutritional support, and mental health care — because a healthy child can truly learn and grow.</p>
+              <div class="program-stat"><strong>1,200+</strong> <span data-en="medical visits covered last year" data-sw="ziara za dawa zilizolipwa mwaka jana">medical visits covered last year</span></div>
+            </div>
+          </article>
+          <article class="program-card reveal reveal-delay-3" role="listitem">
+            <div class="program-img">
+              <div class="program-img-inner" style="background-image:url('assets/uploads/WhatsApp Image 2026-08-15 at 03.18.56.jpeg');" role="img" aria-label="Community gathering"></div>
+              <div class="program-icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"/></svg></div>
+            </div>
+            <div class="program-body">
+              <h3 class="program-title" data-en="Community" data-sw="Jamii">Community</h3>
+              <p class="program-text" data-en="We build family-like homes and connect children with caregivers, mentors, and community support systems that last a lifetime." data-sw="Tunajenga nyumba zinazofanana na familia na kuunganisha watoto na walezi, washauri, na mifumo ya msaada wa jamii inayodumu maisha yote.">We build family-like homes and connect children with caregivers, mentors, and community support systems that last a lifetime.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="transparency" aria-labelledby="trans-title">
+      <div class="max-w">
+        <p class="section-label reveal" data-en="Financial Transparency" data-sw="Uwazi wa Fedha">Financial Transparency</p>
+        <h2 class="section-title reveal reveal-delay-1" id="trans-title">
+          <span data-en="Where Your Money" data-sw="Fedha Yako">Where Your Money</span><br>
+          <em data-en="Actually Goes" data-sw="Inaenda Wapi">Actually Goes</em>
+        </h2>
+        <p class="section-body reveal reveal-delay-2" style="margin-top:12px;" data-en="We publish full annual reports. Here is a clear breakdown of every Tanzanian shilling donated in 2024." data-sw="Tunachapisha ripoti kamili za kila mwaka. Hapa ni muhtasari wazi wa kila shilingi iliyochangiwa mwaka 2024.">We publish full annual reports. Here is a clear breakdown of every Tanzanian shilling donated in 2024.</p>
+        <div class="trans-bars reveal reveal-delay-3">
+          <div>
+            <div class="trans-header">
+              <span class="trans-name" data-en="Direct Child Programs (Education + Healthcare)" data-sw="Programu za Moja kwa Moja (Elimu + Afya)">Direct Child Programs (Education + Healthcare)</span>
+              <span class="trans-pct">72%</span>
+            </div>
+            <div class="trans-track"><div class="trans-bar trans-bar-blue" data-target="72"></div></div>
+          </div>
+          <div>
+            <div class="trans-header">
+              <span class="trans-name" data-en="Community Homes & Daily Support" data-sw="Nyumba za Jamii na Msaada wa Kila Siku">Community Homes & Daily Support</span>
+              <span class="trans-pct">20%</span>
+            </div>
+            <div class="trans-track"><div class="trans-bar trans-bar-green" data-target="20"></div></div>
+          </div>
+          <div>
+            <div class="trans-header">
+              <span class="trans-name" data-en="Staff & Operational Costs" data-sw="Gharama za Wafanyakazi na Uendeshaji">Staff & Operational Costs</span>
+              <span class="trans-pct">6%</span>
+            </div>
+            <div class="trans-track"><div class="trans-bar trans-bar-orange" data-target="6"></div></div>
+          </div>
+          <div>
+            <div class="trans-header">
+              <span class="trans-name" data-en="Administration & Reporting" data-sw="Usimamizi na Kuripoti">Administration & Reporting</span>
+              <span class="trans-pct">2%</span>
+            </div>
+            <div class="trans-track"><div class="trans-bar trans-bar-gray" data-target="2"></div></div>
+          </div>
+        </div>
+        <div class="trans-note reveal reveal-delay-4">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span data-en="Agape Family Foundation is registered with the Tanzania Registrar of NGOs · Annual reports available on request" data-sw="Agape Family Foundation imesajiliwa na Msajili wa NGO Tanzania · Ripoti za kila mwaka zinapatikana kwa ombi">Agape Family Foundation is registered with the Tanzania Registrar of NGOs · Annual reports available on request</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section impact" id="impact" aria-labelledby="impact-title">
+      <div class="max-w">
+        <p class="section-label reveal" data-en="Our Impact" data-sw="Matokeo Yetu">Our Impact</p>
+        <h2 class="section-title reveal reveal-delay-1" id="impact-title">
+          <span data-en="Numbers That" data-sw="Namba Ambazo">Numbers That</span><br>
+          <span data-en="Tell the Truth" data-sw="Zinasema Ukweli">Tell the Truth</span>
+        </h2>
+        <div class="impact-grid">
+          <div class="impact-card reveal reveal-delay-1">
+            <div class="impact-num"><span class="count-up" data-target="520">0</span><span class="suffix">+</span></div>
+            <div class="impact-label" data-en="Children Supported" data-sw="Watoto Wanaosaidiwa">Children Supported</div>
+          </div>
+          <div class="impact-card reveal reveal-delay-2">
+            <div class="impact-num"><span class="count-up" data-target="340">0</span><span class="suffix">+</span></div>
+            <div class="impact-label" data-en="School Enrollments" data-sw="Usajili wa Shule">School Enrollments</div>
+          </div>
+          <div class="impact-card reveal reveal-delay-3">
+            <div class="impact-num"><span class="count-up" data-target="1200">0</span><span class="suffix">+</span></div>
+            <div class="impact-label" data-en="Medical Visits" data-sw="Ziara za Dawa">Medical Visits</div>
+          </div>
+          <div class="impact-card reveal reveal-delay-4">
+            <div class="impact-num"><span class="count-up" data-target="13">0</span><span class="suffix">yrs</span></div>
+            <div class="impact-label" data-en="Years Active" data-sw="Miaka ya Kufanya Kazi">Years Active</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section stories" aria-labelledby="stories-title">
+      <div class="max-w">
+        <p class="section-label reveal" data-en="Real Stories" data-sw="Hadithi za Kweli">Real Stories</p>
+        <h2 class="section-title reveal reveal-delay-1" id="stories-title">
+          <span data-en="Children Whose Lives" data-sw="Watoto Ambao Maisha Yao">Children Whose Lives</span><br>
+          <em data-en="Changed" data-sw="Yalibadilika">Changed</em>
+        </h2>
+        <div class="stories-grid">
+          <article class="story-card reveal reveal-delay-1">
+            <div class="story-img"><div class="story-img-inner" style="background-image:url('assets/uploads/a1f43f8a6e5eab510962752f6e10cd392e0c15793755adeb9cf8da09a368fa14.jpg');" role="img" aria-label="Amina"></div></div>
+            <div class="story-body">
+              <div class="story-quote-mark" aria-hidden="true">"</div>
+              <h3 class="story-name">Amina, 11</h3>
+              <div class="story-age" data-en="Dar es Salaam · Joined 2022" data-sw="Dar es Salaam · Alijiunga 2022">Dar es Salaam · Joined 2022</div>
+              <p class="story-text" data-en="When Amina arrived, she hadn't been to school in two years. Today she reads aloud to younger children in the home and wants to be a teacher." data-sw="Amina alipofika, alikuwa hajawahi kwenda shuleni kwa miaka miwili. Leo anasoma kwa sauti kwa watoto wadogo nyumbani na anataka kuwa mwalimu.">When Amina arrived, she hadn't been to school in two years. Today she reads aloud to younger children in the home and wants to be a teacher.</p>
+            </div>
+          </article>
+          <article class="story-card reveal reveal-delay-2">
+            <div class="story-img"><div class="story-img-inner" style="background-image:url('assets/uploads/cf4e0028d61de1e2e43a7bd2d9f2d39b17f81f87ab06a76c82da54c1247a1fa0.jpg');" role="img" aria-label="Baraka"></div></div>
+            <div class="story-body">
+              <div class="story-quote-mark" aria-hidden="true">"</div>
+              <h3 class="story-name">Baraka, 9</h3>
+              <div class="story-age" data-en="Mwanza · Joined 2021" data-sw="Mwanza · Alijiunga 2021">Mwanza · Joined 2021</div>
+              <p class="story-text" data-en="Baraka arrived malnourished and afraid. After 18 months of consistent care, he scored top in his class — his caregiver cried when she heard the news." data-sw="Baraka alifika hana lishe ya kutosha na akiwa na hofu. Baada ya miezi 18 ya huduma endelevu, alipata nafasi ya juu darasani — mlezi wake alilia aliposikia habari.">Baraka arrived malnourished and afraid. After 18 months of consistent care, he scored top in his class — his caregiver cried when she heard the news.</p>
+            </div>
+          </article>
+          <article class="story-card reveal reveal-delay-3">
+            <div class="story-img"><div class="story-img-inner" style="background-image:url('assets/uploads/WhatsApp Image 2026-08-15 at 03.18.28.jpeg');" role="img" aria-label="Neema"></div></div>
+            <div class="story-body">
+              <div class="story-quote-mark" aria-hidden="true">"</div>
+              <h3 class="story-name">Neema, 14</h3>
+              <div class="story-age" data-en="Arusha · Joined 2019" data-sw="Arusha · Alijiunga 2019">Arusha · Joined 2019</div>
+              <p class="story-text" data-en="Neema is now preparing for secondary school. She speaks three languages and volunteers at the foundation on weekends, helping younger children settle in." data-sw="Neema sasa anajiandaa kwa sekondari. Anazungumza lugha tatu na hujitolea katika shirika mwishoni mwa wiki, akisaidia watoto wadogo kukaa vizuri.">Neema is now preparing for secondary school. She speaks three languages and volunteers at the foundation on weekends, helping younger children settle in.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" aria-labelledby="gallery-title">
+      <div class="gallery-header">
+        <p class="section-label reveal" data-en="From the Ground" data-sw="Kutoka Ardhini">From the Ground</p>
+        <h2 class="section-title reveal reveal-delay-1" id="gallery-title">
+          <span data-en="Moments That" data-sw="Nyakati Ambazo">Moments That</span><br>
+          <em style="color:var(--orange-lt)" data-en="Matter" data-sw="Zinamaanisha">Matter</em>
+        </h2>
+      </div>
+      <div class="gallery-stage" id="galleryStage" role="region" aria-label="Photo gallery carousel">
+        <div class="gal-card" data-index="0"><div class="gal-card-img" style="background-image:url('assets/uploads/0d3451a789cfe17f70bd2a0cadf97c8e576fc0d1dc8dd292a21acceb876a0523.jpg');"></div><div class="gal-caption"><div class="gal-caption-title" data-en="Morning Lessons" data-sw="Masomo ya Asubuhi">Morning Lessons</div><div class="gal-caption-detail" data-en="Dar es Salaam · 2024" data-sw="Dar es Salaam · 2024">Dar es Salaam · 2024</div></div></div>
+        <div class="gal-card" data-index="1"><div class="gal-card-img" style="background-image:url('assets/uploads/017ed5ab2dc3e5dad22b0bd1793791177a622b4a82383df2a84883f5e59841fb.jpg');"></div><div class="gal-caption"><div class="gal-caption-title" data-en="Afternoon Play" data-sw="Mchezo wa Mchana">Afternoon Play</div><div class="gal-caption-detail" data-en="Mwanza Home · 2024" data-sw="Nyumba ya Mwanza · 2024">Mwanza Home · 2024</div></div></div>
+        <div class="gal-card" data-index="2"><div class="gal-card-img" style="background-image:url('assets/uploads/WhatsApp Image 2026-08-15 at 03.18.25.jpeg');"></div><div class="gal-caption"><div class="gal-caption-title" data-en="Health Screening" data-sw="Uchunguzi wa Afya">Health Screening</div><div class="gal-caption-detail" data-en="Annual medical outreach · 2024" data-sw="Huduma ya afya ya mwaka · 2024">Annual medical outreach · 2024</div></div></div>
+        <div class="gal-card" data-index="3"><div class="gal-card-img" style="background-image:url('assets/uploads/WhatsApp Image 2026-08-15 at 03.18.37.jpeg');"></div><div class="gal-caption"><div class="gal-caption-title" data-en="Community Day" data-sw="Siku ya Jamii">Community Day</div><div class="gal-caption-detail" data-en="Morogoro · Annual gathering" data-sw="Morogoro · Mkutano wa kila mwaka">Morogoro · Annual gathering</div></div></div>
+        <div class="gal-card" data-index="4"><div class="gal-card-img" style="background-image:url('assets/uploads/WhatsApp Image 2026-08-15 at 03.18.40.jpeg');"></div><div class="gal-caption"><div class="gal-caption-title" data-en="Food Distribution" data-sw="Ugavi wa Chakula">Food Distribution</div><div class="gal-caption-detail" data-en="Dar es Salaam · Monthly drive" data-sw="Dar es Salaam · Kila mwezi">Dar es Salaam · Monthly drive</div></div></div>
+        <div class="gal-card" data-index="5"><div class="gal-card-img" style="background-image:url('assets/uploads/WhatsApp Image 2026-08-15 at 03.18.56.jpeg');"></div><div class="gal-caption"><div class="gal-caption-title" data-en="New Arrivals" data-sw="Wanaowasili Wapya">New Arrivals</div><div class="gal-caption-detail" data-en="Welcome day · Mbeya" data-sw="Siku ya kukaribisha · Mbeya">Welcome day · Mbeya</div></div></div>
+        <div class="gal-card" data-index="6"><div class="gal-card-img" style="background-image:url('assets/uploads/WhatsApp Image 2026-08-15 at 03.18.31.jpeg');"></div><div class="gal-caption"><div class="gal-caption-title" data-en="Together We Grow" data-sw="Tunakua Pamoja">Together We Grow</div><div class="gal-caption-detail" data-en="Field trip · 2024" data-sw="Safari ya mafunzo · 2024">Field trip · 2024</div></div></div>
+      </div>
+      <div class="gallery-dots" id="galleryDots" role="tablist" aria-label="Gallery navigation"></div>
+      <div class="gallery-nav">
+        <button class="gallery-arrow" id="galPrev" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="gallery-arrow" id="galNext" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+      <div class="gallery-footer">
+        <a href="pages/gallery.html" class="btn-gallery">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          <span data-en="View Full Gallery" data-sw="Tazama Picha Zote">View Full Gallery</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="cta-title">
+      <div class="final-cta-inner">
+        <div class="final-cta-icon reveal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+        <h2 class="section-title reveal reveal-delay-1" id="cta-title">
+          <span data-en="A Child Is Waiting." data-sw="Mtoto Anasubiri.">A Child Is Waiting.</span><br>
+          <em data-en="You Can Help Today." data-sw="Unaweza Kusaidia Leo.">You Can Help Today.</em>
+        </h2>
+        <p class="section-body reveal reveal-delay-2" style="text-align:center;margin:16px auto 32px;" data-en="No bureaucracy. No confusion. Your donation reaches a child within 48 hours. That is our promise." data-sw="Hakuna urasimu. Hakuna mkanganyiko. Mchango wako unafika kwa mtoto ndani ya masaa 48. Hiyo ndiyo ahadi yetu.">No bureaucracy. No confusion. Your donation reaches a child within 48 hours. That is our promise.</p>
+        <div class="final-cta-btns reveal reveal-delay-3">
+          <a href="#donate" class="btn-primary" style="font-size:16px;padding:17px 36px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <span data-en="Donate Now" data-sw="Changia Sasa">Donate Now</span>
+          </a>
+          <a href="mailto:info@agapefamilyfoundation.org" class="btn-navy" data-en="Contact Us" data-sw="Wasiliana Nasi">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" aria-label="Site footer">
+    <div class="max-w">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo" style="justify-content:flex-start;">
+            <img src="logo.png" alt="AFF logo" class="nav-logo-img" style="width:48px;height:48px;" />
+            <div class="nav-logo-text" style="color:#fff;">Agape Family Foundation<span>Est. 2022 · Tanzania</span></div>
+          </div>
+          <p data-en="A registered non-governmental organization dedicated to the welfare and future of orphaned children across Tanzania." data-sw="Shirika la kiraia lililosajiliwa linalojishughulisha na ustawi na mustakabali wa watoto yatima kote Tanzania.">A registered non-governmental organization dedicated to the welfare and future of orphaned children across Tanzania.</p>
+        </div>
+        <div class="footer-links">
+          <h4 data-en="Navigate" data-sw="Nenda">Navigate</h4>
+          <ul>
+            <li><a href="#donate" data-en="Donate" data-sw="Changia">Donate</a></li>
+            <li><a href="pages/about.html" data-en="About Us" data-sw="Kuhusu Sisi">About Us</a></li>
+            <li><a href="pages/leadership.html" data-en="Leadership" data-sw="Uongozi">Leadership</a></li>
+            <li><a href="#impact" data-en="Our Impact" data-sw="Matokeo Yetu">Our Impact</a></li>
+            <li><a href="pages/gallery.html" data-en="Gallery" data-sw="Picha">Gallery</a></li>
+            <li><a href="pages/blog.html" data-en="Blog" data-sw="Blogu">Blog</a></li>
+            <li><a href="pages/updates.html" data-en="Updates" data-sw="Matangazo">Updates</a></li>
+            <li><a href="pages/volunteer.html" data-en="Volunteer" data-sw="Jitolee">Volunteer</a></li>
+            <li><a href="pages/contact.html" data-en="Contact" data-sw="Wasiliana">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4 data-en="Organization" data-sw="Shirika">Organization</h4>
+          <ul>
+            <li><a href="#" data-en="Annual Report 2024" data-sw="Ripoti ya Mwaka 2024">Annual Report 2024</a></li>
+            <li><a href="#" data-en="Registration Certificate" data-sw="Cheti cha Usajili">Registration Certificate</a></li>
+            <li><a href="#" data-en="Privacy Policy" data-sw="Sera ya Faragha">Privacy Policy</a></li>
+            <li><a href="pages/volunteer.html" data-en="Volunteer" data-sw="Jitolee">Volunteer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-reg">
+        <span>© 2025 Agape Family Foundation. Registered NGO · Tanzania</span>
+        <span>Reg. No. 00-NGO-2022-0047 · All rights reserved</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="pay-overlay" id="payOverlay" role="dialog" aria-modal="true" aria-labelledby="payTitle">
+    <div class="pay-sheet">
+      <div class="pay-head">
+        <h3 id="payTitle" data-en="Choose Payment Method" data-sw="Chagua Njia ya Malipo">Choose Payment Method</h3>
+        <button class="pay-close" id="payClose" aria-label="Close">&times;</button>
+      </div>
+      <span class="pay-amount-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+        <span data-en="Give any amount you choose" data-sw="Toa kiasi chochote unachotaka">Give any amount you choose</span>
+      </span>
+      <div class="pay-tabs" id="payTabs"></div>
+      <div id="payPanels"></div>
+      <div class="pay-status" id="payStatus"></div>
+    </div>
+  </div>
+
+  <a href="#donate" class="float-donate hidden" id="floatDonate">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+    <span data-en="Donate Now" data-sw="Changia Sasa">Donate Now</span>
+  </a>
+
+  <button type="button" class="float-wa float-wa-pulse hidden" id="floatWa" aria-label="Contact us on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </button>
+
+  <button type="button" class="float-top" id="floatTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <div class="wa-contact-modal" id="waContactModal" role="dialog" aria-modal="true" aria-labelledby="waContactTitle" aria-hidden="true">
+    <div class="wa-contact-box">
+      <button type="button" class="wa-contact-close" id="waContactClose" aria-label="Close">×</button>
+      <h2 id="waContactTitle" data-en="Contact us on WhatsApp" data-sw="Wasiliana nasi kwa WhatsApp">Contact us on WhatsApp</h2>
+      <p data-en="Choose the person you would like to talk to." data-sw="Chagua mtu unayetaka kuzungumza naye.">Choose the person you would like to talk to.</p>
+      <div id="waContactOptions"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/site-data.js?v=3"></script>
+  <script>
+    /* ============================================================
+       GLOBAL HELPERS — declared first so they're always available
+    ============================================================ */
+    let currentLang = 'en';
+
+    function toggleDrawer(){ drawerOpen ? closeDrawer() : openDrawer(); }
+    function openDrawer(){
+      drawerOpen = true;
+      drawer.classList.add('open');
+      drawerOverlay.classList.add('open');
+      hamburger.classList.add('open');
+      hamburger.setAttribute('aria-expanded','true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer(){
+      drawerOpen = false;
+      drawer.classList.remove('open');
+      drawerOverlay.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded','false');
+      document.body.style.overflow = '';
+    }
+
+    /* ============================================================
+       LANGUAGE ENGINE — bulletproof, handles all translatable text
+    ============================================================ */
+    function setLang(lang){
+      currentLang = (lang === 'sw') ? 'sw' : 'en';
+      try { AFF.setLanguage(currentLang); } catch(_) {}
+      document.documentElement.lang = currentLang;
+
+      // 1) Buttons
+      const langEN = document.getElementById('langEN');
+      const langSW = document.getElementById('langSW');
+      if (langEN) { langEN.classList.toggle('active', currentLang === 'en'); langEN.setAttribute('aria-pressed', currentLang === 'en'); }
+      if (langSW) { langSW.classList.toggle('active', currentLang === 'sw'); langSW.setAttribute('aria-pressed', currentLang === 'sw'); }
+
+      // 1b) Drawer language buttons
+      document.querySelectorAll('.drawer-lang button').forEach(b => {
+        b.classList.toggle('active', b.dataset.lang === currentLang);
+      });
+
+      // 2) Every element with data-en / data-sw → swap textContent (or innerHTML if data-en-html is set)
+      document.querySelectorAll('[data-en],[data-sw]').forEach(el => {
+        const val = el.dataset[currentLang];
+        if (!val) return;
+        if (el.dataset.enHtml === 'true' || el.dataset.swHtml === 'true') {
+          el.innerHTML = val;
+        } else {
+          // Skip elements whose children are structural SVG/EM/SPAN/etc.
+          const hasComplexChildren = Array.from(el.children).some(c =>
+            !['EM','STRONG','SPAN','B','I','BR'].includes(c.tagName)
+          );
+          if (!hasComplexChildren) el.textContent = val;
+        }
+      });
+
+      // 3) Hero content comes from content.json → re-apply per language
+      try {
+        const hero = AFF.get().hero || {};
+        const hc = document.getElementById('heroChildrenCount');
+        const hh = document.getElementById('heroChildrenHeadline');
+        const hd = document.getElementById('heroChildrenDescription');
+        if (hc) hc.textContent = hero.childrenCount || '520+';
+        if (hh) hh.textContent = currentLang === 'sw'
+          ? 'Watoto Waliopewa Nafasi Mpya'
+          : (hero.headline || 'Children Given a Second Chance');
+        if (hd) hd.textContent = currentLang === 'sw'
+          ? 'Kutoa elimu, huduma za afya, na msaada wa kila siku kwa watoto yatima kote Tanzania.'
+          : (hero.description || 'Providing education, healthcare, and daily support to orphaned children across Tanzania.');
+      } catch(_) {}
+
+      // 4) If pay modal is open → re-render its contents in the new language
+      const payOv = document.getElementById('payOverlay');
+      if (payOv && payOv.classList.contains('open')) {
+        try { buildPayTabs(); renderPayPanels(); } catch(_) {}
+      }
+    }
+
+    /* ============================================================
+       DOM REFS + BASIC BEHAVIOUR
+    ============================================================ */
+    const drawer = document.getElementById('drawer');
+    const drawerOverlay = document.getElementById('drawerOverlay');
+    const hamburger = document.getElementById('navHamburger');
+    let drawerOpen = false;
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        if (drawerOpen) closeDrawer();
+        const payOv = document.getElementById('payOverlay');
+        if (payOv && payOv.classList.contains('open')) closePayModal();
+      }
+    });
+
+    const nav = document.getElementById('nav');
+    const floatDonate = document.getElementById('floatDonate');
+    const floatWa = document.getElementById('floatWa');
+    const floatTop = document.getElementById('floatTop');
+    const waContactModal = document.getElementById('waContactModal');
+    const closeWaContactModal = () => { waContactModal.classList.remove('open'); waContactModal.setAttribute('aria-hidden','true'); };
+
+    function renderWaContacts(){
+      const contacts = AFF.normalizeContacts(AFF.get().whatsappContacts);
+      const container = document.getElementById('waContactOptions');
+      container.innerHTML = contacts.map((c,i) =>
+        `<button type="button" class="wa-contact-option" data-wa-index="${i}">
+          <span class="wa-contact-number">${i+1}</span>
+          ${AFF.escape(c.label || 'Contact '+(i+1))}
+        </button>`
+      ).join('') || '<p style="color:var(--text-muted);font-size:13px">No contacts set up yet.</p>';
+    }
+
+    floatWa.addEventListener('click', () => {
+      renderWaContacts();
+      waContactModal.classList.add('open');
+      waContactModal.setAttribute('aria-hidden','false');
+    });
+    document.getElementById('waContactClose').addEventListener('click', closeWaContactModal);
+    waContactModal.addEventListener('click', e => { if (e.target === waContactModal) closeWaContactModal(); });
+    document.getElementById('waContactOptions').addEventListener('click', e => {
+      const button = e.target.closest('[data-wa-index]'); if (!button) return;
+      const contacts = AFF.normalizeContacts(AFF.get().whatsappContacts);
+      const number = String((contacts[Number(button.dataset.waIndex)] || {}).number || '').replace(/\D/g,'');
+      if (!number) return alert('This WhatsApp contact has not been set yet.');
+      window.open(`https://wa.me/${number}?text=${encodeURIComponent('Hello, I would like to learn more about Agape Family Foundation.')}`,'_blank','noopener');
+      closeWaContactModal();
+    });
+
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      nav.classList.toggle('scrolled', y > 60);
+      const threshold = window.innerHeight * 0.7;
+      floatDonate.classList.toggle('hidden', y < threshold);
+      floatWa.classList.toggle('hidden', y < threshold);
+      floatTop.classList.toggle('show', y > 500);
+    }, { passive: true });
+
+    /* ============================================================
+       HERO zoom-in on load
+    ============================================================ */
+    const heroBg = document.getElementById('heroBg');
+    window.addEventListener('load', () => setTimeout(() => heroBg.classList.add('loaded'), 100));
+
+    /* ============================================================
+       REVEAL on scroll
+    ============================================================ */
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    /* ============================================================
+       Progress bars + count-up
+    ============================================================ */
+    const barObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          setTimeout(() => { e.target.style.width = e.target.dataset.target + '%'; }, 300);
+          barObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('#mainProgressBar, .trans-bar').forEach(el => barObserver.observe(el));
+
+    function animateCount(el){
+      const target = parseInt(el.dataset.target);
+      const duration = 1600, step = 16;
+      const increment = target / (duration / step);
+      let current = 0;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) { current = target; clearInterval(timer); }
+        el.textContent = Math.floor(current).toLocaleString();
+      }, step);
+    }
+    const countObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { animateCount(e.target); countObserver.unobserve(e.target); }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.count-up').forEach(el => countObserver.observe(el));
+
+    /* ============================================================
+       PAY MODAL — dynamic networks, copy Lipa Namba, chat on WhatsApp
+    ============================================================ */
+    const NETWORK_LABELS = { mpesa:'M-Pesa', tigopesa:'Tigo Pesa', airtel:'Airtel Money', halotel:'Halotel' };
+    const NETWORK_SHORT  = { mpesa:'M-Pesa', tigopesa:'Tigo', airtel:'Airtel', halotel:'Halotel' };
+    const NETWORK_TAGS   = { mpesa:'Vodacom · Pay Bill', tigopesa:'Tigo · Pay Bill', airtel:'Airtel · Pay Merchant', halotel:'Halotel · Pay Bill' };
+    const NETWORK_DOTS   = { mpesa:'#12a84a', tigopesa:'#0057a6', airtel:'#e30613', halotel:'#f4a900' };
+    const NETWORK_IMAGES = {
+      mpesa:    'assets/images/Networks/vodacom.jpg',
+      tigopesa: 'assets/images/Networks/yas.jpg',
+      airtel:   'assets/images/Networks/airtel.jpg',
+      halotel:  'assets/images/Networks/halotel.jpg'
+    };
+
+    const PAY_STRINGS = {
+      en: {
+        lipaLabel: 'Lipa Namba (Business Number)',
+        copy: 'Copy', copied: 'Copied!',
+        stepsTitle: 'How to pay',
+        emptyTitle: 'No payment methods are available right now. Chat with us on WhatsApp and we will help you complete your donation.',
+        freeLine: 'Give any amount you choose — every shilling helps.',
+        waLabel: 'Chat with us on WhatsApp',
+        waMessage: 'Hello, I would like to talk about donating to Agape Family Foundation.',
+        divider: 'Questions?'
+      },
+      sw: {
+        lipaLabel: 'Lipa Namba (Namba ya Biashara)',
+        copy: 'Nakili', copied: 'Imenakiliwa!',
+        stepsTitle: 'Jinsi ya kulipa',
+        emptyTitle: 'Hakuna njia ya malipo inayopatikana kwa sasa. Wasiliana nasi kwa WhatsApp ili tukusaidie kukamilisha mchango wako.',
+        freeLine: 'Toa kiasi chochote unachotaka — kila shilingi inasaidia.',
+        waLabel: 'Wasiliana nasi kwa WhatsApp',
+        waMessage: 'Habari, ningependa kuzungumza kuhusu kuchangia Agape Family Foundation.',
+        divider: 'Una maswali?'
+      }
+    };
+
+    const payManualSteps = {
+      mpesa: { en:['Open the M-Pesa menu on your phone','Select Lipa na M-Pesa → Pay Bill','Enter the Lipa Namba shown above','Enter any amount and confirm with your PIN'],
+                sw:['Fungua menyu ya M-Pesa kwenye simu yako','Chagua Lipa na M-Pesa → Pay Bill','Weka Lipa Namba iliyo juu','Weka kiasi chochote na thibitisha kwa PIN yako'] },
+      tigopesa: { en:['Dial *150*01# on your phone','Select Pay Bill','Enter the Lipa Namba shown above','Enter any amount and confirm with your PIN'],
+                  sw:['Piga *150*01# kwenye simu yako','Chagua Lipa Bili','Weka Lipa Namba iliyo juu','Weka kiasi chochote na thibitisha kwa PIN yako'] },
+      airtel: { en:['Dial *150*60# on your phone','Select Pay Merchant','Enter the Lipa Namba shown above','Enter any amount and confirm with your PIN'],
+                sw:['Piga *150*60# kwenye simu yako','Chagua Lipa Merchant','Weka Lipa Namba iliyo juu','Weka kiasi chochote na thibitisha kwa PIN yako'] },
+      halotel: { en:['Dial *150*88# on your phone','Select Pay Bill','Enter the Lipa Namba shown above','Enter any amount and confirm with your PIN'],
+                 sw:['Piga *150*88# kwenye simu yako','Chagua Pay Bill','Weka Lipa Namba iliyo juu','Weka kiasi chochote na thibitisha kwa PIN yako'] }
+    };
+
+    let activePayNetwork = null;
+
+    function configuredNetworks(){
+      const lipa = (AFF.get().donation || {}).lipaNamba || {};
+      return Object.keys(NETWORK_LABELS).filter(net => {
+        const info = lipa[net] || {};
+        return String(info.number || '').trim().length > 0;
+      });
+    }
+
+    // Chairperson's WhatsApp — chairperson label first, then first contact, then contact.whatsapp.
+    function chairpersonWhatsApp(){
+      const contacts = AFF.normalizeContacts(AFF.get().whatsappContacts) || [];
+      const chair = contacts.find(c => /chairperson/i.test(c.label || '')) || contacts[0];
+      if (chair && chair.number) return String(chair.number).replace(/\D/g,'');
+      const contact = AFF.get().contact || {};
+      return String(contact.whatsapp || AFF.get().whatsapp || '255699126144').replace(/\D/g,'');
+    }
+
+    function whatsappButtonHtml(){
+      const t = PAY_STRINGS[currentLang] || PAY_STRINGS.en;
+      const num = chairpersonWhatsApp();
+      if (!num) return '';
+      const msg = encodeURIComponent(t.waMessage);
+      return `<a class="wa-pay-btn" href="https://wa.me/${num}?text=${msg}" target="_blank" rel="noopener"
+                 onclick="try{AFF.track('whatsapp_donation_click',location.pathname)}catch(_){}">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        ${t.waLabel}
+      </a>`;
+    }
+
+    function buildPayTabs(){
+      const available = configuredNetworks();
+      const tabs = document.getElementById('payTabs');
+      if (!available.length){ tabs.innerHTML=''; tabs.style.display='none'; return available; }
+      tabs.style.display = '';
+      if (!activePayNetwork || !available.includes(activePayNetwork)) activePayNetwork = available[0];
+      tabs.innerHTML = available.map(net =>
+        `<button type="button" class="pay-tab${net===activePayNetwork?' active':''}" data-network="${net}">
+          <span class="dot" style="background:${NETWORK_DOTS[net]}"></span>${NETWORK_SHORT[net]}
+        </button>`
+      ).join('');
+      return available;
+    }
+
+    function renderPayPanels(){
+      const available = configuredNetworks();
+      const lipaNamba = (AFF.get().donation || {}).lipaNamba || {};
+      const t = PAY_STRINGS[currentLang] || PAY_STRINGS.en;
+      const panels = document.getElementById('payPanels');
+
+      if (!available.length){
+        panels.innerHTML = `<div class="pay-empty"><p>${t.emptyTitle}</p>${whatsappButtonHtml()}</div>`;
+        return;
+      }
+
+      panels.innerHTML = available.map(net => {
+        const info = lipaNamba[net] || {};
+        const heroImg = NETWORK_IMAGES[net] || '';
+        const steps = (payManualSteps[net][currentLang] || payManualSteps[net].en).map(s => `<li>${s}</li>`).join('');
+        return `<div class="pay-panel${net===activePayNetwork?' active':''}" data-panel="${net}">
+          <div class="network-hero" style="background-image:url('${heroImg}')">
+            <div class="network-hero-content">
+              <div class="network-hero-name">${NETWORK_LABELS[net]}</div>
+              <div class="network-hero-tag">${NETWORK_TAGS[net]}</div>
+            </div>
+          </div>
+          <div class="lipa-box">
+            <div class="grow">
+              <small>${t.lipaLabel} · ${NETWORK_LABELS[net]}</small>
+              <strong>${info.number}</strong>
+              ${info.name ? `<span class="acct-name">${info.name}</span>` : ''}
+            </div>
+            <button type="button" class="lipa-copy-btn" data-copy="${info.number}">${t.copy}</button>
+          </div>
+          <p class="pay-section-label">${t.stepsTitle}</p>
+          <ol class="pay-steps">${steps}</ol>
+          <p class="pay-auto-note">${t.freeLine}</p>
+          <div class="pay-divider">${t.divider}</div>
+          ${whatsappButtonHtml()}
+        </div>`;
+      }).join('');
+    }
+
+    function openPayModal(){
+      try { AFF.track('donation_click', location.pathname); } catch(_) {}
+      buildPayTabs();
+      renderPayPanels();
+      document.getElementById('payOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closePayModal(){
+      document.getElementById('payOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function handleDonate(){ openPayModal(); }
+
+    document.getElementById('payClose').onclick = closePayModal;
+    document.getElementById('payOverlay').addEventListener('click', e => { if (e.target.id === 'payOverlay') closePayModal(); });
+
+    document.getElementById('payTabs').addEventListener('click', e => {
+      const btn = e.target.closest('.pay-tab'); if (!btn) return;
+      activePayNetwork = btn.dataset.network;
+      document.querySelectorAll('.pay-tab').forEach(b => b.classList.toggle('active', b === btn));
+      document.querySelectorAll('.pay-panel').forEach(p => p.classList.toggle('active', p.dataset.panel === activePayNetwork));
+      try { AFF.track('donation_network_select', location.pathname, activePayNetwork); } catch(_) {}
+    });
+
+    document.getElementById('payPanels').addEventListener('click', async e => {
+      const copyBtn = e.target.closest('[data-copy]');
+      if (!copyBtn) return;
+      try { await navigator.clipboard.writeText(copyBtn.dataset.copy); } catch(_) {}
+      const t = PAY_STRINGS[currentLang] || PAY_STRINGS.en;
+      copyBtn.textContent = t.copied;
+      copyBtn.classList.add('copied');
+      setTimeout(() => { copyBtn.textContent = t.copy; copyBtn.classList.remove('copied'); }, 1800);
+    });
+
+    /* ============================================================
+       GALLERY CAROUSEL
+    ============================================================ */
+    const stage = document.getElementById('galleryStage');
+    const dotsWrap = document.getElementById('galleryDots');
+    let cards = Array.from(stage.querySelectorAll('.gal-card'));
+    let TOTAL = cards.length;
+    let currentIndex = 0;
+
+    function refreshGallery(){
+      cards = Array.from(stage.querySelectorAll('.gal-card'));
+      TOTAL = cards.length;
+      currentIndex = 0;
+      dotsWrap.innerHTML = '';
+      cards.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', `Go to photo ${i+1}`);
+        dot.setAttribute('role','tab');
+        dot.addEventListener('click', () => goTo(i));
+        dotsWrap.appendChild(dot);
+      });
+      renderGallery();
+    }
+    function updateDots(){
+      dotsWrap.querySelectorAll('.gallery-dot').forEach((d,i) => d.classList.toggle('active', i === currentIndex));
+    }
+    function renderGallery(){
+      cards.forEach((card, i) => {
+        let pos = i - currentIndex;
+        if (pos > Math.floor(TOTAL/2)) pos -= TOTAL;
+        if (pos < -Math.floor(TOTAL/2)) pos += TOTAL;
+        let attr;
+        if (pos >= 4) attr = 'far';
+        else if (pos <= -4) attr = '-far';
+        else attr = String(pos);
+        card.dataset.pos = attr;
+        const cap = card.querySelector('.gal-caption');
+        if (cap) cap.style.display = pos === 0 ? '' : 'none';
+        card.onclick = pos !== 0 ? () => goTo(i) : null;
+        card.style.cursor = pos !== 0 ? 'pointer' : 'default';
+      });
+      updateDots();
+    }
+    function goTo(i){ currentIndex = ((i % TOTAL) + TOTAL) % TOTAL; renderGallery(); }
+    function goNext(){ goTo(currentIndex + 1); }
+    function goPrev(){ goTo(currentIndex - 1); }
+
+    document.getElementById('galNext').addEventListener('click', goNext);
+    document.getElementById('galPrev').addEventListener('click', goPrev);
+
+    let touchStartX = 0;
+    stage.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive:true });
+    stage.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 40) dx < 0 ? goNext() : goPrev();
+    }, { passive:true });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') goNext();
+      if (e.key === 'ArrowLeft')  goPrev();
+    });
+
+    let autoTimer = setInterval(goNext, 5000);
+    function resetAuto(){ clearInterval(autoTimer); autoTimer = setInterval(goNext, 5000); }
+    document.getElementById('galNext').addEventListener('click', resetAuto);
+    document.getElementById('galPrev').addEventListener('click', resetAuto);
+    stage.addEventListener('touchend', resetAuto, { passive:true });
+
+    refreshGallery();
+    stage.addEventListener('aff:gallery-updated', refreshGallery);
+
+    /* ============================================================
+       INIT
+    ============================================================ */
+    // Apply the remembered language immediately
+    try { setLang(AFF.language()); } catch(_) { setLang('en'); }
+
+    // Re-run when site-data.js finishes fetching content from the server
+    document.addEventListener('aff:content-updated', () => {
+      try { setLang(currentLang); } catch(_) {}
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blog | Agape Family Foundation" />
+  <title id="pageTitle">Blog | Agape Family Foundation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0d1f3c;
+      --navy-dark: #081629;
+      --orange: #e8611a;
+      --cream: #f7f4ef;
+      --warm-white: #fdfaf6;
+      --text-dark: #1a1a2e;
+      --text-body: #3d4456;
+      --border: #e4ddd4;
+      --shadow-md: 0 8px 32px rgba(13,31,60,.12);
+      --transition: .3s cubic-bezier(.4,0,.2,1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--warm-white); color: var(--text-dark); line-height: 1.65; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    .header { padding: 24px; background: var(--navy-dark); display: flex; align-items: center; gap: 20px; position: sticky; top: 0; z-index: 900; }
+    .header-logo { display: flex; align-items: center; gap: 10px; }
+    .header-logo-img { width: 40px; height: 40px; border-radius: 50%; background: #fff; padding: 2px; }
+    .header-logo-text { color: #fff; font-size: 13px; font-weight: 700; }
+    .header-nav { margin-left: auto; display: flex; gap: 20px; }
+    .header-nav a { color: rgba(255,255,255,.7); font-size: 14px; font-weight: 500; transition: color var(--transition); }
+    .header-nav a:hover { color: #fff; }
+    .header-btn { background: var(--orange); color: #fff; padding: 9px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; }
+
+    .section { padding: 56px 24px 88px; max-width: 760px; margin: 0 auto; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--orange); margin-bottom: 28px; }
+    .post-date { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--orange); margin-bottom: 14px; }
+    .post-title { font-family: 'Playfair Display', serif; font-size: clamp(26px, 5vw, 40px); font-weight: 900; line-height: 1.15; color: var(--navy); letter-spacing: -.02em; margin-bottom: 24px; }
+    .post-image { width: 100%; height: 320px; object-fit: cover; border-radius: 14px; margin-bottom: 32px; box-shadow: var(--shadow-md); background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%); }
+    .post-body { font-size: 16px; color: var(--text-body); line-height: 1.85; white-space: pre-wrap; }
+    .post-missing { text-align: center; padding: 64px 24px; color: var(--text-body); }
+
+    .footer { background: var(--navy-dark); color: rgba(255,255,255,.5); padding: 48px 24px; text-align: center; }
+    .footer a { color: rgba(255,255,255,.4); transition: color var(--transition); }
+    .footer a:hover { color: rgba(255,255,255,.8); }
+
+    @media (max-width: 768px) { .header-nav { display: none; } .section { padding: 40px 20px 64px; } .post-image { height: 220px; } }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="../index.html" class="header-logo">
+      <img src="../logo.png" alt="Agape logo" class="header-logo-img" />
+      <div class="header-logo-text">AFF</div>
+    </a>
+    <nav class="header-nav">
+      <a href="../index.html" data-en="Home" data-sw="Nyumbani">Home</a>
+      <a href="about.html" data-en="About" data-sw="Kuhusu">About</a>
+      <a href="leadership.html" data-en="Leadership" data-sw="Uongozi">Leadership</a>
+      <a href="gallery.html" data-en="Gallery" data-sw="Picha">Gallery</a>
+      <a href="blog.html" data-en="Blog" data-sw="Blogu">Blog</a>
+      <a href="volunteer.html" data-en="Volunteer" data-sw="Jitolee">Volunteer</a>
+      <a href="updates.html" data-en="Updates" data-sw="Matangazo">Updates</a>
+      <a href="contact.html" data-en="Contact" data-sw="Wasiliana">Contact</a>
+      <a href="../index.html#donate" class="header-btn" data-en="Donate" data-sw="Changia">Donate</a>
+    </nav>
+  </header>
+
+  <section class="section" id="postSection">
+    <a href="blog.html" class="back-link" data-en="← Back to Blog" data-sw="← Rudi kwenye Blogu">← Back to Blog</a>
+    <div id="postContent">
+      <!-- Imejazwa na JS kutoka data.blog (id kutoka ?id= kwenye URL) -->
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p data-en="© 2025 Agape Family Foundation. All rights reserved." data-sw="© 2025 Agape Family Foundation. Haki zote zimehifadhiwa.">© 2025 Agape Family Foundation. All rights reserved.</p>
+    <p style="margin-top: 10px; font-size: 12px;" data-en="Registered NGO · Tanzania · Reg. No. 00-NGO-2022-0047" data-sw="NGO Iliyosajiliwa · Tanzania · Na. ya Usajili 00-NGO-2022-0047">Registered NGO · Tanzania · Reg. No. 00-NGO-2022-0047</p>
+  </footer>
+  <script src="../assets/js/site-data.js?v=1"></script>
+  <script>
+    // Soma "id" kutoka kwenye URL (?id=...) na uonyeshe chapisho husika kutoka data.blog.
+    // Kama chapisho halipatikani (limefutwa au id si sahihi), onyesha ujumbe wa heshima
+    // badala ya ukurasa mtupu au hitilafu (error) isiyoeleweka kwa mgeni.
+    function renderPost() {
+      const id = new URLSearchParams(location.search).get('id');
+      const post = (AFF.get().blog || []).find(p => p.id === id);
+      const container = document.getElementById('postContent');
+      if (!post) {
+        container.innerHTML = `<div class="post-missing"><p data-en="This post could not be found. It may have been removed." data-sw="Chapisho hili halikupatikana. Huenda limeondolewa.">This post could not be found. It may have been removed.</p></div>`;
+        return;
+      }
+      document.title = post.title + ' | Agape Family Foundation';
+      document.getElementById('pageTitle').textContent = post.title + ' | Agape Family Foundation';
+      container.innerHTML = `<div class="post-date">${AFF.escape(post.date)}</div><h1 class="post-title">${AFF.escape(post.title)}</h1><img class="post-image" src="${post.image}" alt=""><div class="post-body">${AFF.escape(post.body || post.excerpt)}</div>`;
+    }
+    document.addEventListener('DOMContentLoaded', () => { renderPost(); AFF.load().then(renderPost).catch(() => {}); });
+  </script>
+</body>
+</html>

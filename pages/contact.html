@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Agape Family Foundation" />
+  <title>Contact | Agape Family Foundation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0d1f3c;
+      --navy-dark: #081629;
+      --orange: #e8611a;
+      --orange-lt: #f07a3a;
+      --cream: #f7f4ef;
+      --warm-white: #fdfaf6;
+      --text-dark: #1a1a2e;
+      --text-body: #3d4456;
+      --border: #e4ddd4;
+      --shadow-md: 0 8px 32px rgba(13,31,60,.12);
+      --transition: .3s cubic-bezier(.4,0,.2,1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--warm-white);
+      color: var(--text-dark);
+      line-height: 1.65;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    .header { padding: 24px; background: var(--navy-dark); display: flex; align-items: center; gap: 20px; position: sticky; top: 0; z-index: 900; }
+    .header-logo { display: flex; align-items: center; gap: 10px; }
+    .header-logo-img { width: 40px; height: 40px; border-radius: 50%; background: #fff; padding: 2px; }
+    .header-logo-text { color: #fff; font-size: 13px; font-weight: 700; }
+    .header-nav { margin-left: auto; display: flex; gap: 20px; }
+    .header-nav a { color: rgba(255,255,255,.7); font-size: 14px; font-weight: 500; transition: color var(--transition); }
+    .header-nav a:hover { color: #fff; }
+    .header-btn { background: var(--orange); color: #fff; padding: 9px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; }
+
+    .section { padding: 72px 24px; max-width: 960px; margin: 0 auto; }
+    .section-label { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 6vw, 44px); font-weight: 900; line-height: 1.12; color: var(--navy); letter-spacing: -.02em; margin-bottom: 24px; }
+    .section-body { font-size: 15px; color: var(--text-body); line-height: 1.75; margin-bottom: 20px; }
+
+    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; margin: 40px 0; }
+    .contact-card { background: #fff; border-radius: 12px; padding: 28px; border: 1px solid var(--border); box-shadow: var(--shadow-md); text-align: center; }
+    .contact-card-icon { width: 52px; height: 52px; display: inline-flex; align-items: center; justify-content: center; color: var(--orange); background: #fff5ef; border-radius: 14px; margin-bottom: 16px; box-shadow: 0 4px 12px rgba(13,31,60,.1); }
+    .contact-card-icon svg { width: 25px; height: 25px; }
+    .contact-card h3 { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .contact-card p { font-size: 13px; color: var(--text-body); }
+    .contact-card a { color: var(--orange); font-weight: 600; text-decoration: none; transition: text-decoration var(--transition); }
+    .contact-card a:hover { text-decoration: underline; }
+
+    .form-group { margin-bottom: 24px; }
+    .form-group label { display: block; font-weight: 600; color: var(--navy); margin-bottom: 8px; font-size: 14px; }
+    .form-group input,
+    .form-group textarea,
+    .form-group select { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 14px; }
+    .form-group textarea { min-height: 120px; resize: vertical; }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus { outline: none; border-color: var(--orange); box-shadow: 0 0 0 3px rgba(232,97,26,.1); }
+
+    .btn-primary { display: inline-block; background: var(--orange); color: #fff; padding: 15px 28px; border-radius: 10px; font-size: 15px; font-weight: 600; transition: background var(--transition); border: none; cursor: pointer; width: 100%; }
+    .btn-primary:hover { background: var(--orange-lt); }
+
+    .footer { background: var(--navy-dark); color: rgba(255,255,255,.5); padding: 48px 24px; text-align: center; }
+    .footer a { color: rgba(255,255,255,.4); transition: color var(--transition); }
+    .footer a:hover { color: rgba(255,255,255,.8); }
+
+    @media (max-width: 768px) {
+      .header-nav { display: none; }
+      .section { padding: 48px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="../index.html" class="header-logo">
+      <img src="../logo.png" alt="Agape logo" class="header-logo-img" />
+      <div class="header-logo-text">AFF</div>
+    </a>
+    <nav class="header-nav">
+      <a href="../index.html" data-en="Home" data-sw="Nyumbani">Home</a>
+      <a href="about.html" data-en="About" data-sw="Kuhusu">About</a>
+      <a href="leadership.html" data-en="Leadership" data-sw="Uongozi">Leadership</a>
+      <a href="gallery.html" data-en="Gallery" data-sw="Picha">Gallery</a>
+      <a href="blog.html" data-en="Blog" data-sw="Blogu">Blog</a>
+      <a href="volunteer.html" data-en="Volunteer" data-sw="Jitolee">Volunteer</a>
+      <a href="updates.html" data-en="Updates" data-sw="Matangazo">Updates</a>
+      <a href="contact.html" data-en="Contact" data-sw="Wasiliana">Contact</a>
+      <a href="../index.html#donate" class="header-btn" data-en="Donate" data-sw="Changia">Donate</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <p class="section-label" data-en="Get In Touch" data-sw="Wasiliana Nasi">Get In Touch</p>
+    <h1 class="section-title" data-en="Contact Us" data-sw="Wasiliana Nasi">Contact <em style="color:var(--orange);font-style:italic;">Us</em></h1>
+    <!-- Kumbuka: #contactIntro hapa chini imejazwa na admin dashboard (maudhui yanayobadilika) —
+         HATUWEKI data-en/data-sw juu yake, ili yasifutwe na injini ya tafsiri. -->
+    <p class="section-body" id="contactIntro">
+      Have questions? Want to partner with us? Ready to make a difference? We'd love to hear from you. Reach out using any of the methods below.
+    </p>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+        <h3 data-en="Email" data-sw="Barua Pepe">Email</h3>
+        <p><a id="contactEmail" href="mailto:info@agapefamilyfoundation.org">info@agapefamilyfoundation.org</a></p>
+        <p style="font-size: 12px; color: var(--text-body); margin-top: 8px;" data-en="Typically responds within 24 hours" data-sw="Kwa kawaida hujibu ndani ya saa 24">Typically responds within 24 hours</p>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15.5a5 5 0 0 1-5 5H8l-5 3v-16a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5z"/><path d="M8 10h8M8 14h5"/></svg></div>
+        <h3>WhatsApp</h3>
+        <p><a id="contactWhatsapp" href="https://wa.me/255700000000">+255 700 000 000</a></p>
+        <p style="font-size: 12px; color: var(--text-body); margin-top: 8px;" data-en="Chat with us directly" data-sw="Ongea nasi moja kwa moja">Chat with us directly</p>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .8 2.9a2 2 0 0 1-.4 2.1L8.2 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.4 1.9.7 2.9.8a2 2 0 0 1 1.5 1.8Z"/></svg></div>
+        <h3 data-en="Phone" data-sw="Simu">Phone</h3>
+        <p><a id="contactPhone" href="tel:+255222123456">+255 22 212 3456</a></p>
+        <p id="contactAvailability" style="font-size: 12px; color: var(--text-body); margin-top: 8px;">Mon-Fri, 9 AM - 5 PM EAT</p>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <h3 data-en="Office" data-sw="Ofisi">Office</h3>
+        <p><span id="contactOffice">Dar es Salaam, Tanzania</span><br><span id="contactRegionalOffices">8 Regional Offices</span></p>
+        <p style="font-size: 12px; color: var(--text-body); margin-top: 8px;" data-en="Serving children across Tanzania" data-sw="Tunahudumia watoto kote Tanzania">Serving children across Tanzania</p>
+      </div>
+    </div>
+
+    <h2 style="color: var(--navy); font-size: 24px; margin-top: 48px; margin-bottom: 24px;" data-en="Send Us a Message" data-sw="Tutumie Ujumbe">Send Us a Message</h2>
+    
+    <form id="contactForm" style="background: #fff; padding: 32px; border-radius: 12px; border: 1px solid var(--border); box-shadow: var(--shadow-md);">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div class="form-group">
+          <label for="fname" data-en="First Name *" data-sw="Jina la Kwanza *">First Name *</label>
+          <input type="text" id="fname" name="fname" required />
+        </div>
+
+        <div class="form-group">
+          <label for="lname" data-en="Last Name *" data-sw="Jina la Mwisho *">Last Name *</label>
+          <input type="text" id="lname" name="lname" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email" data-en="Email Address *" data-sw="Anwani ya Barua Pepe *">Email Address *</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="phone" data-en="Phone Number *" data-sw="Namba ya Simu *">Phone Number *</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="e.g. +255 700 000 000" data-en-ph="e.g. +255 700 000 000" data-sw-ph="mfano +255 700 000 000" required />
+      </div>
+
+      <div class="form-group">
+        <label for="subject" data-en="Subject *" data-sw="Mada *">Subject *</label>
+        <select id="subject" name="subject" required>
+          <option value="" data-en="Select a subject..." data-sw="Chagua mada...">Select a subject...</option>
+          <option value="donation" data-en="Donation Inquiry" data-sw="Swali la Mchango">Donation Inquiry</option>
+          <option value="volunteer" data-en="Volunteer Interest" data-sw="Nia ya Kujitolea">Volunteer Interest</option>
+          <option value="partnership" data-en="Partnership Opportunity" data-sw="Fursa ya Ushirikiano">Partnership Opportunity</option>
+          <option value="feedback" data-en="Feedback" data-sw="Maoni">Feedback</option>
+          <option value="other" data-en="Other" data-sw="Nyingine">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message" data-en="Message *" data-sw="Ujumbe *">Message *</label>
+        <textarea id="message" name="message" placeholder="Tell us how we can help..." data-en-ph="Tell us how we can help..." data-sw-ph="Tuambie jinsi tunavyoweza kusaidia..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary" data-en="Send Message" data-sw="Tuma Ujumbe">Send Message</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p data-en="© 2025 Agape Family Foundation. All rights reserved." data-sw="© 2025 Agape Family Foundation. Haki zote zimehifadhiwa.">© 2025 Agape Family Foundation. All rights reserved.</p>
+    <p style="margin-top: 10px; font-size: 12px;" data-en="Registered NGO · Tanzania · Reg. No. 00-NGO-2022-0047" data-sw="NGO Iliyosajiliwa · Tanzania · Na. ya Usajili 00-NGO-2022-0047">Registered NGO · Tanzania · Reg. No. 00-NGO-2022-0047</p>
+  </footer>
+  <script src="../assets/js/site-data.js?v=1"></script>
+  <script>
+    // Tafsiri ya "select > option" hazibadiliki kwa textContent peke yake kwenye baadhi ya vivinjari
+    // vya simu, hivyo tunahakikisha injini ya AFF.applyLanguage inashughulikia hii pia (angalia site-data.js).
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const form = new FormData(this), data = AFF.get(), contact = data.contact || {};
+      const message = { name: `${form.get('fname')} ${form.get('lname')}`.trim(), email: form.get('email'), phone: form.get('phone'), subject: form.get('subject'), message: form.get('message'), sentAt: new Date().toLocaleString() };
+      AFF.sendMessage(message).catch(() => {});
+      AFF.track('contact_conversion', location.pathname);
+      const text = `New Agape website message%0AName: ${encodeURIComponent(message.name)}%0AEmail: ${encodeURIComponent(message.email)}%0APhone: ${encodeURIComponent(message.phone)}%0ASubject: ${encodeURIComponent(message.subject)}%0A%0A${encodeURIComponent(message.message)}`;
+      const whatsapp = String(contact.whatsapp || data.whatsapp || '').replace(/\D/g, '');
+      if (whatsapp) window.open(`https://wa.me/${whatsapp}?text=${text}`, '_blank', 'noopener');
+      this.reset();
+      alert(AFF.language() === 'sw' ? 'Asante. Ujumbe wako umehifadhiwa na WhatsApp imefunguliwa kwa ajili ya kutuma.' : 'Thank you. Your message was saved and WhatsApp has opened for delivery.');
+    });
+  </script>
+</body>
+</html>

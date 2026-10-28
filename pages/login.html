@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Secure Admin Sign In | Agape</title><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet"><style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#f7f4ef;font:15px 'DM Sans';color:#3d4456}.card{width:min(420px,calc(100% - 40px));background:#fff;padding:36px;border-radius:18px;box-shadow:0 16px 42px rgba(13,31,60,.16)}h1{font:900 30px 'Playfair Display';color:#0d1f3c;margin:0 0 8px}p{margin:0 0 24px}label{display:block;font-weight:600;color:#0d1f3c;margin-bottom:7px}input,button{font:inherit;width:100%;box-sizing:border-box;border-radius:9px;padding:13px}input{border:1px solid #e4ddd4;margin-bottom:14px}button{border:0;background:#e8611a;color:#fff;font-weight:600;cursor:pointer}#note{margin-top:14px;color:#a53131}#codeGroup{display:none}</style></head><body><main class="card"><h1>Admin sign in</h1><p id="intro">Enter your username and password to continue.</p><form id="form"><label for="username">Username</label><input id="username" type="text" autocomplete="username" required autofocus><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" required><div id="codeGroup"><label for="code">6-digit authentication code</label><input id="code" type="text" inputmode="numeric" maxlength="6" autocomplete="one-time-code" placeholder="123456"></div><button id="submitBtn">Sign in securely</button><p id="note" role="alert"></p></form></main><script>
+// Fomu ya kuingia — hatua ya pili (2FA) inaonekana TU kama server itasema inahitajika,
+// baada ya jina la mtumiaji na nenosiri kuwa sahihi. Hii inaepuka kuonyesha uga wa msimbo
+// kwa kila mtu (ambayo ingemuonyesha mshambuliaji kuwa 2FA imewashwa kabla ya kujaribu nenosiri).
+document.getElementById('form').onsubmit = async e => {
+  e.preventDefault();
+  const note = document.getElementById('note');
+  const base = location.pathname.endsWith('/pages/login.html') ? location.pathname.slice(0, -'/pages/login.html'.length) : '';
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+  const code = document.getElementById('code').value.trim();
+  note.textContent = '';
+  try {
+    const r = await fetch(`${base}/api/login`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ username, password, code }) });
+    if (r.ok) return location = `${base}/control`;
+    const result = await r.json().catch(() => ({}));
+    if (result.requires2fa) {
+      document.getElementById('codeGroup').style.display = '';
+      document.getElementById('intro').textContent = 'Enter the 6-digit code from your authenticator app.';
+      document.getElementById('code').focus();
+      note.textContent = result.error || 'Enter your authentication code.';
+      return;
+    }
+    note.textContent = result.error || 'Sign-in failed. Please check your username and password.';
+  } catch { note.textContent = 'Unable to reach the server. Please try again.'; }
+};
+</script></body></html>

@@ -1,0 +1,10 @@
+{
+  "name": "agape-foundation",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "sharp": "^0.35.4"
+  }
+}

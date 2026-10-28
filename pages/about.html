@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Agape Family Foundation — Our mission, vision, and values." />
+  <title>About Us | Agape Family Foundation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0d1f3c;
+      --navy-dark: #081629;
+      --orange: #e8611a;
+      --orange-lt: #f07a3a;
+      --cream: #f7f4ef;
+      --warm-white: #fdfaf6;
+      --text-dark: #1a1a2e;
+      --text-body: #3d4456;
+      --border: #e4ddd4;
+      --shadow-md: 0 8px 32px rgba(13,31,60,.12);
+      --transition: .3s cubic-bezier(.4,0,.2,1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--warm-white);
+      color: var(--text-dark);
+      line-height: 1.65;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    .header { padding: 24px; background: var(--navy-dark); display: flex; align-items: center; gap: 20px; position: sticky; top: 0; z-index: 900; }
+    .header-logo { display: flex; align-items: center; gap: 10px; }
+    .header-logo-img { width: 40px; height: 40px; border-radius: 50%; background: #fff; padding: 2px; }
+    .header-logo-text { color: #fff; font-size: 13px; font-weight: 700; }
+    .header-nav { margin-left: auto; display: flex; gap: 20px; }
+    .header-nav a { color: rgba(255,255,255,.7); font-size: 14px; font-weight: 500; transition: color var(--transition); }
+    .header-nav a:hover { color: #fff; }
+    .header-btn { background: var(--orange); color: #fff; padding: 9px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; }
+
+    .section { padding: 72px 24px; max-width: 960px; margin: 0 auto; }
+    .section-label { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 6vw, 44px); font-weight: 900; line-height: 1.12; color: var(--navy); letter-spacing: -.02em; margin-bottom: 24px; }
+    .section-body { font-size: 15px; color: var(--text-body); line-height: 1.75; margin-bottom: 20px; }
+
+    .footer { background: var(--navy-dark); color: rgba(255,255,255,.5); padding: 48px 24px; text-align: center; }
+    .footer a { color: rgba(255,255,255,.4); transition: color var(--transition); }
+    .footer a:hover { color: rgba(255,255,255,.8); }
+
+    .btn-primary { display: inline-block; background: var(--orange); color: #fff; padding: 15px 28px; border-radius: 10px; font-size: 15px; font-weight: 600; transition: background var(--transition); margin-top: 20px; }
+    .btn-primary:hover { background: var(--orange-lt); }
+
+    @media (max-width: 768px) {
+      .header-nav { display: none; }
+      .section { padding: 48px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="../index.html" class="header-logo">
+      <img src="../logo.png" alt="Agape logo" class="header-logo-img" />
+      <div class="header-logo-text">AFF</div>
+    </a>
+    <nav class="header-nav">
+      <a href="../index.html" data-en="Home" data-sw="Nyumbani">Home</a>
+      <a href="about.html" data-en="About" data-sw="Kuhusu">About</a>
+      <a href="leadership.html" data-en="Leadership" data-sw="Uongozi">Leadership</a>
+      <a href="gallery.html" data-en="Gallery" data-sw="Picha">Gallery</a>
+      <a href="blog.html" data-en="Blog" data-sw="Blogu">Blog</a>
+      <a href="volunteer.html" data-en="Volunteer" data-sw="Jitolee">Volunteer</a>
+      <a href="updates.html" data-en="Updates" data-sw="Matangazo">Updates</a>
+      <a href="contact.html" data-en="Contact" data-sw="Wasiliana">Contact</a>
+      <a href="../index.html#donate" class="header-btn" data-en="Donate" data-sw="Changia">Donate</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <p class="section-label" data-en="About Agape Family Foundation" data-sw="Kuhusu Agape Family Foundation">About Agape Family Foundation</p>
+    <h1 class="section-title" data-en="Our Mission, Vision & Values" data-sw="Dhamira, Maono na Maadili Yetu">Our Mission, Vision & <em style="color:var(--orange);font-style:italic;">Values</em></h1>
+
+    <h2 style="color: var(--navy); font-size: 22px; margin-top: 40px; margin-bottom: 16px;" data-en="Our Mission" data-sw="Dhamira Yetu">Our Mission</h2>
+    <p class="section-body" data-en="To serve, empower, and transform vulnerable lives by turning compassion into meaningful action and hope into a better future. We meet physical needs while strengthening mental and emotional well-being, rebuilding confidence, changing limiting mindsets, restoring hope, and empowering people to believe in their potential." data-sw="Kuhudumia, kuwawezesha, na kubadilisha maisha ya watu walio katika mazingira magumu kwa kugeuza huruma kuwa vitendo vyenye maana na matumaini kuwa mustakabali bora. Tunakidhi mahitaji ya kimwili huku tukiimarisha ustawi wa kiakili na kihisia, kujenga upya kujiamini, kubadilisha fikra zinazoweka mipaka, kurejesha matumaini, na kuwawezesha watu kuamini uwezo wao.">
+      To serve, empower, and transform vulnerable lives by turning compassion into meaningful action and hope into a better future. We meet physical needs while strengthening mental and emotional well-being, rebuilding confidence, changing limiting mindsets, restoring hope, and empowering people to believe in their potential.
+    </p>
+    <p class="section-body" style="margin-top: 16px; color: var(--orange); font-weight: 600; font-style: italic;" data-en="“Serving with Love, Empowering with Purpose, Transforming Lives.”" data-sw="“Kuhudumia kwa Upendo, Kuwezesha kwa Dhamira, Kubadilisha Maisha.”">“Serving with Love, Empowering with Purpose, Transforming Lives.”</p>
+
+    <h2 style="color: var(--navy); font-size: 22px; margin-top: 40px; margin-bottom: 16px;" data-en="Our Vision" data-sw="Maono Yetu">Our Vision</h2>
+    <p class="section-body" data-en="To build a compassionate and empowered society where every vulnerable person has hope, dignity, confidence, and the opportunity to reach their full potential." data-sw="Kujenga jamii yenye huruma na uwezeshaji ambapo kila mtu aliye katika mazingira magumu ana matumaini, heshima, kujiamini, na fursa ya kufikia uwezo wake kamili.">
+      To build a compassionate and empowered society where every vulnerable person has hope, dignity, confidence, and the opportunity to reach their full potential.
+    </p>
+
+    <h2 style="color: var(--navy); font-size: 22px; margin-top: 40px; margin-bottom: 16px;" data-en="Our Core Values" data-sw="Maadili Yetu Makuu">Our Core Values</h2>
+    <div style="margin-top: 20px; display: grid; gap: 16px;">
+      <div style="border-left: 4px solid var(--orange); padding-left: 20px;">
+        <h3 style="color: var(--navy); font-weight: 600; margin-bottom: 8px;" data-en="Compassion" data-sw="Huruma">Compassion</h3>
+        <p class="section-body" style="margin: 0;" data-en="We serve with genuine love, empathy, and care." data-sw="Tunahudumia kwa upendo wa kweli, huruma, na kujali.">We serve with genuine love, empathy, and care.</p>
+      </div>
+      <div style="border-left: 4px solid var(--orange); padding-left: 20px;">
+        <h3 style="color: var(--navy); font-weight: 600; margin-bottom: 8px;" data-en="Love" data-sw="Upendo">Love</h3>
+        <p class="section-body" style="margin: 0;" data-en="Every act of service is rooted in unconditional love." data-sw="Kila tendo la huduma linatokana na upendo usio na masharti.">Every act of service is rooted in unconditional love.</p>
+      </div>
+      <div style="border-left: 4px solid var(--orange); padding-left: 20px;">
+        <h3 style="color: var(--navy); font-weight: 600; margin-bottom: 8px;" data-en="Dignity" data-sw="Heshima">Dignity</h3>
+        <p class="section-body" style="margin: 0;" data-en="We honour the worth and uniqueness of every person." data-sw="Tunaheshimu thamani na upekee wa kila mtu.">We honour the worth and uniqueness of every person.</p>
+      </div>
+      <div style="border-left: 4px solid var(--orange); padding-left: 20px;">
+        <h3 style="color: var(--navy); font-weight: 600; margin-bottom: 8px;" data-en="Empowerment" data-sw="Uwezeshaji">Empowerment</h3>
+        <p class="section-body" style="margin: 0;" data-en="We help people develop their potential and become self-reliant." data-sw="Tunawasaidia watu kukuza uwezo wao na kujitegemea.">We help people develop their potential and become self-reliant.</p>
+      </div>
+      <div style="border-left: 4px solid var(--orange); padding-left: 20px;">
+        <h3 style="color: var(--navy); font-weight: 600; margin-bottom: 8px;" data-en="Hope" data-sw="Matumaini">Hope</h3>
+        <p class="section-body" style="margin: 0;" data-en="We restore hope in difficult circumstances." data-sw="Tunarejesha matumaini katika mazingira magumu.">We restore hope in difficult circumstances.</p>
+      </div>
+      <div style="border-left: 4px solid var(--orange); padding-left: 20px;">
+        <h3 style="color: var(--navy); font-weight: 600; margin-bottom: 8px;" data-en="Mindset Transformation" data-sw="Ubadilishaji wa Fikra">Mindset Transformation</h3>
+        <p class="section-body" style="margin: 0;" data-en="We inspire positive thinking and new possibilities." data-sw="Tunahamasisha fikra chanya na fursa mpya.">We inspire positive thinking and new possibilities.</p>
+      </div>
+      <div style="border-left: 4px solid var(--orange); padding-left: 20px;">
+        <h3 style="color: var(--navy); font-weight: 600; margin-bottom: 8px;" data-en="Integrity" data-sw="Uadilifu">Integrity</h3>
+        <p class="section-body" style="margin: 0;" data-en="We act with honesty, accountability, and responsibility." data-sw="Tunatenda kwa uaminifu, uwajibikaji, na dhamira.">We act with honesty, accountability, and responsibility.</p>
+      </div>
+      <div style="border-left: 4px solid var(--orange); padding-left: 20px;">
+        <h3 style="color: var(--navy); font-weight: 600; margin-bottom: 8px;" data-en="Inclusivity" data-sw="Ushirikishwaji">Inclusivity</h3>
+        <p class="section-body" style="margin: 0;" data-en="We serve everyone with fairness and respect." data-sw="Tunahudumia kila mtu kwa haki na heshima.">We serve everyone with fairness and respect.</p>
+      </div>
+      <div style="border-left: 4px solid var(--orange); padding-left: 20px;">
+        <h3 style="color: var(--navy); font-weight: 600; margin-bottom: 8px;" data-en="Service" data-sw="Huduma">Service</h3>
+        <p class="section-body" style="margin: 0;" data-en="We serve humanity with joy and purpose." data-sw="Tunahudumia binadamu kwa furaha na dhamira.">We serve humanity with joy and purpose.</p>
+      </div>
+      <div style="border-left: 4px solid var(--orange); padding-left: 20px;">
+        <h3 style="color: var(--navy); font-weight: 600; margin-bottom: 8px;" data-en="Sustainability" data-sw="Uendelevu">Sustainability</h3>
+        <p class="section-body" style="margin: 0;" data-en="We create lasting impact, not temporary relief." data-sw="Tunaleta matokeo ya kudumu, si nafuu ya muda mfupi.">We create lasting impact, not temporary relief.</p>
+      </div>
+    </div>
+
+    <h2 style="color: var(--navy); font-size: 22px; margin-top: 40px; margin-bottom: 16px;" data-en="Our Belief" data-sw="Imani Yetu">Our Belief</h2>
+    <p class="section-body" style="font-size: 18px; font-style: italic; color: var(--navy);" data-en="“We don't just change circumstances; we change mindsets, restore hope, and transform lives.”" data-sw="“Hatubadilishi mazingira tu; tunabadilisha fikra, kurejesha matumaini, na kubadilisha maisha.”">“We don't just change circumstances; we change mindsets, restore hope, and transform lives.”</p>
+
+    <h2 style="color: var(--navy); font-size: 22px; margin-top: 40px; margin-bottom: 16px;" data-en="Our History" data-sw="Historia Yetu">Our History</h2>
+    <p class="section-body" data-en="Founded in 2022, Agape Family Foundation began with a simple vision: to ensure no child in Tanzania faces abandonment or poverty alone. What started as supporting 12 children has grown to directly support over 520 children across 8 regions. Today, we remain committed to our founding principle—that every child deserves love, education, and hope." data-sw="Ilianzishwa mwaka 2022, Agape Family Foundation ilianza na maono rahisi: kuhakikisha hakuna mtoto Tanzania anayekabiliana na kutelekezwa au umaskini peke yake. Kilichoanza kama msaada kwa watoto 12 sasa kimekua na kufikia zaidi ya watoto 520 kwa moja kwa moja katika mikoa 8. Leo, tunaendelea kushikilia kanuni yetu ya msingi—kwamba kila mtoto anastahili upendo, elimu, na matumaini.">
+      Founded in 2022, Agape Family Foundation began with a simple vision: to ensure no child in Tanzania faces abandonment or poverty alone. What started as supporting 12 children has grown to directly support over 520 children across 8 regions. Today, we remain committed to our founding principle—that every child deserves love, education, and hope.
+    </p>
+
+    <a href="../index.html#donate" class="btn-primary" data-en="Support Our Mission" data-sw="Saidia Dhamira Yetu">Support Our Mission</a>
+  </section>
+
+  <footer class="footer">
+    <p data-en="© 2025 Agape Family Foundation. All rights reserved." data-sw="© 2025 Agape Family Foundation. Haki zote zimehifadhiwa.">© 2025 Agape Family Foundation. All rights reserved.</p>
+    <p style="margin-top: 10px; font-size: 12px;" data-en="Registered NGO · Tanzania · Reg. No. 00-NGO-2022-0047" data-sw="NGO Iliyosajiliwa · Tanzania · Na. ya Usajili 00-NGO-2022-0047">Registered NGO · Tanzania · Reg. No. 00-NGO-2022-0047</p>
+  </footer>
+  <script src="../assets/js/site-data.js?v=1"></script>
+</body>
+</html>

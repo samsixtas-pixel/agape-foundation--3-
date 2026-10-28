@@ -1,0 +1,68 @@
+{
+  "whatsapp": "255699126144",
+  "whatsappContacts": [
+    { "label": "Chairperson", "number": "255699126144" },
+    { "label": "Secretary", "number": "255765889888" },
+    { "label": "Developer", "number": "255698741459" }
+  ],
+  "heroImage": "assets/uploads/hero-group.jpg",
+  "gallery": [
+    ["assets/uploads/kids-wall.jpg", "Morning Lessons", "Dar es Salaam · 2024"],
+    ["assets/uploads/group-wheelchair.jpg", "Afternoon Play", "Mwanza Home · 2024"],
+    ["assets/uploads/clinic-visit.jpg", "Health Screening", "Annual medical outreach · 2024"],
+    ["assets/uploads/hero-group.jpg", "Community Day", "Morogoro · Annual gathering"],
+    ["assets/uploads/food-drive.jpg", "Food Distribution", "Dar es Salaam · Monthly drive"],
+    ["assets/uploads/child-care.jpg", "New Arrivals", "Welcome day · Mbeya"],
+    ["assets/uploads/baobab-tour.jpg", "Together We Grow", "Field trip · 2024"]
+  ],
+  "reviews": [
+    ["Amina, 11", "Dar es Salaam · Joined 2022", "When Amina arrived, she hadn't been to school in two years. Today she reads aloud to younger children in the home and wants to be a teacher.", "assets/uploads/community-pair.jpg"],
+    ["Baraka, 9", "Mwanza · Joined 2021", "Baraka arrived malnourished and afraid. After 18 months of consistent care, he scored top in his class — his caregiver cried when she heard the news.", "assets/uploads/child-care.jpg"],
+    ["Neema, 14", "Arusha · Joined 2019", "Neema is now preparing for secondary school. She speaks three languages and volunteers at the foundation on weekends, helping younger children settle in.", "assets/uploads/woman-pink.jpg"]
+  ],
+  "leaders": [
+    ["Wilson Gasper", "Founder · CEO", "Wilson founded Agape Family Foundation in 2022 with a vision to give every orphaned child in Tanzania a second chance at life. Under his leadership, the foundation has grown to support over 520 children across 8 regions.", "assets/uploads/leader-wilson.jpg"]
+  ],
+  "adminProfile": { "name": "Administrator", "image": "" },
+  "hero": { "childrenCount": "520+", "headline": "Children Given a Second Chance", "description": "Providing education, healthcare, and daily support to orphaned children across Tanzania." },
+  "programs": [
+    ["Education", "We enroll children in accredited schools, provide uniforms, books, and after-school tutoring — ensuring no child falls behind due to poverty.", "340+", "children currently enrolled in school", "assets/uploads/prayer-group.jpg"],
+    ["Healthcare", "Monthly medical check-ups, vaccinations, nutritional support, and mental health care — because a healthy child can truly learn and grow.", "1,200+", "medical visits covered last year", "assets/uploads/clinic-visit.jpg"],
+    ["Community", "We build family-like homes and connect children with caregivers, mentors, and community support systems that last a lifetime.", "6", "community homes across Tanzania", "assets/uploads/food-drive.jpg"]
+  ],
+  "seo": { "homeTitle": "Agape Family Foundation | 520+ Children Given a Second Chance", "homeDescription": "Agape Family Foundation provides education, healthcare, and daily support to orphaned children across Tanzania.", "shareImage": "assets/uploads/hero-group.jpg" },
+  "donation": {
+    "paymentUrl": "",
+    "history": [],
+    "lipaNamba": {
+      "mpesa": { "number": "123456", "name": "Agape Family Foundation" },
+      "tigopesa": { "number": "", "name": "" },
+      "airtel": { "number": "", "name": "" },
+      "halotel": { "number": "", "name": "" }
+    }
+  },
+  "blog": [
+    { "id": "post-1", "image": "assets/uploads/wilson-studio.jpg", "date": "May 2025", "title": "New Scholarship Program Launched", "excerpt": "We're excited to announce a new scholarship program supporting 50 students pursuing secondary education. This initiative will change lives...", "body": "We're excited to announce a new scholarship program supporting 50 students pursuing secondary education. Thanks to generous donors, these students will receive full tuition, books, and mentorship for the next four years. This initiative reflects our belief that education is the strongest path out of poverty, and we are proud to walk alongside these students as they pursue their dreams." },
+    { "id": "post-2", "image": "assets/uploads/clinic-visit.jpg", "date": "April 2025", "title": "Annual Healthcare Outreach Reaches 1,200 Children", "excerpt": "Our medical team completed a comprehensive health screening reaching over 1,200 children across 8 regions. Here's what we found...", "body": "Our medical team completed a comprehensive health screening reaching over 1,200 children across 8 regions. The outreach included vaccinations, dental checks, nutrition assessments, and referrals for children needing specialist care. We are grateful to the volunteer doctors and nurses who made this possible." },
+    { "id": "post-3", "image": "assets/uploads/community-pair.jpg", "date": "March 2025", "title": "Meet Amina: A Story of Hope and Determination", "excerpt": "Two years ago, Amina couldn't read. Today, she's reading to other children. This is her story...", "body": "Two years ago, Amina couldn't read a single word. Today, she's reading to other children in her home every evening. Her caregiver says the transformation has been remarkable to watch, and Amina now dreams of becoming a teacher herself one day." },
+    { "id": "post-4", "image": "assets/uploads/food-drive.jpg", "date": "February 2025", "title": "Monthly Food Drive Feeds 300 Families", "excerpt": "Thanks to our donors and volunteers, this month we distributed cooking oil, sembe, and other essentials to 300 families across Dar es Salaam.", "body": "Thanks to our donors and volunteers, this month we distributed cooking oil, sembe, and other essentials to 300 families across Dar es Salaam. Each family received enough supplies for two weeks. This monthly drive has become a lifeline for the community, and we are grateful to everyone who made it possible." },
+    { "id": "post-5", "image": "assets/uploads/group-wheelchair.jpg", "date": "January 2025", "title": "Inclusive Care for Children with Disabilities", "excerpt": "Agape Family Foundation provides wheelchairs, mobility aids, and specialized care for children with disabilities across Tanzania.", "body": "Agape Family Foundation provides wheelchairs, mobility aids, and specialized care for children with disabilities across Tanzania. Our team works with physiotherapists and community health workers to ensure every child receives the support they need to live with dignity and independence." },
+    { "id": "post-6", "image": "assets/uploads/baobab-tour.jpg", "date": "December 2024", "title": "Field Trip: Learning Beyond the Classroom", "excerpt": "Our children visited Tanzania's iconic baobab trees — a day of discovery, joy, and connection with their heritage.", "body": "Our children visited Tanzania's iconic baobab trees — a day of discovery, joy, and connection with their heritage. Field trips like this give our children the chance to explore, learn, and simply be kids. We are grateful to the guides and volunteers who made this unforgettable day possible." }
+  ],
+  "contact": {
+    "email": "info@agapefamilyfoundation.org",
+    "whatsapp": "255699126144",
+    "phone": "+255 22 212 3456",
+    "office": "Dar es Salaam, Tanzania",
+    "regionalOffices": "8 Regional Offices",
+    "availability": "Mon-Fri, 9 AM - 5 PM EAT",
+    "intro": "Have questions? Want to partner with us? Ready to make a difference? We'd love to hear from you. Reach out using any of the methods below."
+  },
+  "analytics": [],
+  "messages": [],
+  "updates": [],
+  "users": [
+    { "username": "willy", "passwordHash": "110c0814793c81bc6bc2556c7e4f267c:a09abd30878409348614b56579fd332afb2469a64f56c2c9fb60cfa15f27bc4817cfdd01a23a001aeeee337cb73279f538841a5eaa077f012e2345ecbe220b24", "active": true, "createdAt": "2026-08-15T08:42:17.756Z" },
+    { "username": "mmari", "passwordHash": "ec52f6e92d9760cd1b825384a34248c3:8b4c23b3ada1d34a69c710d89939b4b7a6788028f82d76c9a9b67db75e6367205dcb1f2b48be932a33b160354af9c786e24c902b14d6a25f9003e98d60da2906", "active": true, "role": "admin", "mustChangePassword": true, "createdAt": "2026-09-01T08:19:43.664Z" }
+  ]
+}

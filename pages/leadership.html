@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Leadership Team | Agape Family Foundation" />
+  <title>Leadership | Agape Family Foundation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0d1f3c;
+      --navy-dark: #081629;
+      --orange: #e8611a;
+      --orange-lt: #f07a3a;
+      --cream: #f7f4ef;
+      --warm-white: #fdfaf6;
+      --text-dark: #1a1a2e;
+      --text-body: #3d4456;
+      --border: #e4ddd4;
+      --shadow-md: 0 8px 32px rgba(13,31,60,.12);
+      --transition: .3s cubic-bezier(.4,0,.2,1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--warm-white);
+      color: var(--text-dark);
+      line-height: 1.65;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    .header { padding: 24px; background: var(--navy-dark); display: flex; align-items: center; gap: 20px; position: sticky; top: 0; z-index: 900; }
+    .header-logo { display: flex; align-items: center; gap: 10px; }
+    .header-logo-img { width: 40px; height: 40px; border-radius: 50%; background: #fff; padding: 2px; }
+    .header-logo-text { color: #fff; font-size: 13px; font-weight: 700; }
+    .header-nav { margin-left: auto; display: flex; gap: 20px; }
+    .header-nav a { color: rgba(255,255,255,.7); font-size: 14px; font-weight: 500; transition: color var(--transition); }
+    .header-nav a:hover { color: #fff; }
+    .header-btn { background: var(--orange); color: #fff; padding: 9px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; }
+
+    .section { padding: 72px 24px; max-width: 960px; margin: 0 auto; }
+    .section-label { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 6vw, 44px); font-weight: 900; line-height: 1.12; color: var(--navy); letter-spacing: -.02em; margin-bottom: 24px; }
+
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-top: 40px; }
+    .team-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border); }
+    .team-card-img { height: 240px; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.78); }
+    .team-card-img svg { width: 74px; height: 74px; filter: drop-shadow(0 6px 10px rgba(0,0,0,.25)); }
+    .team-card-photo { background-size: cover; background-position: center; }
+    .team-card-body { padding: 24px; }
+    .team-card-name { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .team-card-title { font-size: 12px; font-weight: 600; color: var(--orange); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 12px; }
+    .team-card-bio { font-size: 13px; color: var(--text-body); line-height: 1.6; }
+
+    .footer { background: var(--navy-dark); color: rgba(255,255,255,.5); padding: 48px 24px; text-align: center; }
+    .footer a { color: rgba(255,255,255,.4); transition: color var(--transition); }
+    .footer a:hover { color: rgba(255,255,255,.8); }
+
+    @media (max-width: 768px) {
+      .header-nav { display: none; }
+      .section { padding: 48px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="../index.html" class="header-logo">
+      <img src="../logo.png" alt="Agape logo" class="header-logo-img" />
+      <div class="header-logo-text">AFF</div>
+    </a>
+    <nav class="header-nav">
+      <a href="../index.html" data-en="Home" data-sw="Nyumbani">Home</a>
+      <a href="about.html" data-en="About" data-sw="Kuhusu">About</a>
+      <a href="leadership.html" data-en="Leadership" data-sw="Uongozi">Leadership</a>
+      <a href="gallery.html" data-en="Gallery" data-sw="Picha">Gallery</a>
+      <a href="blog.html" data-en="Blog" data-sw="Blogu">Blog</a>
+      <a href="volunteer.html" data-en="Volunteer" data-sw="Jitolee">Volunteer</a>
+      <a href="updates.html" data-en="Updates" data-sw="Matangazo">Updates</a>
+      <a href="contact.html" data-en="Contact" data-sw="Wasiliana">Contact</a>
+      <a href="../index.html#donate" class="header-btn" data-en="Donate" data-sw="Changia">Donate</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <p class="section-label" data-en="Meet Our Team" data-sw="Kutana na Timu Yetu">Meet Our Team</p>
+    <h1 class="section-title" data-en="Leadership & Commitment" data-sw="Uongozi na Kujitolea">Leadership & <em style="color:var(--orange);font-style:italic;">Commitment</em></h1>
+    <p style="font-size: 15px; color: var(--text-body); line-height: 1.75; max-width: 540px; margin-bottom: 40px;" data-en="Our leadership team brings decades of combined experience in child welfare, healthcare, education, and non-profit management. We are united by a single commitment: the welfare and future of Tanzania's orphaned children." data-sw="Timu yetu ya uongozi ina uzoefu wa miongo mingi katika ustawi wa watoto, afya, elimu, na uendeshaji wa mashirika yasiyo ya kiserikali. Tumeunganishwa na dhamira moja: ustawi na mustakabali wa watoto yatima wa Tanzania.">
+      Our leadership team brings decades of combined experience in child welfare, healthcare, education, and non-profit management. We are united by a single commitment: the welfare and future of Tanzania's orphaned children.
+    </p>
+
+    <!-- Kumbuka: maudhui halisi ya .team-grid hapa chini yanabadilishwa na admin dashboard
+         (data.leaders kupitia site-data.js). Hii hapa chini ni fallback tu kabla JS haijapakia. -->
+    <div class="team-grid">
+      <!-- SSR:TEAM:START -->
+      <div class="team-card">
+        <div class="team-card-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="7" r="3"/><path d="M5 21v-2a7 7 0 0 1 14 0v2M8 14l-2 7m10-7 2 7M9 17h6"/></svg></div>
+        <div class="team-card-body">
+          <div class="team-card-name">Amina Mkamali</div>
+          <div class="team-card-title">Executive Director</div>
+          <p class="team-card-bio">With 15 years in child welfare and NGO leadership, Amina founded AFF with a vision to transform the lives of orphaned children across Tanzania.</p>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-card-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21a7 7 0 0 0-7-7v7m7 0a7 7 0 0 1 7-7v7"/><circle cx="12" cy="7" r="3"/><path d="M18 3v4m-2-2h4"/></svg></div>
+        <div class="team-card-body">
+          <div class="team-card-name">Dr. Julius Mwenda</div>
+          <div class="team-card-title">Head of Healthcare</div>
+          <p class="team-card-bio">A pediatrician with 20 years of experience, Julius leads our comprehensive healthcare initiatives ensuring every child receives quality medical care.</p>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-card-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 10 12 5l9 5-9 5-9-5Z"/><path d="M7 13v4c3 2 7 2 10 0v-4M21 10v6"/></svg></div>
+        <div class="team-card-body">
+          <div class="team-card-name">Grace Mtoro</div>
+          <div class="team-card-title">Education Coordinator</div>
+          <p class="team-card-bio">Grace oversees school enrollment, tutoring programs, and scholarship initiatives, ensuring every child has access to quality education.</p>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-card-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><path d="M12 7v10m3-7.5c0-1-1.3-1.7-3-1.7s-3 .7-3 1.9 1.3 1.7 3 1.7 3 .7 3 1.9-1.3 1.9-3 1.9-3-.7-3-1.7"/></svg></div>
+        <div class="team-card-body">
+          <div class="team-card-name">Emmanuel Njau</div>
+          <div class="team-card-title">Finance Officer</div>
+          <p class="team-card-bio">Emmanuel ensures complete transparency in fund management and maintains detailed records of every Tanzanian shilling donated and how it's used.</p>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-card-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.9-8.6a5.5 5.5 0 0 0-.1-7.8Z"/></svg></div>
+        <div class="team-card-body">
+          <div class="team-card-name">Rose Kipchoge</div>
+          <div class="team-card-title">Community Liaison</div>
+          <p class="team-card-bio">Rose manages our community homes and ensures every child receives personalized care, mentorship, and the support they need to thrive.</p>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-card-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
+        <div class="team-card-body">
+          <div class="team-card-name">David Kiplagat</div>
+          <div class="team-card-title">Program Manager</div>
+          <p class="team-card-bio">David oversees all program implementations across our 8 regions, coordinating with local partners and ensuring quality service delivery.</p>
+        </div>
+      </div>
+      <!-- SSR:TEAM:END -->
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p data-en="© 2025 Agape Family Foundation. All rights reserved." data-sw="© 2025 Agape Family Foundation. Haki zote zimehifadhiwa.">© 2025 Agape Family Foundation. All rights reserved.</p>
+    <p style="margin-top: 10px; font-size: 12px;" data-en="Registered NGO · Tanzania · Reg. No. 00-NGO-2022-0047" data-sw="NGO Iliyosajiliwa · Tanzania · Na. ya Usajili 00-NGO-2022-0047">Registered NGO · Tanzania · Reg. No. 00-NGO-2022-0047</p>
+  </footer>
+  <script src="../assets/js/site-data.js?v=1"></script>
+</body>
+</html>

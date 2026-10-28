@@ -1,0 +1,40 @@
+# ============================================================
+# Systemd service for the Agape Node server, with credentials set as fixed
+# environment variables (so SESSION_SECRET doesn't change on every restart —
+# server.js warns on startup if this isn't done, and a changing secret logs
+# every admin out on every deploy/reboot).
+#
+# Setup:
+#   1. Copy this project to /var/www/agape-foundation on the server
+#   2. cd /var/www/agape-foundation && npm install   (fetches sharp's native binary for THIS server)
+#   3. Generate a real secret:  openssl rand -hex 32
+#   4. Fill in ADMIN_PASSWORD and SESSION_SECRET below with real values
+#   5. sudo cp agape.service /etc/systemd/system/agape.service
+#   6. sudo systemctl daemon-reload
+#   7. sudo systemctl enable --now agape
+#   8. sudo systemctl status agape        (confirm it's running)
+#   9. sudo journalctl -u agape -f        (watch the startup diagnostics —
+#      this is where you'll see if data/content.json is missing or the
+#      data/ folder isn't writable)
+# ============================================================
+[Unit]
+Description=Agape Family Foundation website
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/var/www/agape-foundation
+ExecStart=/usr/bin/node server.js
+Restart=on-failure
+RestartSec=5
+User=www-data
+
+# --- Set these to real values before enabling this service ---
+Environment=PORT=3000
+Environment=HOST=127.0.0.1
+Environment=ADMIN_PASSWORD=CHANGE-THIS-TO-A-REAL-STRONG-PASSWORD
+Environment=SESSION_SECRET=CHANGE-THIS-run-openssl-rand-hex-32-and-paste-the-output-here
+Environment=ADMIN_USERNAME=admin
+
+[Install]
+WantedBy=multi-user.target

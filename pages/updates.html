@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Updates | Agape Family Foundation" />
+  <title>Updates | Agape Family Foundation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0d1f3c; --navy-dark: #081629; --orange: #e8611a; --cream: #f7f4ef;
+      --warm-white: #fdfaf6; --text-dark: #1a1a2e; --text-body: #3d4456; --border: #e4ddd4;
+      --shadow-md: 0 12px 32px rgba(13,31,60,.14); --transition: .3s cubic-bezier(.4,0,.2,1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--warm-white); color: var(--text-dark); line-height: 1.65; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    .header { padding: 24px; background: var(--navy-dark); display: flex; align-items: center; gap: 20px; position: sticky; top: 0; z-index: 900; }
+    .header-logo { display: flex; align-items: center; gap: 10px; }
+    .header-logo-img { width: 40px; height: 40px; border-radius: 50%; background: #fff; padding: 2px; }
+    .header-logo-text { color: #fff; font-size: 13px; font-weight: 700; }
+    .header-nav { margin-left: auto; display: flex; gap: 20px; }
+    .header-nav a { color: rgba(255,255,255,.7); font-size: 14px; font-weight: 500; transition: color var(--transition); }
+    .header-nav a:hover { color: #fff; }
+    .header-btn { background: var(--orange); color: #fff; padding: 9px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; }
+
+    .section { padding: 56px 24px 88px; max-width: 1000px; margin: 0 auto; }
+    .section-label { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 5vw, 42px); font-weight: 900; color: var(--navy); letter-spacing: -.02em; margin-bottom: 40px; }
+
+    .updates-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+    .update-card { background: #fff; border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-md); transition: transform var(--transition), box-shadow var(--transition); }
+    .update-card:hover { transform: translateY(-4px); box-shadow: 0 20px 44px rgba(13,31,60,.2); }
+    .update-imgwrap { position: relative; width: 100%; aspect-ratio: 4/3; background: linear-gradient(135deg, var(--navy), var(--navy-dark)); overflow: hidden; }
+    .update-imgwrap img { width: 100%; height: 100%; object-fit: cover; }
+    .update-badge { position: absolute; left: 14px; bottom: 14px; background: var(--orange); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: 5px 11px; border-radius: 999px; }
+    .update-body { padding: 22px 24px 26px; }
+    .update-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 900; color: var(--navy); margin-bottom: 10px; line-height: 1.25; }
+    .update-details { font-size: 14px; color: var(--text-body); line-height: 1.7; white-space: pre-wrap; }
+    .update-time { font-size: 11.5px; font-weight: 700; color: #a06e00; margin-top: 14px; }
+    .updates-empty { text-align: center; padding: 64px 24px; color: var(--text-body); font-size: 15px; }
+
+    .footer { background: var(--navy-dark); color: rgba(255,255,255,.5); padding: 48px 24px; text-align: center; }
+
+    @media (max-width: 768px) { .header-nav { display: none; } .section { padding: 40px 20px 64px; } }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="../index.html" class="header-logo">
+      <img src="../logo.png" alt="Agape logo" class="header-logo-img" />
+      <div class="header-logo-text">AFF</div>
+    </a>
+    <nav class="header-nav">
+      <a href="../index.html" data-en="Home" data-sw="Nyumbani">Home</a>
+      <a href="about.html" data-en="About" data-sw="Kuhusu">About</a>
+      <a href="leadership.html" data-en="Leadership" data-sw="Uongozi">Leadership</a>
+      <a href="gallery.html" data-en="Gallery" data-sw="Picha">Gallery</a>
+      <a href="blog.html" data-en="Blog" data-sw="Blogu">Blog</a>
+      <a href="volunteer.html" data-en="Volunteer" data-sw="Jitolee">Volunteer</a>
+      <a href="updates.html" data-en="Updates" data-sw="Matangazo">Updates</a>
+      <a href="contact.html" data-en="Contact" data-sw="Wasiliana">Contact</a>
+      <a href="../index.html#donate" class="header-btn" data-en="Donate" data-sw="Changia">Donate</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <p class="section-label" data-en="Happening Now" data-sw="Yanayoendelea Sasa">Happening Now</p>
+    <h1 class="section-title" data-en="Latest Updates" data-sw="Matangazo ya Hivi Karibuni">Latest Updates</h1>
+    <div class="updates-grid" id="updatesGrid">
+      <!-- SSR:UPDATES:START -->
+      <!-- SSR:UPDATES:END -->
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p data-en="© 2025 Agape Family Foundation. All rights reserved." data-sw="© 2025 Agape Family Foundation. Haki zote zimehifadhiwa.">© 2025 Agape Family Foundation. All rights reserved.</p>
+  </footer>
+  <script src="../assets/js/site-data.js?v=1"></script>
+  <script>
+    // Onyesha matangazo yote yanayotumika kwa sasa (hai) — yaliyoisha muda wake tayari
+    // yameondolewa server-side, hivyo hapa tunaonyesha tu yale data.updates inayorudisha.
+    const UPDATES_PAGE_STRINGS = {
+      en: { badge: 'Update', endsIn: h => h < 1 ? 'Ending soon' : `Active for ${h}h more`, empty: "There are no active updates right now — check back soon." },
+      sw: { badge: 'Tangazo', endsIn: h => h < 1 ? 'Inakaribia kuisha' : `Itaendelea kwa saa ${h} zaidi`, empty: 'Hakuna matangazo yanayoendelea kwa sasa — rejea hivi karibuni.' }
+    };
+    function renderUpdatesPage() {
+      const t = UPDATES_PAGE_STRINGS[AFF.language()] || UPDATES_PAGE_STRINGS.en;
+      const updates = AFF.get().updates || [];
+      const grid = document.getElementById('updatesGrid');
+      if (!updates.length) { grid.outerHTML = `<div class="updates-empty">${t.empty}</div>`; return; }
+      grid.innerHTML = updates.map(u => {
+        const hoursLeft = u.expiresAt ? Math.max(0, Math.round((new Date(u.expiresAt).getTime() - Date.now()) / 3600000)) : null;
+        return `<article class="update-card"><div class="update-imgwrap"><img src="${u.image}" alt="${AFF.escape(u.title)}"><span class="update-badge">${t.badge}</span></div><div class="update-body"><h2 class="update-title">${AFF.escape(u.title)}</h2><p class="update-details">${AFF.escape(u.details)}</p>${hoursLeft !== null ? `<div class="update-time">${t.endsIn(hoursLeft)}</div>` : ''}</div></article>`;
+      }).join('');
+    }
+    document.addEventListener('DOMContentLoaded', () => { renderUpdatesPage(); AFF.load().then(renderUpdatesPage).catch(() => {}); });
+  </script>
+</body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Photo Gallery | Agape Family Foundation" />
+  <title>Gallery | Agape Family Foundation</title>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Photo Gallery | Agape Family Foundation" />
+  <meta property="og:description" content="A visual journey through the work of Agape Family Foundation—moments of learning, healing, growth, and hope." />
+  <meta property="og:image" content="../assets/uploads/WhatsApp Image 2026-08-15 at 03.18.37.jpeg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --navy:#0d1f3c; --navy-dark:#081629; --navy-mid:#162d52;
+      --orange:#e8611a; --orange-lt:#f07a3a;
+      --cream:#f7f4ef; --warm-white:#fdfaf6;
+      --text-dark:#1a1a2e; --text-body:#3d4456; --text-muted:#6b7280;
+      --border:#e4ddd4;
+      --shadow-sm:0 2px 12px rgba(13,31,60,.07);
+      --shadow-md:0 8px 32px rgba(13,31,60,.12);
+      --radius:12px; --radius-lg:20px;
+      --transition:.3s cubic-bezier(.4,0,.2,1);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--text-dark);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+    img{display:block;max-width:100%}
+    a{text-decoration:none;color:inherit}
+    button{cursor:pointer;border:none;background:none;font-family:inherit}
+    ::selection{background:rgba(232,97,26,.24);color:var(--navy-dark)}
+    :focus-visible{outline:3px solid rgba(240,122,58,.72);outline-offset:3px}
+
+    /* HEADER */
+    .header{padding:18px 24px;background:var(--navy-dark);display:flex;align-items:center;gap:20px;position:sticky;top:0;z-index:900;box-shadow:0 1px 0 rgba(255,255,255,.06)}
+    .header-logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+    .header-logo-img{width:40px;height:40px;border-radius:50%;background:#fff;padding:2px;object-fit:contain;box-shadow:0 0 0 1.5px rgba(255,255,255,.2)}
+    .header-logo-text{color:#fff;font-size:13px;font-weight:700;line-height:1.15;letter-spacing:.01em}
+    .header-logo-text span{display:block;font-weight:300;opacity:.65;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+    .header-nav{margin-left:auto;display:flex;align-items:center;gap:18px}
+    .header-nav a{color:rgba(255,255,255,.72);font-size:14px;font-weight:500;transition:color var(--transition)}
+    .header-nav a:hover,.header-nav a.active{color:#fff}
+    .header-btn{background:var(--orange);color:#fff !important;padding:9px 18px;border-radius:8px;font-size:13px;font-weight:600}
+    .header-btn:hover{background:var(--orange-lt)}
+    .header-lang{display:flex;gap:2px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:3px;margin-left:8px}
+    .header-lang button{padding:5px 10px;border-radius:6px;font-size:11px;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.5);transition:background var(--transition),color var(--transition)}
+    .header-lang button.active{background:var(--orange);color:#fff}
+
+    /* PAGE */
+    .section{padding:72px 24px;max-width:1000px;margin:0 auto}
+    .section-label{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:12px}
+    .section-title{font-family:'Playfair Display',serif;font-size:clamp(28px,6vw,46px);font-weight:900;line-height:1.12;color:var(--navy);letter-spacing:-.02em;margin-bottom:24px}
+    .section-title em{font-style:italic;color:var(--orange)}
+    .section-sub{font-size:15px;color:var(--text-body);line-height:1.75;max-width:620px;margin-bottom:40px}
+
+    /* GALLERY GRID */
+    .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:20px}
+    .gallery-item{position:relative;overflow:hidden;border-radius:14px;height:300px;cursor:pointer;box-shadow:var(--shadow-md);background:var(--navy-dark);transition:transform var(--transition),box-shadow var(--transition)}
+    .gallery-item:hover{transform:translateY(-4px);box-shadow:0 22px 48px rgba(13,31,60,.2)}
+    .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+    .gallery-item:hover img{transform:scale(1.08)}
+    .gallery-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,22,41,.05) 0%,rgba(8,22,41,.35) 55%,rgba(8,22,41,.92) 100%);opacity:.9;transition:opacity var(--transition);display:flex;align-items:flex-end;justify-content:flex-start;color:#fff;padding:22px}
+    .gallery-item:hover .gallery-overlay{opacity:1}
+    .gallery-overlay-text{text-align:left}
+    .gallery-overlay-text strong{display:block;font-family:'Playfair Display',serif;font-size:17px;font-weight:700;line-height:1.2;margin-bottom:4px}
+    .gallery-overlay-text span{font-size:12px;color:rgba(255,255,255,.72);letter-spacing:.01em}
+    .gallery-zoom{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.18);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;color:#fff;opacity:0;transition:opacity var(--transition)}
+    .gallery-item:hover .gallery-zoom{opacity:1}
+    .gallery-zoom svg{width:16px;height:16px}
+
+    /* EMPTY STATE */
+    .gallery-empty{text-align:center;padding:80px 24px;color:var(--text-muted);font-size:15px;border:1.5px dashed var(--border);border-radius:16px;background:var(--warm-white)}
+
+    /* LIGHTBOX */
+    .lightbox{position:fixed;inset:0;z-index:1100;background:rgba(5,14,28,.94);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:24px;opacity:0;transition:opacity .3s ease}
+    .lightbox.open{display:flex;opacity:1}
+    .lightbox-inner{position:relative;max-width:1100px;width:100%;max-height:100vh;display:flex;flex-direction:column;align-items:center}
+    .lightbox-img{width:auto;max-width:100%;max-height:80vh;border-radius:12px;box-shadow:0 24px 80px rgba(0,0,0,.6)}
+    .lightbox-caption{margin-top:18px;color:#fff;text-align:center;max-width:640px}
+    .lightbox-caption strong{display:block;font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin-bottom:4px}
+    .lightbox-caption span{font-size:13px;color:rgba(255,255,255,.6)}
+    .lightbox-close{position:absolute;top:-48px;right:0;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;display:flex;align-items:center;justify-content:center;transition:background var(--transition)}
+    .lightbox-close:hover{background:rgba(255,255,255,.22)}
+    .lightbox-close svg{width:20px;height:20px}
+    .lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;display:flex;align-items:center;justify-content:center;transition:background var(--transition)}
+    .lightbox-nav:hover{background:rgba(255,255,255,.22)}
+    .lightbox-nav svg{width:22px;height:22px}
+    .lightbox-prev{left:-64px}
+    .lightbox-next{right:-64px}
+    @media(max-width:900px){.lightbox-prev{left:8px}.lightbox-next{right:8px}.lightbox-close{top:8px;right:8px;background:rgba(0,0,0,.5)}}
+
+    /* FOOTER */
+    .footer{background:var(--navy-dark);color:rgba(255,255,255,.5);padding:48px 24px;text-align:center;margin-top:40px}
+    .footer p{font-size:13px;line-height:1.7}
+    .footer p+p{margin-top:10px;font-size:12px}
+    .footer a{color:rgba(255,255,255,.7);font-weight:600;border-bottom:1px solid rgba(255,255,255,.2)}
+    .footer a:hover{color:#fff;border-bottom-color:rgba(255,255,255,.5)}
+
+    /* FLOATING WHATSAPP */
+    .float-wa{position:fixed;bottom:24px;right:24px;z-index:800;background:#25d366;color:#fff;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(37,211,102,.45);transition:transform var(--transition),background var(--transition)}
+    .float-wa:hover{transform:scale(1.08);background:#1fbb5a}
+    .float-wa svg{width:26px;height:26px}
+    @media(max-width:768px){.float-wa{bottom:20px;right:20px;width:48px;height:48px}.float-wa svg{width:24px;height:24px}}
+
+    @media(max-width:768px){
+      .header{padding:14px 16px;gap:12px}
+      .header-nav{gap:12px}
+      .header-nav a:not(.header-btn):not(.header-lang){display:none}
+      .section{padding:48px 20px}
+      .gallery-item{height:240px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <a href="../index.html" class="header-logo">
+      <img src="../logo.png" alt="Agape Family Foundation logo" class="header-logo-img" />
+      <div class="header-logo-text">Agape Family Foundation<span>Est. 2022 · Tanzania</span></div>
+    </a>
+    <nav class="header-nav" aria-label="Main navigation">
+      <a href="../index.html" data-en="Home" data-sw="Nyumbani">Home</a>
+      <a href="about.html" data-en="About" data-sw="Kuhusu">About</a>
+      <a href="leadership.html" data-en="Leadership" data-sw="Uongozi">Leadership</a>
+      <a href="gallery.html" class="active" data-en="Gallery" data-sw="Picha">Gallery</a>
+      <a href="blog.html" data-en="Blog" data-sw="Blogu">Blog</a>
+      <a href="volunteer.html" data-en="Volunteer" data-sw="Jitolee">Volunteer</a>
+      <a href="updates.html" data-en="Updates" data-sw="Matangazo">Updates</a>
+      <a href="contact.html" data-en="Contact" data-sw="Wasiliana">Contact</a>
+      <a href="../index.html#donate" class="header-btn" data-en="Donate" data-sw="Changia">Donate</a>
+      <div class="header-lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="active">EN</button>
+        <button type="button" data-lang="sw">SW</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="section">
+    <p class="section-label" data-en="Photo Gallery" data-sw="Galeria ya Picha">Photo Gallery</p>
+    <h1 class="section-title">
+      <span data-en="Moments That" data-sw="Nyakati Zenye">Moments That</span>
+      <em data-en="Matter" data-sw="Maana">Matter</em>
+    </h1>
+    <p class="section-sub" data-en="A visual journey through the work of Agape Family Foundation — moments of learning, healing, growth, and hope." data-sw="Safari ya picha katika kazi ya Agape Family Foundation — nyakati za kujifunza, kupona, kukua, na matumaini.">
+      A visual journey through the work of Agape Family Foundation — moments of learning, healing, growth, and hope.
+    </p>
+
+    <!-- SSR:GALLERY:START -->
+    <div class="gallery-grid" id="galleryGrid">
+
+      <div class="gallery-item" data-index="0">
+        <img src="../assets/uploads/0d3451a789cfe17f70bd2a0cadf97c8e576fc0d1dc8dd292a21acceb876a0523.jpg" alt="Morning Lessons" loading="lazy" />
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><strong data-en="Morning Lessons" data-sw="Masomo ya Asubuhi">Morning Lessons</strong><span data-en="Dar es Salaam · 2024" data-sw="Dar es Salaam · 2024">Dar es Salaam · 2024</span></div></div>
+        <div class="gallery-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-index="1">
+        <img src="../assets/uploads/017ed5ab2dc3e5dad22b0bd1793791177a622b4a82383df2a84883f5e59841fb.jpg" alt="Afternoon Play" loading="lazy" />
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><strong data-en="Afternoon Play" data-sw="Mchezo wa Mchana">Afternoon Play</strong><span data-en="Mwanza Home · 2024" data-sw="Nyumba ya Mwanza · 2024">Mwanza Home · 2024</span></div></div>
+        <div class="gallery-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-index="2">
+        <img src="../assets/uploads/WhatsApp Image 2026-08-15 at 03.18.25.jpeg" alt="Health Screening" loading="lazy" />
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><strong data-en="Health Screening" data-sw="Uchunguzi wa Afya">Health Screening</strong><span data-en="Annual medical outreach · 2024" data-sw="Huduma ya afya ya mwaka · 2024">Annual medical outreach · 2024</span></div></div>
+        <div class="gallery-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-index="3">
+        <img src="../assets/uploads/WhatsApp Image 2026-08-15 at 03.18.37.jpeg" alt="Community Day" loading="lazy" />
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><strong data-en="Community Day" data-sw="Siku ya Jamii">Community Day</strong><span data-en="Morogoro · Annual gathering" data-sw="Morogoro · Mkutano wa kila mwaka">Morogoro · Annual gathering</span></div></div>
+        <div class="gallery-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-index="4">
+        <img src="../assets/uploads/WhatsApp Image 2026-08-15 at 03.18.40.jpeg" alt="Food Distribution" loading="lazy" />
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><strong data-en="Food Distribution" data-sw="Ugavi wa Chakula">Food Distribution</strong><span data-en="Dar es Salaam · Monthly drive" data-sw="Dar es Salaam · Kila mwezi">Dar es Salaam · Monthly drive</span></div></div>
+        <div class="gallery-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-index="5">
+        <img src="../assets/uploads/WhatsApp Image 2026-08-15 at 03.18.56.jpeg" alt="New Arrivals" loading="lazy" />
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><strong data-en="New Arrivals" data-sw="Wanaowasili Wapya">New Arrivals</strong><span data-en="Welcome day · Mbeya" data-sw="Siku ya kukaribisha · Mbeya">Welcome day · Mbeya</span></div></div>
+        <div class="gallery-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-index="6">
+        <img src="../assets/uploads/WhatsApp Image 2026-08-15 at 03.18.31.jpeg" alt="Together We Grow" loading="lazy" />
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><strong data-en="Together We Grow" data-sw="Tunakua Pamoja">Together We Grow</strong><span data-en="Field trip · 2024" data-sw="Safari ya mafunzo · 2024">Field trip · 2024</span></div></div>
+        <div class="gallery-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-index="7">
+        <img src="../assets/uploads/WhatsApp Image 2026-08-15 at 03.18.28.jpeg" alt="Children smiling" loading="lazy" />
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><strong data-en="Smiles That Light Up" data-sw="Tabasamu Zinazoangaza">Smiles That Light Up</strong><span data-en="Dar es Salaam · 2024" data-sw="Dar es Salaam · 2024">Dar es Salaam · 2024</span></div></div>
+        <div class="gallery-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-index="8">
+        <img src="../assets/uploads/WhatsApp Image 2026-08-15 at 03.18.14.jpeg" alt="Community outreach" loading="lazy" />
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><strong data-en="Community Outreach" data-sw="Huduma ya Jamii">Community Outreach</strong><span data-en="Mwanza · 2023" data-sw="Mwanza · 2023">Mwanza · 2023</span></div></div>
+        <div class="gallery-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+      </div>
+
+    </div>
+    <!-- SSR:GALLERY:END -->
+
+    <div id="galleryEmpty" class="gallery-empty" style="display:none;" data-en="No photos have been added yet — check back soon." data-sw="Hakuna picha zilizoongezwa bado — rejea hivi karibuni.">
+      No photos have been added yet — check back soon.
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous photo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next photo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+      <div class="lightbox-caption">
+        <strong id="lightboxTitle"></strong>
+        <span id="lightboxDetail"></span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p data-en="© 2025 Agape Family Foundation. All rights reserved." data-sw="© 2025 Agape Family Foundation. Haki zote zimehifadhiwa.">© 2025 Agape Family Foundation. All rights reserved.</p>
+    <p data-en="Registered NGO · Tanzania · Reg. No. 00-NGO-2022-0047" data-sw="NGO Iliyosajiliwa · Tanzania · Na. ya Usajili 00-NGO-2022-0047">Registered NGO · Tanzania · Reg. No. 00-NGO-2022-0047</p>
+  </footer>
+
+  <a href="contact.html" class="float-wa" aria-label="Contact us on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="../assets/js/site-data.js?v=3"></script>
+  <script>
+  (() => {
+    /* ============================================================
+       LANGUAGE SWITCHER (self-contained — doesn't rely on site-data.js
+       to add it, so it works even on minimal pages)
+    ============================================================ */
+    let currentLang = 'en';
+    function applyLang(lang) {
+      currentLang = (lang === 'sw') ? 'sw' : 'en';
+      document.documentElement.lang = currentLang;
+      try { AFF.setLanguage(currentLang); } catch(_) {}
+
+      document.querySelectorAll('.header-lang button').forEach(b => {
+        b.classList.toggle('active', b.dataset.lang === currentLang);
+      });
+
+      document.querySelectorAll('[data-en],[data-sw]').forEach(el => {
+        const val = el.dataset[currentLang];
+        if (!val) return;
+        const hasComplex = Array.from(el.children).some(c =>
+          !['EM','STRONG','SPAN','B','I','BR'].includes(c.tagName)
+        );
+        if (!hasComplex) el.textContent = val;
+      });
+    }
+    document.querySelectorAll('.header-lang button').forEach(btn => {
+      btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+    });
+
+    /* ============================================================
+       GALLERY — collect images + lightbox
+    ============================================================ */
+    let items = [];
+
+    function collectItems() {
+      const grid = document.getElementById('galleryGrid');
+      if (!grid) { items = []; return; }
+      items = Array.from(grid.querySelectorAll('.gallery-item')).map((el, i) => {
+        const img = el.querySelector('img');
+        const strong = el.querySelector('.gallery-overlay-text strong');
+        const span = el.querySelector('.gallery-overlay-text span');
+        return {
+          index: i,
+          src: img ? img.getAttribute('src') : '',
+          title: strong ? strong.textContent.trim() : '',
+          detail: span ? span.textContent.trim() : '',
+          element: el
+        };
+      }).filter(it => it.src);
+
+      const empty = document.getElementById('galleryEmpty');
+      if (empty) empty.style.display = items.length ? 'none' : '';
+      if (grid) grid.style.display = items.length ? '' : 'none';
+    }
+
+    /* -------- Lightbox -------- */
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightboxImg');
+    const lbTitle = document.getElementById('lightboxTitle');
+    const lbDetail = document.getElementById('lightboxDetail');
+    let current = 0;
+
+    function openLightbox(i) {
+      if (!items.length) return;
+      current = ((i % items.length) + items.length) % items.length;
+      const it = items[current];
+      lbImg.src = it.src;
+      lbImg.alt = it.title;
+      lbTitle.textContent = it.title;
+      lbDetail.textContent = it.detail;
+      lb.classList.add('open');
+      lb.setAttribute('aria-hidden','false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      lb.classList.remove('open');
+      lb.setAttribute('aria-hidden','true');
+      document.body.style.overflow = '';
+    }
+    function showNext() { openLightbox(current + 1); }
+    function showPrev() { openLightbox(current - 1); }
+
+    document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+    document.getElementById('lightboxNext').addEventListener('click', showNext);
+    document.getElementById('lightboxPrev').addEventListener('click', showPrev);
+    lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape')     closeLightbox();
+      if (e.key === 'ArrowRight') showNext();
+      if (e.key === 'ArrowLeft')  showPrev();
+    });
+
+    /* -------- Click delegation on grid -------- */
+    function bindGrid() {
+      const grid = document.getElementById('galleryGrid');
+      if (!grid) return;
+      grid.addEventListener('click', e => {
+        const card = e.target.closest('.gallery-item');
+        if (!card) return;
+        const idx = items.findIndex(it => it.element === card);
+        if (idx >= 0) openLightbox(idx);
+      });
+    }
+
+    /* ============================================================
+       INIT
+    ============================================================ */
+    function boot() {
+      collectItems();
+      applyLang((AFF && AFF.language && AFF.language()) || 'en');
+    }
+
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
+    else boot();
+
+    bindGrid();
+
+    // When site-data.js finishes fetching fresh content, re-collect and re-apply language
+    document.addEventListener('aff:content-updated', () => {
+      collectItems();
+      applyLang(currentLang);
+    });
+
+    // If site-data.js is available, let it reload content and re-render any SSR markers
+    if (window.AFF && typeof AFF.load === 'function') {
+      AFF.load().then(() => {
+        collectItems();
+        applyLang(currentLang);
+      }).catch(() => {});
+    }
+  })();
+  </script>
+</body>
+</html>

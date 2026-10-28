@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "eamodio.gitlens",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "ritwickdey.LiveServer",
+    "christian-kohler.path-intellisense",
+    "christian-kohler.npm-intellisense",
+    "ecmel.vscode-html-css",
+    "pranaygp.vscode-css-peek",
+    "msjsdiag.debugger-for-chrome",
+    "humao.rest-client",
+    "EditorConfig.EditorConfig",
+    "yzhang.markdown-all-in-one"
+  ]
+}

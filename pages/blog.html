@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blog | Agape Family Foundation" />
+  <title>Blog | Agape Family Foundation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0d1f3c;
+      --navy-dark: #081629;
+      --orange: #e8611a;
+      --cream: #f7f4ef;
+      --warm-white: #fdfaf6;
+      --text-dark: #1a1a2e;
+      --text-body: #3d4456;
+      --border: #e4ddd4;
+      --shadow-md: 0 8px 32px rgba(13,31,60,.12);
+      --transition: .3s cubic-bezier(.4,0,.2,1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--warm-white);
+      color: var(--text-dark);
+      line-height: 1.65;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    .header { padding: 24px; background: var(--navy-dark); display: flex; align-items: center; gap: 20px; position: sticky; top: 0; z-index: 900; }
+    .header-logo { display: flex; align-items: center; gap: 10px; }
+    .header-logo-img { width: 40px; height: 40px; border-radius: 50%; background: #fff; padding: 2px; }
+    .header-logo-text { color: #fff; font-size: 13px; font-weight: 700; }
+    .header-nav { margin-left: auto; display: flex; gap: 20px; }
+    .header-nav a { color: rgba(255,255,255,.7); font-size: 14px; font-weight: 500; transition: color var(--transition); }
+    .header-nav a:hover { color: #fff; }
+    .header-btn { background: var(--orange); color: #fff; padding: 9px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; }
+
+    .section { padding: 72px 24px; max-width: 960px; margin: 0 auto; }
+    .section-label { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 6vw, 44px); font-weight: 900; line-height: 1.12; color: var(--navy); letter-spacing: -.02em; margin-bottom: 24px; }
+
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 40px; }
+    .blog-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border); transition: transform var(--transition); }
+    .blog-card:hover { transform: translateY(-4px); }
+    .blog-card-img { height: 200px; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%); }
+    .blog-card-body { padding: 24px; }
+    .blog-card-date { font-size: 11px; color: var(--orange); font-weight: 600; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 8px; }
+    .blog-card-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+    .blog-card-excerpt { font-size: 13px; color: var(--text-body); line-height: 1.6; margin-bottom: 16px; }
+    .blog-card-link { display: inline-block; color: var(--orange); font-weight: 600; font-size: 13px; }
+    .blog-card-link:hover { text-decoration: underline; }
+
+    .footer { background: var(--navy-dark); color: rgba(255,255,255,.5); padding: 48px 24px; text-align: center; }
+    .footer a { color: rgba(255,255,255,.4); transition: color var(--transition); }
+    .footer a:hover { color: rgba(255,255,255,.8); }
+
+    @media (max-width: 768px) {
+      .header-nav { display: none; }
+      .section { padding: 48px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="../index.html" class="header-logo">
+      <img src="../logo.png" alt="Agape logo" class="header-logo-img" />
+      <div class="header-logo-text">AFF</div>
+    </a>
+    <nav class="header-nav">
+      <a href="../index.html" data-en="Home" data-sw="Nyumbani">Home</a>
+      <a href="about.html" data-en="About" data-sw="Kuhusu">About</a>
+      <a href="leadership.html" data-en="Leadership" data-sw="Uongozi">Leadership</a>
+      <a href="gallery.html" data-en="Gallery" data-sw="Picha">Gallery</a>
+      <a href="blog.html" data-en="Blog" data-sw="Blogu">Blog</a>
+      <a href="volunteer.html" data-en="Volunteer" data-sw="Jitolee">Volunteer</a>
+      <a href="updates.html" data-en="Updates" data-sw="Matangazo">Updates</a>
+      <a href="contact.html" data-en="Contact" data-sw="Wasiliana">Contact</a>
+      <a href="../index.html#donate" class="header-btn" data-en="Donate" data-sw="Changia">Donate</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <p class="section-label" data-en="Latest News" data-sw="Habari za Hivi Karibuni">Latest News</p>
+    <h1 class="section-title" data-en="Blog & Updates" data-sw="Blogu na Taarifa">Blog & <em style="color:var(--orange);font-style:italic;">Updates</em></h1>
+    <p style="font-size: 15px; color: var(--text-body); line-height: 1.75; margin-bottom: 40px;" data-en="Stories from the field, program updates, and insights into the lives of the children we serve." data-sw="Hadithi kutoka uwandani, taarifa za programu, na maisha ya watoto tunaowahudumia.">
+      Stories from the field, program updates, and insights into the lives of the children we serve.
+    </p>
+
+    <div class="blog-grid">
+      <!-- SSR:BLOG:START -->
+      <div class="blog-card">
+        <div class="blog-card-img" style="background-image:url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80'); background-size: cover; background-position: center;"></div>
+        <div class="blog-card-body">
+          <div class="blog-card-date" data-en="May 2025" data-sw="Mei 2025">May 2025</div>
+          <h3 class="blog-card-title" data-en="New Scholarship Program Launched" data-sw="Programu Mpya ya Ufadhili wa Masomo Yazinduliwa">New Scholarship Program Launched</h3>
+          <p class="blog-card-excerpt" data-en="We're excited to announce a new scholarship program supporting 50 students pursuing secondary education. This initiative will change lives..." data-sw="Tunafuraha kutangaza programu mpya ya ufadhili wa masomo inayosaidia wanafunzi 50 wanaosoma sekondari. Mpango huu utabadilisha maisha...">We're excited to announce a new scholarship program supporting 50 students pursuing secondary education. This initiative will change lives...</p>
+          <a href="#" class="blog-card-link" data-en="Read More →" data-sw="Soma Zaidi →">Read More →</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-img" style="background-image:url('https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&q=80'); background-size: cover; background-position: center;"></div>
+        <div class="blog-card-body">
+          <div class="blog-card-date" data-en="April 2025" data-sw="Aprili 2025">April 2025</div>
+          <h3 class="blog-card-title" data-en="Annual Healthcare Outreach Reaches 1,200 Children" data-sw="Huduma za Kila Mwaka za Afya Zawafikia Watoto 1,200">Annual Healthcare Outreach Reaches 1,200 Children</h3>
+          <p class="blog-card-excerpt" data-en="Our medical team completed a comprehensive health screening reaching over 1,200 children across 8 regions. Here's what we found..." data-sw="Timu yetu ya afya imekamilisha uchunguzi wa kina wa afya uliowafikia zaidi ya watoto 1,200 katika mikoa 8. Haya ndiyo tuliyobaini...">Our medical team completed a comprehensive health screening reaching over 1,200 children across 8 regions. Here's what we found...</p>
+          <a href="#" class="blog-card-link" data-en="Read More →" data-sw="Soma Zaidi →">Read More →</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-img" style="background-image:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80'); background-size: cover; background-position: center;"></div>
+        <div class="blog-card-body">
+          <div class="blog-card-date" data-en="March 2025" data-sw="Machi 2025">March 2025</div>
+          <h3 class="blog-card-title" data-en="Meet Amina: A Story of Hope and Determination" data-sw="Mfahamu Amina: Hadithi ya Matumaini na Azimio">Meet Amina: A Story of Hope and Determination</h3>
+          <p class="blog-card-excerpt" data-en="Two years ago, Amina couldn't read. Today, she's reading to other children. This is her story..." data-sw="Miaka miwili iliyopita, Amina hakuweza kusoma. Leo, anawasomea watoto wengine. Hii ndiyo hadithi yake...">Two years ago, Amina couldn't read. Today, she's reading to other children. This is her story...</p>
+          <a href="#" class="blog-card-link" data-en="Read More →" data-sw="Soma Zaidi →">Read More →</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-img" style="background-image:url('https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=600&q=80'); background-size: cover; background-position: center;"></div>
+        <div class="blog-card-body">
+          <div class="blog-card-date" data-en="February 2025" data-sw="Februari 2025">February 2025</div>
+          <h3 class="blog-card-title" data-en="2024 Annual Report Now Available" data-sw="Ripoti ya Mwaka 2024 Sasa Inapatikana">2024 Annual Report Now Available</h3>
+          <p class="blog-card-excerpt" data-en="Full transparency on how every Tanzanian shilling was spent supporting children across Tanzania. Download our comprehensive annual report..." data-sw="Uwazi kamili wa jinsi kila shilingi ilivyotumika kuwasaidia watoto kote Tanzania. Pakua ripoti yetu kamili ya mwaka...">Full transparency on how every Tanzanian shilling was spent supporting children across Tanzania. Download our comprehensive annual report...</p>
+          <a href="#" class="blog-card-link" data-en="Read More →" data-sw="Soma Zaidi →">Read More →</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-img" style="background-image:url('https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?w=600&q=80'); background-size: cover; background-position: center;"></div>
+        <div class="blog-card-body">
+          <div class="blog-card-date" data-en="January 2025" data-sw="Januari 2025">January 2025</div>
+          <h3 class="blog-card-title" data-en="Community Home Expansion in Mwanza" data-sw="Upanuzi wa Nyumba ya Jamii Mwanza">Community Home Expansion in Mwanza</h3>
+          <p class="blog-card-excerpt" data-en="Thanks to generous donors, we've expanded our Mwanza facility. Now serving 35 children with loving care and support..." data-sw="Kwa msaada wa wafadhili wakarimu, tumepanua kituo chetu cha Mwanza. Sasa tunahudumia watoto 35 kwa upendo na msaada...">Thanks to generous donors, we've expanded our Mwanza facility. Now serving 35 children with loving care and support...</p>
+          <a href="#" class="blog-card-link" data-en="Read More →" data-sw="Soma Zaidi →">Read More →</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-img" style="background-image:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80'); background-size: cover; background-position: center;"></div>
+        <div class="blog-card-body">
+          <div class="blog-card-date" data-en="December 2024" data-sw="Desemba 2024">December 2024</div>
+          <h3 class="blog-card-title" data-en="Holiday Giving Campaign Results" data-sw="Matokeo ya Kampeni ya Michango ya Sikukuu">Holiday Giving Campaign Results</h3>
+          <p class="blog-card-excerpt" data-en="Your generosity during our holiday campaign made an incredible impact. Here's what we accomplished together..." data-sw="Ukarimu wenu wakati wa kampeni yetu ya sikukuu ulileta matokeo makubwa. Haya ndiyo tuliyofanikisha pamoja...">Your generosity during our holiday campaign made an incredible impact. Here's what we accomplished together...</p>
+          <a href="#" class="blog-card-link" data-en="Read More →" data-sw="Soma Zaidi →">Read More →</a>
+        </div>
+      </div>
+      <!-- SSR:BLOG:END -->
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p data-en="© 2025 Agape Family Foundation. All rights reserved." data-sw="© 2025 Agape Family Foundation. Haki zote zimehifadhiwa.">© 2025 Agape Family Foundation. All rights reserved.</p>
+    <p style="margin-top: 10px; font-size: 12px;" data-en="Registered NGO · Tanzania · Reg. No. 00-NGO-2022-0047" data-sw="NGO Iliyosajiliwa · Tanzania · Na. ya Usajili 00-NGO-2022-0047">Registered NGO · Tanzania · Reg. No. 00-NGO-2022-0047</p>
+  </footer>
+  <script src="../assets/js/site-data.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0d1f3c">
+  <title>Updates Admin | Agape Family Foundation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================================
+       DESIGN TOKENS — identical to index.html
+    ============================================================ */
+    :root{
+      --navy:#0d1f3c;
+      --navy-dark:#081629;
+      --navy-mid:#162d52;
+      --orange:#e8611a;
+      --orange-lt:#f07a3a;
+      --cream:#f7f4ef;
+      --warm-white:#fdfaf6;
+      --text-dark:#1a1a2e;
+      --text-body:#3d4456;
+      --text-muted:#6b7280;
+      --border:#e4ddd4;
+      --shadow-sm:0 2px 12px rgba(13,31,60,.07);
+      --shadow-md:0 8px 32px rgba(13,31,60,.12);
+      --radius:12px;
+      --radius-lg:20px;
+      --transition:.3s cubic-bezier(.4,0,.2,1);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{
+      font-family:'DM Sans',sans-serif;
+      background:var(--warm-white);
+      color:var(--text-dark);
+      line-height:1.65;
+      overflow-x:hidden;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      text-rendering:optimizeLegibility;
+    }
+    img{display:block;max-width:100%}
+    a{text-decoration:none;color:inherit}
+    button{cursor:pointer;border:none;background:none;font-family:inherit}
+    ::selection{background:rgba(232,97,26,.24);color:var(--navy-dark)}
+    :focus-visible{outline:3px solid rgba(240,122,58,.72);outline-offset:3px}
+
+    /* ============================================================
+       NAV — same feel as index.html
+    ============================================================ */
+    .nav{
+      position:fixed;top:0;left:0;right:0;z-index:900;
+      padding:0 20px;height:68px;
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      background:rgba(8,22,41,.97);
+      backdrop-filter:blur(12px);
+      box-shadow:0 1px 0 rgba(255,255,255,.06);
+    }
+    .nav-logo{display:flex;align-items:center;gap:10px;flex:1;justify-content:center}
+    .nav-logo-img{
+      width:40px;height:40px;border-radius:50%;object-fit:contain;
+      background:#fff;padding:2px;
+      box-shadow:0 0 0 1.5px rgba(255,255,255,.2);flex-shrink:0;
+    }
+    .nav-logo-text{
+      font-size:13px;font-weight:700;color:#fff;line-height:1.2;letter-spacing:.01em;
+    }
+    .nav-logo-text span{
+      display:block;font-weight:300;opacity:.65;font-size:10px;
+      letter-spacing:.08em;text-transform:uppercase;
+    }
+    .nav-right{display:flex;align-items:center;gap:10px}
+    .nav-link{
+      color:rgba(255,255,255,.7);font-size:13px;font-weight:500;
+      padding:9px 14px;border-radius:8px;transition:color var(--transition),background var(--transition);
+    }
+    .nav-link:hover{color:#fff;background:rgba(255,255,255,.08)}
+    .nav-donate{
+      background:var(--orange);color:#fff;padding:9px 18px;border-radius:8px;
+      font-size:13px;font-weight:600;letter-spacing:.02em;
+      transition:background var(--transition),transform var(--transition);
+      white-space:nowrap;flex-shrink:0;
+    }
+    .nav-donate:hover{background:var(--orange-lt)}
+    .nav-donate:active{transform:scale(.96)}
+    @media(max-width:640px){.nav-link{display:none}}
+
+    /* ============================================================
+       PAGE INTRO — mirrors the hero/section language
+    ============================================================ */
+    .page{padding:120px 24px 80px;max-width:960px;margin:0 auto}
+    .page-eyebrow{
+      display:inline-block;font-size:11px;font-weight:600;letter-spacing:.14em;
+      text-transform:uppercase;color:var(--orange);margin-bottom:14px;
+      padding:5px 12px;border:1px solid rgba(232,97,26,.4);border-radius:40px;
+      background:rgba(232,97,26,.08);
+    }
+    .page-title{
+      font-family:'Playfair Display',serif;
+      font-size:clamp(30px,5vw,48px);font-weight:900;line-height:1.12;
+      color:var(--navy);letter-spacing:-.02em;margin-bottom:14px;
+    }
+    .page-title em{font-style:italic;color:var(--orange)}
+    .page-sub{
+      font-size:16px;color:var(--text-body);line-height:1.7;max-width:620px;
+      margin-bottom:40px;
+    }
+
+    /* ============================================================
+       CARDS — same visual language as fundraiser / programs cards
+    ============================================================ */
+    .card{
+      background:#fff;
+      border-radius:var(--radius-lg);
+      padding:32px 28px;
+      box-shadow:var(--shadow-md);
+      border:1px solid var(--border);
+      margin-bottom:28px;
+    }
+    @media(min-width:768px){.card{padding:40px 36px}}
+    .card-head{margin-bottom:22px}
+    .section-label{
+      font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--orange);margin-bottom:10px;
+    }
+    .card h2{
+      font-family:'Playfair Display',serif;font-size:24px;font-weight:900;
+      color:var(--navy);line-height:1.15;letter-spacing:-.01em;
+      display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+    }
+    .card h2 .badge{
+      font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;
+      background:rgba(232,97,26,.12);color:var(--orange);
+      padding:4px 10px;border-radius:6px;letter-spacing:.04em;
+      text-transform:uppercase;vertical-align:middle;
+    }
+    .help{
+      font-size:13.5px;color:var(--text-muted);line-height:1.7;margin-top:10px;
+    }
+    .help code{
+      background:var(--cream);padding:2px 7px;border-radius:5px;
+      font-size:12.5px;color:var(--navy);font-family:'DM Sans',monospace;
+      font-weight:600;
+    }
+    .help a{color:var(--orange);font-weight:600;border-bottom:1px solid rgba(232,97,26,.3)}
+    .help a:hover{border-bottom-color:var(--orange)}
+
+    /* ============================================================
+       FORM FIELDS — matching fundraiser/contact inputs
+    ============================================================ */
+    .fields{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+    .fields .full{grid-column:1/-1}
+    @media(max-width:640px){.fields{grid-template-columns:1fr}.fields .full{grid-column:auto}}
+    .field{margin-bottom:16px}
+    label{
+      display:block;font-weight:600;color:var(--navy);font-size:13px;
+      margin-bottom:7px;letter-spacing:.01em;
+    }
+    input,textarea,select{
+      width:100%;padding:13px 14px;border:1.5px solid var(--border);
+      border-radius:10px;font:inherit;font-size:14.5px;background:#fff;
+      color:var(--text-dark);transition:border-color var(--transition),box-shadow var(--transition);
+    }
+    input:focus,textarea:focus,select:focus{
+      outline:none;border-color:var(--orange);
+      box-shadow:0 0 0 3px rgba(232,97,26,.12);
+    }
+    textarea{min-height:100px;resize:vertical;font-family:inherit}
+    input::placeholder,textarea::placeholder{color:#a9b1bd}
+
+    /* ============================================================
+       BUTTONS — same as index.html .btn-primary / .btn-navy
+    ============================================================ */
+    .btn-primary{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      background:var(--orange);color:#fff;padding:15px 28px;border-radius:10px;
+      font-size:15px;font-weight:600;letter-spacing:.01em;
+      transition:background var(--transition),transform var(--transition),box-shadow var(--transition);
+      box-shadow:0 4px 20px rgba(232,97,26,.4);
+      -webkit-tap-highlight-color:transparent;
+    }
+    .btn-primary:hover{background:var(--orange-lt);box-shadow:0 6px 28px rgba(232,97,26,.5)}
+    .btn-primary:active{transform:scale(.97)}
+    .btn-primary:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+    .btn-navy{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      background:var(--navy);color:#fff;padding:15px 24px;border-radius:10px;
+      font-size:15px;font-weight:600;letter-spacing:.01em;
+      transition:background var(--transition),transform var(--transition);
+      -webkit-tap-highlight-color:transparent;
+    }
+    .btn-navy:hover{background:var(--navy-mid)}
+    .btn-navy:active{transform:scale(.97)}
+    .btn-danger{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      background:#a53131;color:#fff;padding:10px 16px;border-radius:9px;
+      font-size:13px;font-weight:600;
+      transition:background var(--transition),transform var(--transition);
+    }
+    .btn-danger:hover{background:#c23c3c}
+    .btn-danger:active{transform:scale(.97)}
+    .btn-ghost{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      background:transparent;color:var(--navy);border:1.5px solid var(--border);
+      padding:13px 22px;border-radius:10px;font-size:14px;font-weight:600;
+      transition:background var(--transition),border-color var(--transition),transform var(--transition);
+    }
+    .btn-ghost:hover{background:var(--cream);border-color:#d8cfc2}
+    .btn-ghost:active{transform:scale(.97)}
+    .btn-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+
+    /* ============================================================
+       STATUS MESSAGES
+    ============================================================ */
+    .status{
+      margin:20px 0;padding:14px 18px;border-radius:12px;font-weight:600;
+      font-size:14px;display:none;line-height:1.6;border:1px solid transparent;
+    }
+    .status.show{display:block;animation:statusIn .25s ease}
+    @keyframes statusIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+    .status.info{background:#fff2d5;color:#7c5500;border-color:rgba(124,85,0,.15)}
+    .status.ok{background:#e6f7ea;color:#17612b;border-color:rgba(23,97,43,.15)}
+    .status.error{background:#ffe8e8;color:#8f1f1f;border-color:rgba(143,31,31,.15)}
+
+    /* ============================================================
+       UPDATE LIST — item cards
+    ============================================================ */
+    .list{display:grid;gap:14px;margin-top:20px}
+    .item{
+      display:flex;gap:16px;align-items:center;
+      border:1px solid var(--border);padding:14px;border-radius:14px;
+      background:var(--warm-white);
+      transition:box-shadow var(--transition),border-color var(--transition);
+    }
+    .item:hover{box-shadow:var(--shadow-sm);border-color:#d8cfc2}
+    .item img{
+      width:96px;height:72px;object-fit:cover;border-radius:10px;
+      background:#eee;flex-shrink:0;
+    }
+    .item .grow{flex:1;min-width:0}
+    .item strong{
+      display:block;color:var(--navy);font-size:15px;font-weight:700;
+      font-family:'Playfair Display',serif;letter-spacing:-.01em;
+      margin-bottom:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+    }
+    .item small{
+      display:block;color:var(--text-muted);font-size:12.5px;
+    }
+    .item small.time{color:var(--orange);font-weight:600;margin-top:4px}
+    .item-actions{display:flex;gap:8px;flex-shrink:0}
+    @media(max-width:520px){
+      .item{flex-direction:column;align-items:flex-start}
+      .item img{width:100%;height:160px}
+    }
+    .empty{
+      color:var(--text-muted);text-align:center;padding:36px 24px;
+      font-size:14px;font-style:italic;
+      border:1.5px dashed var(--border);border-radius:14px;background:var(--warm-white);
+    }
+
+    /* ============================================================
+       HELP DETAILS (collapsible setup guide)
+    ============================================================ */
+    details.setup-guide{
+      margin-top:22px;padding:16px 18px;background:var(--cream);
+      border-radius:12px;border:1px solid var(--border);
+      font-size:13.5px;color:var(--text-body);
+    }
+    details.setup-guide summary{
+      cursor:pointer;font-weight:700;color:var(--navy);
+      padding:4px 0;font-size:14px;list-style:none;
+      display:flex;align-items:center;gap:8px;
+    }
+    details.setup-guide summary::-webkit-details-marker{display:none}
+    details.setup-guide summary::after{
+      content:'▾';margin-left:auto;font-size:12px;
+      transition:transform var(--transition);color:var(--orange);
+    }
+    details.setup-guide[open] summary::after{transform:rotate(180deg)}
+    details.setup-guide ol{padding-left:22px;line-height:1.9;margin-top:12px}
+    details.setup-guide li{padding-left:4px}
+    details.setup-guide p{margin-top:14px;line-height:1.7}
+    details.setup-guide strong{color:var(--navy)}
+
+    /* ============================================================
+       FOOTER — same as index.html
+    ============================================================ */
+    .footer{
+      background:var(--navy-dark);padding:48px 24px;
+      color:rgba(255,255,255,.5);margin-top:40px;
+    }
+    .footer-inner{max-width:960px;margin:0 auto;text-align:center}
+    .footer-inner p{font-size:13px;line-height:1.7}
+    .footer-inner p+p{margin-top:10px;font-size:12px}
+    .footer-inner a{color:rgba(255,255,255,.7);font-weight:600;border-bottom:1px solid rgba(255,255,255,.2)}
+    .footer-inner a:hover{color:#fff;border-bottom-color:rgba(255,255,255,.5)}
+
+    /* ============================================================
+       MISC
+    ============================================================ */
+    .req{color:var(--orange);font-weight:700;margin-left:2px}
+    .muted-note{
+      font-size:12px;color:var(--text-muted);
+      margin-top:10px;line-height:1.6;
+    }
+    .pill{
+      display:inline-block;padding:3px 9px;border-radius:99px;
+      background:rgba(13,31,60,.06);color:var(--navy);
+      font-size:11px;font-weight:700;letter-spacing:.03em;
+    }
+    .pill.live{background:rgba(34,197,94,.12);color:#17612b}
+    .pill.expiring{background:rgba(232,97,26,.12);color:var(--orange)}
+  </style>
+</head>
+<body>
+
+  <!-- ====================== NAV ====================== -->
+  <nav class="nav" aria-label="Admin navigation">
+    <a href="index.html" class="nav-logo" style="text-decoration:none;">
+      <img src="logo.png" alt="Agape logo" class="nav-logo-img">
+      <div class="nav-logo-text">
+        Agape Family Foundation
+        <span>Updates Admin</span>
+      </div>
+    </a>
+    <div class="nav-right">
+      <a href="index.html" class="nav-link" target="_blank" rel="noopener">View site ↗</a>
+      <a href="index.html#donate" class="nav-donate">Donate</a>
+    </div>
+  </nav>
+
+  <!-- ====================== PAGE ====================== -->
+  <main class="page">
+
+    <div class="page-eyebrow">Admin Workspace</div>
+    <h1 class="page-title">Post <em>Updates</em> to the Live Site</h1>
+    <p class="page-sub">
+      Publish pop-up announcements that appear on the website as visitors scroll.
+      Each update auto-removes itself when its time is up. Everything is stored in your
+      GitHub repository — no server to maintain.
+    </p>
+
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+
+    <!-- ============================================================
+         CONNECTION SETUP
+    ============================================================ -->
+    <section class="card" id="setupCard">
+      <div class="card-head">
+        <div class="section-label">Step 1</div>
+        <h2>Connect to your repository</h2>
+        <p class="help">
+          Enter once. Saved to this browser only — <strong>never</strong> sent anywhere
+          except GitHub. Use a fine-grained token scoped to just this one repo.
+        </p>
+      </div>
+
+      <div class="fields">
+        <div class="field">
+          <label for="repoOwner">GitHub username or org <span class="req">*</span></label>
+          <input id="repoOwner" placeholder="e.g. wilson-gasper" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="repoName">Repository name <span class="req">*</span></label>
+          <input id="repoName" placeholder="e.g. agape-family-foundation" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="repoBranch">Branch</label>
+          <input id="repoBranch" placeholder="main" value="main" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="token">Fine-grained Personal Access Token <span class="req">*</span></label>
+          <input id="token" type="password" placeholder="github_pat_…" autocomplete="off">
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button id="saveSetup" class="btn-primary">Save connection</button>
+        <button id="testSetup" class="btn-ghost">Test connection</button>
+      </div>
+
+      <details class="setup-guide">
+        <summary>How to create the token — one time, 3 minutes</summary>
+        <ol>
+          <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com/settings/personal-access-tokens/new</a></li>
+          <li><strong>Token name:</strong> <code>Agape Updates Admin</code></li>
+          <li><strong>Expiration:</strong> 90 days (or "No expiration" if you accept the risk)</li>
+          <li><strong>Repository access:</strong> Only select repositories → tick <em>just this one repo</em></li>
+          <li><strong>Permissions → Repository permissions → Contents:</strong> set to <code>Read and write</code></li>
+          <li>Click <strong>Generate token</strong> and paste it above.</li>
+        </ol>
+        <p><strong>Safety note:</strong> this token is scoped to a single repository with a single permission. Even if it leaks, the worst an attacker can do is edit files in this repo. Rotate it (delete and recreate) any time you suspect exposure.</p>
+      </details>
+    </section>
+
+    <!-- ============================================================
+         LIVE UPDATES
+    ============================================================ -->
+    <section class="card" id="listCard">
+      <div class="card-head">
+        <div class="section-label">Step 2</div>
+        <h2>Live updates <span class="badge" id="countBadge">0 / 5</span></h2>
+        <p class="help">
+          These are the pop-ups visitors see as they scroll. Oldest first.
+          Each one removes itself automatically when its time is up.
+        </p>
+      </div>
+      <div id="list" class="list">
+        <p class="empty">Nothing published yet — add your first update below.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PUBLISH NEW UPDATE
+    ============================================================ -->
+    <section class="card" id="formCard">
+      <div class="card-head">
+        <div class="section-label">Step 3</div>
+        <h2>Publish a new update</h2>
+        <p class="help">
+          The image is compressed in your browser, uploaded to
+          <code>assets/uploads/updates/</code>, and the entry is committed to
+          <code>data/updates.json</code>. Live on the site within ~1 minute
+          (GitHub Pages CDN refresh).
+        </p>
+      </div>
+
+      <div class="field">
+        <label for="imgFile">Image (JPG / PNG / WebP) <span class="req">*</span></label>
+        <input id="imgFile" type="file" accept="image/png,image/jpeg,image/webp">
+      </div>
+
+      <div class="fields">
+        <div class="field full">
+          <label for="title">Title <span class="req">*</span></label>
+          <input id="title" maxlength="80" placeholder="e.g. Morogoro Charity Drive">
+        </div>
+        <div class="field full">
+          <label for="details">Details <span class="req">*</span></label>
+          <textarea id="details" maxlength="500" placeholder="What should visitors know about this update?"></textarea>
+        </div>
+        <div class="field">
+          <label for="hours">Show for</label>
+          <select id="hours">
+            <option value="24">24 hours</option>
+            <option value="48" selected>48 hours</option>
+            <option value="72">72 hours</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button id="publish" class="btn-primary">Publish update</button>
+      </div>
+
+      <p class="muted-note">
+        A total of <strong>5 updates</strong> can be live at once. If you've reached
+        that limit, remove one above before adding another.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ====================== FOOTER ====================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© 2025 Agape Family Foundation · Admin workspace</p>
+      <p>Registered NGO · Tanzania · Reg. No. 00-NGO-2022-0047</p>
+    </div>
+  </footer>
+
+  <script>
+  (() => {
+    const $ = id => document.getElementById(id);
+    const LS = 'aff_gh_admin_v1';
+
+    /* ---------- tiny helpers ---------- */
+    const enc = str => { const b = new TextEncoder().encode(str); let s = ''; b.forEach(x => s += String.fromCharCode(x)); return btoa(s); };
+    const dec = b64 => { const bin = atob(b64.replace(/\s/g, '')); const b = Uint8Array.from(bin, c => c.charCodeAt(0)); return new TextDecoder().decode(b); };
+    const notice = (msg, kind = 'ok') => {
+      const el = $('status');
+      el.textContent = msg;
+      el.className = 'status show ' + kind;
+      clearTimeout(notice._t);
+      notice._t = setTimeout(() => el.classList.remove('show'), 5000);
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    };
+
+    /* ---------- config (localStorage) ---------- */
+    let cfg = { owner: '', repo: '', branch: 'main', token: '' };
+    try { cfg = Object.assign(cfg, JSON.parse(localStorage.getItem(LS) || '{}')); } catch {}
+    const saveCfg = () => localStorage.setItem(LS, JSON.stringify(cfg));
+    $('repoOwner').value  = cfg.owner;
+    $('repoName').value   = cfg.repo;
+    $('repoBranch').value = cfg.branch || 'main';
+    $('token').value      = cfg.token ? '••••••••' : '';
+    $('token').addEventListener('focus', e => { if (e.target.value.startsWith('•')) e.target.value = cfg.token || ''; });
+
+    $('saveSetup').onclick = () => {
+      cfg.owner  = $('repoOwner').value.trim();
+      cfg.repo   = $('repoName').value.trim();
+      cfg.branch = ($('repoBranch').value.trim() || 'main');
+      const t = $('token').value.trim();
+      if (t && !t.startsWith('•')) cfg.token = t;
+      if (!cfg.owner || !cfg.repo || !cfg.token) { notice('Fill in owner, repository and token before saving.', 'error'); return; }
+      saveCfg();
+      $('token').value = '••••••••';
+      notice('Connection saved. Click "Test connection" to verify.', 'ok');
+      loadList();
+    };
+
+    /* ---------- GitHub API ---------- */
+    const api = path => `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${path}`;
+    const headers = () => ({
+      'Authorization': 'Bearer ' + cfg.token,
+      'Accept': 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28'
+    });
+
+    async function getFile(path) {
+      const r = await fetch(api(path) + `?ref=${cfg.branch}`, { headers: headers() });
+      if (r.status === 404) return { content: null, sha: null };
+      if (!r.ok) throw new Error(`GitHub GET ${path} failed: ${r.status} ${await r.text()}`);
+      const j = await r.json();
+      return { content: dec(j.content), sha: j.sha };
+    }
+
+    async function putFile(path, textContent, sha, message) {
+      const body = { message, content: enc(textContent), branch: cfg.branch };
+      if (sha) body.sha = sha;
+      const r = await fetch(api(path), { method: 'PUT', headers: { ...headers(), 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+      if (!r.ok) throw new Error(`GitHub PUT ${path} failed: ${r.status} ${await r.text()}`);
+      return r.json();
+    }
+
+    async function putBinary(path, base64Data, message) {
+      const comma = base64Data.indexOf(',');
+      const raw = base64Data.slice(comma + 1);
+      let sha = null;
+      try { const existing = await getFile(path); sha = existing.sha; } catch {}
+      const body = { message, content: raw, branch: cfg.branch };
+      if (sha) body.sha = sha;
+      const r = await fetch(api(path), { method: 'PUT', headers: { ...headers(), 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+      if (!r.ok) throw new Error(`GitHub PUT ${path} failed: ${r.status} ${await r.text()}`);
+      return r.json();
+    }
+
+    $('testSetup').onclick = async () => {
+      if (!cfg.owner || !cfg.repo || !cfg.token) { notice('Save the connection details first.', 'error'); return; }
+      notice('Testing connection…', 'info');
+      try {
+        const r = await fetch(`https://api.github.com/repos/${cfg.owner}/${cfg.repo}`, { headers: headers() });
+        if (!r.ok) throw new Error('Repository or token invalid (' + r.status + '). Check the owner, repo name and token.');
+        const j = await r.json();
+        notice(`Connected to ${j.full_name}. Default branch: ${j.default_branch}.`, 'ok');
+        if (j.default_branch && j.default_branch !== cfg.branch) {
+          notice(`Note: repository default branch is "${j.default_branch}" but you have "${cfg.branch}" set.`, 'info');
+        }
+      } catch (e) { notice(e.message, 'error'); }
+    };
+
+    /* ---------- load + render list ---------- */
+    async function loadList() {
+      if (!cfg.owner || !cfg.repo || !cfg.token) return;
+      try {
+        const file = await getFile('data/updates.json');
+        const data = file.content ? JSON.parse(file.content) : { updates: [] };
+        renderList(data.updates || [], file.sha);
+      } catch (e) { notice(e.message, 'error'); }
+    }
+
+    function renderList(updates, sha) {
+      $('countBadge').textContent = `${updates.length} / 5`;
+      if (!updates.length) {
+        $('list').innerHTML = '<p class="empty">Nothing published yet — add your first update below.</p>';
+        return;
+      }
+      $('list').innerHTML = updates.map((u, i) => {
+        const expires = u.expiresAt ? new Date(u.expiresAt).getTime() : null;
+        const hoursLeft = expires ? Math.max(0, Math.round((expires - Date.now()) / 3600000)) : null;
+        const pillClass = hoursLeft === null ? 'live' : (hoursLeft < 6 ? 'expiring' : 'live');
+        const pillText = hoursLeft === null
+          ? 'Live'
+          : (hoursLeft < 1 ? 'Ending soon' : hoursLeft + 'h left');
+        return `<div class="item">
+          <img src="${u.image}" alt="">
+          <div class="grow">
+            <strong>${u.title}</strong>
+            <small>${new Date(u.createdAt || Date.now()).toLocaleString()}</small>
+            <small class="time"><span class="pill ${pillClass}">${pillText}</span></small>
+          </div>
+          <div class="item-actions">
+            <button class="btn-danger" data-remove="${i}">Remove</button>
+          </div>
+        </div>`;
+      }).join('');
+      $('list').querySelectorAll('[data-remove]').forEach(btn => {
+        btn.onclick = async () => {
+          const idx = Number(btn.dataset.remove);
+          if (!confirm('Remove this update?\n\nThe image file stays in the repository (harmless), but the pop-up will stop appearing on the site.')) return;
+          updates.splice(idx, 1);
+          try {
+            await putFile('data/updates.json', JSON.stringify({ updates }, null, 2), sha, 'Remove update ' + idx);
+            notice('Update removed from the site.', 'ok');
+            setTimeout(loadList, 900);
+          } catch (e) { notice(e.message, 'error'); }
+        };
+      });
+    }
+
+    /* ---------- browser-side image compression ---------- */
+    function compressImage(file, maxDim = 1600, quality = 0.85) {
+      return new Promise((resolve, reject) => {
+        if (!file || !file.type.startsWith('image/')) return reject(new Error('Please choose an image file (JPG, PNG or WebP).'));
+        const reader = new FileReader();
+        reader.onload = () => {
+          const img = new Image();
+          img.onload = () => {
+            let w = img.naturalWidth, h = img.naturalHeight;
+            if (Math.max(w, h) > maxDim) {
+              const s = maxDim / Math.max(w, h);
+              w = Math.round(w * s);
+              h = Math.round(h * s);
+            }
+            const c = document.createElement('canvas');
+            c.width = w; c.height = h;
+            c.getContext('2d').drawImage(img, 0, 0, w, h);
+            resolve(c.toDataURL('image/jpeg', quality));
+          };
+          img.onerror = () => reject(new Error('That image could not be read.'));
+          img.src = reader.result;
+        };
+        reader.onerror = () => reject(new Error('The file could not be read.'));
+        reader.readAsDataURL(file);
+      });
+    }
+
+    /* ---------- publish ---------- */
+    $('publish').onclick = async () => {
+      if (!cfg.owner || !cfg.repo || !cfg.token) { notice('Save the connection details first.', 'error'); return; }
+      const file = $('imgFile').files[0];
+      const title = $('title').value.trim();
+      const details = $('details').value.trim();
+      const hours = Number($('hours').value);
+      if (!file || !title || !details) { notice('Image, title and details are all required.', 'error'); return; }
+
+      $('publish').disabled = true;
+      try {
+        notice('Compressing image…', 'info');
+        const dataUrl = await compressImage(file);
+
+        notice('Uploading image to repository…', 'info');
+        const bytes = dataUrl.slice(dataUrl.indexOf(',') + 1);
+        const hashBuf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(bytes));
+        const hashHex = Array.from(new Uint8Array(hashBuf)).map(b => b.toString(16).padStart(2, '0')).join('');
+        const imgPath = `assets/uploads/updates/${hashHex.slice(0, 32)}.jpg`;
+        await putBinary(imgPath, dataUrl, 'Add update image ' + hashHex.slice(0, 12));
+
+        notice('Saving data/updates.json…', 'info');
+        const file2 = await getFile('data/updates.json');
+        const data = file2.content ? JSON.parse(file2.content) : { updates: [] };
+        const now = new Date();
+        data.updates = data.updates || [];
+        data.updates.push({
+          id: (crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36)),
+          image: imgPath,
+          title,
+          details,
+          createdAt: now.toISOString(),
+          expiresAt: new Date(now.getTime() + hours * 3600000).toISOString()
+        });
+        await putFile('data/updates.json', JSON.stringify(data, null, 2), file2.sha, `Publish update "${title}"`);
+
+        notice(`Published. Live on the site within ~1 minute. Auto-removes in ${hours} hours.`, 'ok');
+        $('imgFile').value = ''; $('title').value = ''; $('details').value = '';
+        $('hours').value = '48';
+        setTimeout(loadList, 1200);
+      } catch (e) {
+        notice(e.message, 'error');
+      } finally {
+        $('publish').disabled = false;
+      }
+    };
+
+    /* ---------- boot ---------- */
+    if (cfg.owner && cfg.repo && cfg.token) loadList();
+  })();
+  </script>
+</body>
+</html>
